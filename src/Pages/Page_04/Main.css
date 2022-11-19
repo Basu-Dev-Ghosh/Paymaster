@@ -37,8 +37,15 @@
 @media only screen and (max-width: 1000px) {
   .page4-row3 h3 {
     align-self: flex-start !important;
+    font-size: 15px;
   }
   .form-input {
     text-align: center;
+  }
+  .page4-row1 h1 {
+    font-size: 30px !important;
+  }
+  .page4-row1 h3 {
+    font-size: 15px !important;
   }
 }

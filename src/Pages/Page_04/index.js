@@ -8,7 +8,7 @@ const index = () => {
         <img src={logo} alt="Logo" />
       </div>
       <div className="form">
-        <div className="row1">
+        <div className="row1 page4-row1">
           <h1>Welcome to paymaster</h1>
           <h3>Please take a moment to complete the account</h3>
         </div>
