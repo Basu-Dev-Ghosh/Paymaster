@@ -44,12 +44,22 @@
 }
 @media only screen and (max-width: 600px) {
   .footer-logo {
-    margin: 10px 0;
+    margin: 6px 0;
+  }
+  .footer-logo h3 {
+    font-size: 22px;
+  }
+  .footer-logo img {
+    width: 40px;
   }
   .links {
     margin: 10px 0;
   }
+  .links i {
+    font-size: 17px;
+  }
   .copyright {
-    margin: 10px 0;
+    margin: 9px 0;
+    font-size: 14px;
   }
 }
