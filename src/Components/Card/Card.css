@@ -1,0 +1,47 @@
+.card {
+  width: 340px;
+  height: 420px;
+  background-color: #fff;
+  border-radius: 38px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  overflow-x: hidden;
+}
+.row1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.row1 .logo img {
+  width: 80px;
+}
+.row1 .title h1 {
+  font-family: "MyriadPro-Regular";
+  font-size: 49px;
+  margin-left: 10px;
+  color: #272b65;
+}
+.row2 {
+  display: flex;
+  justify-content: center;
+  font-size: 27px;
+  font-family: Causten-Regular;
+}
+.row3 {
+  padding: 30px 40px;
+}
+.row3-row1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.row3-row1 p {
+  font-size: 18px;
+  font-family: Causten-Regular;
+}
+.row4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
