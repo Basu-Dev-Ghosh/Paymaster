@@ -65,7 +65,7 @@ const index = () => {
           autoPlaySpeed={2000}
           arrows={false}
           className="cards"
-          partialVisbile={true}
+
         >
           <Card />
           <Card />
