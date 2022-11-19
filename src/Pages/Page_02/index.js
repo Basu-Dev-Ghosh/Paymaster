@@ -2,6 +2,7 @@ import React from "react";
 import "./Main.css";
 import logo from "../../assets/FooterLogo.png";
 import linkedin from "../../assets/LinkedIn.png";
+import { NavLink } from "react-router-dom";
 const index = () => {
   return (
     <div className="page-02-container">
@@ -12,7 +13,16 @@ const index = () => {
         <div className="row1">
           <h1>Log In</h1>
           <h3>
-            New user?<span>Create an account</span>
+            New user?
+            <span>
+              {" "}
+              <NavLink
+                to={"/page03"}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Create an account{" "}
+              </NavLink>{" "}
+            </span>
           </h3>
         </div>
         <div className="row2">
