@@ -1,0 +1,8 @@
+@media only screen and (max-width: 1000px) {
+  .page-02-container {
+    height: 100vh;
+  }
+  .form .row2 img {
+    width: 350px;
+  }
+}
