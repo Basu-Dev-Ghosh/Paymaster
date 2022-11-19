@@ -45,3 +45,58 @@
   align-items: center;
   font-size: 28px;
 }
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 170px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    overflow-x: hidden;
+  }
+  .row1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .row1 .logo img {
+    width: 30px;
+  }
+  .row1 .title h1 {
+    font-family: "MyriadPro-Regular";
+    font-size: 25px;
+    margin-left: 4px;
+    color: #272b65;
+  }
+  .row2 {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-family: Causten-Regular;
+  }
+  .row3 {
+    padding: 10px 20px;
+  }
+  .row3-row1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+  }
+  .row3-row1 p {
+    font-size: 8px;
+    font-family: Causten-Regular;
+  }
+  .ratings i {
+    font-size: 10px;
+  }
+  .row4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+  .row4 i {
+    font-size: 14px;
+  }
+}
