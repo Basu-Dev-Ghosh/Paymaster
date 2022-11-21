@@ -1,0 +1,21 @@
+.header02 {
+  background-color: #272b65;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header02 h1 {
+  font-size: 70px;
+  color: #fff;
+  font-family: "Nexa Bold";
+}
+@media only screen and (max-width: 1000px) {
+  .header02 {
+    height: 95px;
+  }
+  .header02 h1 {
+    font-size: 40px;
+  }
+}

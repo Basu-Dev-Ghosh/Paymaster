@@ -1,0 +1,231 @@
+.page5-container {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 300px;
+}
+.page5-row1 {
+  display: flex;
+  flex-direction: column;
+}
+.page5-row1 p {
+  font-family: "Nexa Light";
+  font-size: 50px;
+  color: rgb(74, 73, 73);
+}
+.page5-button {
+  background: #fab00b !important;
+  color: #303160 !important;
+  font-size: 44px !important;
+  width: 290px !important;
+  padding: 18px !important;
+  border-radius: 34px !important;
+  margin-left: 14px;
+}
+.header-form {
+  display: flex;
+  justify-content: flex-start;
+  padding: 35px 0px;
+}
+.row2-heading {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.image-section img {
+  width: 105px;
+}
+.text-section {
+  margin-left: 20px;
+}
+.text-section .text-row1 {
+  display: flex;
+  align-items: center;
+  color: #2a2b55;
+}
+.text-row1 h1 {
+  font-family: "Nexa Bold";
+  font-size: 47px;
+}
+.text-row1 p {
+  font-size: 30px;
+  font-family: "Causten-Regular";
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.text-row2 p {
+  font-size: 30px;
+  font-family: "Causten-Regular";
+  color: #2a2b55;
+}
+.page5-row2 .row2-input {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.page5-row2 .row2-input textarea {
+  padding: 50px;
+  height: 300px;
+  width: 900px;
+  border-radius: 25px;
+  font-family: "Causten-Regular";
+  font-size: 45px;
+}
+.page5-row2 .row2-buttons {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+  opacity: 0.7;
+}
+.row2-buttons i {
+  font-size: 80px;
+  cursor: pointer;
+}
+.row2-buttons i:nth-child(2) {
+  margin-left: 30px;
+  font-size: 85px;
+}
+.page5-row3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding: 0px 30px;
+  width: 80%;
+}
+.page5-row3-row1 {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page5-row3-row1 p {
+  font-size: 45px;
+  font-family: "Causten-Regular";
+}
+
+.page5-row3-row1 .stars {
+  width: auto;
+  margin-left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.page5-row3-row1 .stars i {
+  font-size: 44px;
+  margin: 0 10px;
+  color: #bcbbba;
+}
+@media only screen and (max-width: 1000px) {
+  .page5-container {
+    padding: 30px 40px;
+  }
+  .page5-row1 p {
+    font-size: 40px;
+  }
+  .page5-button {
+    font-size: 24px !important;
+    width: 150px !important;
+    padding: 12px !important;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .page5-input {
+    font-size: 24px !important;
+    padding: 20px !important;
+    width: 200px !important;
+  }
+  .header-form {
+    padding: 0px 0px;
+  }
+  .row2-heading {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+  .image-section img {
+    width: 50px;
+  }
+  .text-section {
+    margin-left: 10px;
+  }
+  .text-section .text-row1 {
+    display: flex;
+    align-items: center;
+    color: #2a2b55;
+  }
+  .text-row1 h1 {
+    font-family: "Nexa Bold";
+    font-size: 29px;
+  }
+  .text-row1 p {
+    font-size: 16px;
+    font-family: "Causten-Regular";
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  .text-row2 p {
+    font-size: 14px;
+    margin-top: 4px;
+    font-family: "Causten-Regular";
+
+    color: #2a2b55;
+  }
+  .page5-row2 .row2-input {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .page5-row2 .row2-input textarea {
+    padding: 10px;
+    height: 160px;
+    width: 300px;
+    border-radius: 25px;
+    font-family: "Causten-Regular";
+    font-size: 22px;
+  }
+  .page5-row2 .row2-buttons {
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    opacity: 0.7;
+  }
+  .row2-buttons i {
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .row2-buttons i:nth-child(2) {
+    margin-left: 18px;
+    font-size: 43px;
+  }
+  .page5-row3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0px 0px;
+    width: 80%;
+  }
+  .page5-row3-row1 {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page5-row3-row1 p {
+    font-size: 20px;
+    font-family: "Causten-Regular";
+  }
+
+  .page5-row3-row1 .stars {
+    width: auto;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page5-row3-row1 .stars i {
+    font-size: 24px;
+    margin: 10px 10px;
+    color: #bcbbba;
+  }
+}
