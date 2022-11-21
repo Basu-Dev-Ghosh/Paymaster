@@ -3,7 +3,9 @@ import "./Header.css";
 import logo from "../../assets/Logo.png";
 const Header = () => {
   const showref = useRef();
-  const show = (e) => showref.current.classList.toggle("show");
+  const show = (e) => {
+    console.log(showref.current.classList.toggle("show"));
+  };
   return (
     <div className="header">
       <div className="header-logo">
