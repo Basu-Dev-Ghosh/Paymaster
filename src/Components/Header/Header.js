@@ -1,10 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Header.css";
 import logo from "../../assets/Logo.png";
 const Header = () => {
-  const showref = useRef();
+  const [display, setDisplay] = useState("flex");
   const show = (e) => {
-    console.log(showref.current.classList.toggle("show"));
+    console.log("HI");
+    if (display === "none") {
+      setDisplay("flex");
+    } else {
+      setDisplay("none");
+    }
   };
   return (
     <div className="header">
@@ -14,7 +19,7 @@ const Header = () => {
       <div className="hamburger">
         <i class="fa-solid fa-bars" onClick={show}></i>
       </div>
-      <div className="header-form" ref={showref}>
+      <div className="header-form" style={{ display: `${display}` }}>
         <input type="text" placeholder="Companies" />
         <input type="text" placeholder="Location" />
         <button>Search</button>
