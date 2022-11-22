@@ -81,7 +81,8 @@
   .row3-row1 {
     display: flex;
     justify-content: space-between;
-    margin: 2px 0;
+    align-items: center;
+    margin: 6px 0;
   }
   .row3-row1 p {
     font-size: 8px;
