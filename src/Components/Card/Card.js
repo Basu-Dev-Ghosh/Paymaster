@@ -24,7 +24,7 @@ const Card = () => {
               <StarRatings
                 rating={4.5}
                 starRatedColor="gold"
-                starDimension="22px"
+                starDimension="12px"
                 numberOfStars={5}
                 starSpacing="0px"
                 name="rating"
@@ -37,7 +37,7 @@ const Card = () => {
               <StarRatings
                 rating={4.5}
                 starRatedColor="gold"
-                starDimension="22px"
+                starDimension="12px"
                 numberOfStars={5}
                 starSpacing="0px"
                 name="rating"
@@ -50,7 +50,7 @@ const Card = () => {
               <StarRatings
                 rating={4.5}
                 starRatedColor="gold"
-                starDimension="22px"
+                starDimension="12px"
                 numberOfStars={5}
                 starSpacing="0px"
                 name="rating"
@@ -63,7 +63,7 @@ const Card = () => {
               <StarRatings
                 rating={4.5}
                 starRatedColor="gold"
-                starDimension="22px"
+                starDimension="12px"
                 numberOfStars={5}
                 starSpacing="0px"
                 name="rating"
