@@ -57,7 +57,7 @@
   padding-left: 10px;
 }
 .side-row3-col1 p {
-  margin: 10px 0;
+  margin: 13px 0;
 }
 .side-row3-col2 {
   margin-top: 20px;
@@ -135,7 +135,8 @@
     padding-left: 0px;
   }
   .side-row3-col1 p {
-    margin: 10px 0;
+    font-size: 15px;
+    margin: 10px 10px;
   }
   .side-row3-col2 {
     margin-top: 20px;

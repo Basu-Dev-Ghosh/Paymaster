@@ -30,7 +30,7 @@ const Index = () => {
                 <StarRatings
                   rating={4.5}
                   starRatedColor="gold"
-                  starDimension="22px"
+                  starDimension="12px"
                   numberOfStars={5}
                   starSpacing="4px"
                   name="rating"
@@ -40,7 +40,7 @@ const Index = () => {
                 <StarRatings
                   rating={3.5}
                   starRatedColor="gold"
-                  starDimension="22px"
+                  starDimension="12px"
                   numberOfStars={5}
                   starSpacing="4px"
                   name="rating"
@@ -50,7 +50,7 @@ const Index = () => {
                 <StarRatings
                   rating={2.5}
                   starRatedColor="gold"
-                  starDimension="22px"
+                  starDimension="12px"
                   numberOfStars={5}
                   starSpacing="4px"
                   name="rating"
@@ -60,7 +60,7 @@ const Index = () => {
                 <StarRatings
                   rating={2}
                   starRatedColor="gold"
-                  starDimension="22px"
+                  starDimension="12px"
                   numberOfStars={5}
                   starSpacing="4px"
                   name="rating"
