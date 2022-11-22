@@ -1,7 +1,7 @@
 .page5-container {
   display: flex;
   flex-direction: column;
-  padding: 100px 300px;
+  padding: 60px 150px;
 }
 .page5-row1 {
   display: flex;
@@ -15,8 +15,8 @@
 .page5-button {
   background: #fab00b !important;
   color: #303160 !important;
-  font-size: 44px !important;
-  width: 290px !important;
+  font-size: 40px !important;
+  width: 240px !important;
   padding: 18px !important;
   border-radius: 34px !important;
   margin-left: 14px;
@@ -33,7 +33,7 @@
   justify-content: flex-start;
 }
 .image-section img {
-  width: 105px;
+  width: 95px;
 }
 .text-section {
   margin-left: 20px;
@@ -45,7 +45,7 @@
 }
 .text-row1 h1 {
   font-family: "Nexa Bold";
-  font-size: 47px;
+  font-size: 44px;
 }
 .text-row1 p {
   font-size: 30px;
@@ -58,6 +58,13 @@
   font-family: "Causten-Regular";
   color: #2a2b55;
 }
+.outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 30px;
+}
 .page5-row2 .row2-input {
   margin-top: 30px;
   margin-left: 20px;
@@ -65,10 +72,10 @@
 .page5-row2 .row2-input textarea {
   padding: 50px;
   height: 300px;
-  width: 900px;
+  width: 700px;
   border-radius: 25px;
   font-family: "Causten-Regular";
-  font-size: 45px;
+  font-size: 40px;
 }
 .page5-row2 .row2-buttons {
   display: flex;
@@ -77,63 +84,70 @@
   opacity: 0.7;
 }
 .row2-buttons i {
-  font-size: 80px;
+  font-size: 60px;
   cursor: pointer;
 }
 .row2-buttons i:nth-child(2) {
   margin-left: 30px;
-  font-size: 85px;
+  font-size: 65px;
+}
+.page5-row2 {
+  width: 100%;
 }
 .page5-row3 {
   display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-  padding: 0px 30px;
-  width: 80%;
-}
-.page5-row3-row1 {
+  margin-top: 0px;
+  padding: 0px 0px;
+  padding-left: 120px;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
 }
-.page5-row3-row1 p {
-  font-size: 45px;
+.page5-row3-col1 p {
+  font-size: 35px;
+  margin: 10px 0;
   font-family: "Causten-Regular";
 }
 
-.page5-row3-row1 .stars {
+.page5-row3-col2 .stars {
   width: auto;
-  margin-left: 0px;
+  margin: 10px 0;
+  margin-left: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
-.page5-row3-row1 .stars i {
-  font-size: 44px;
-  margin: 0 10px;
+.page5-row3-col2 .stars i {
+  font-size: 35px;
+  margin: 4px 10px;
   color: #bcbbba;
+}
+.stars {
+  margin: 17px 30px !important;
 }
 @media only screen and (max-width: 1000px) {
   .page5-container {
-    padding: 30px 40px;
+    padding: 20px 40px;
   }
   .page5-row1 p {
-    font-size: 40px;
+    font-size: 35px;
+  }
+  .outer {
+    flex-wrap: wrap;
+    padding: 0;
   }
   .page5-button {
-    font-size: 24px !important;
+    font-size: 20px !important;
     width: 150px !important;
-    padding: 12px !important;
+    padding: 10px !important;
     margin-left: 10px;
     margin-top: 10px;
   }
   .page5-input {
-    font-size: 24px !important;
-    padding: 20px !important;
-    width: 200px !important;
+    font-size: 16px !important;
+    padding: 15px !important;
+    width: 150px !important;
   }
   .header-form {
+    margin-top: 20px !important;
     padding: 0px 0px;
   }
   .row2-heading {
@@ -157,23 +171,22 @@
   }
   .text-row1 h1 {
     font-family: "Nexa Bold";
-    font-size: 29px;
+    font-size: 25px;
   }
   .text-row1 p {
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Causten-Regular";
     margin-left: 5px;
     margin-top: 10px;
   }
   .text-row2 p {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 4px;
     font-family: "Causten-Regular";
-
     color: #2a2b55;
   }
   .page5-row2 .row2-input {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 0px;
   }
   .page5-row2 .row2-input textarea {
@@ -182,7 +195,7 @@
     width: 300px;
     border-radius: 25px;
     font-family: "Causten-Regular";
-    font-size: 22px;
+    font-size: 19px;
   }
   .page5-row2 .row2-buttons {
     display: flex;
@@ -191,41 +204,28 @@
     opacity: 0.7;
   }
   .row2-buttons i {
-    font-size: 40px;
+    font-size: 33px;
     cursor: pointer;
   }
   .row2-buttons i:nth-child(2) {
     margin-left: 18px;
-    font-size: 43px;
+    font-size: 33px;
   }
   .page5-row3 {
     display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+    flex-direction: row;
+    margin-top: 20px;
     padding: 0px 0px;
-    width: 80%;
-  }
-  .page5-row3-row1 {
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
   }
-  .page5-row3-row1 p {
-    font-size: 20px;
+
+  .page5-row3-col1 p {
+    font-size: 21px;
+    margin: 12px 1px;
     font-family: "Causten-Regular";
   }
 
-  .page5-row3-row1 .stars {
-    width: auto;
-    margin-left: 0px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .page5-row3-row1 .stars i {
-    font-size: 24px;
-    margin: 10px 10px;
-    color: #bcbbba;
+  .stars {
+    margin: 10px 5px !important;
   }
 }

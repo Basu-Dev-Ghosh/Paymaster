@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Header.css";
 import logo from "../../assets/Logo.png";
 const Header = () => {
@@ -11,6 +11,14 @@ const Header = () => {
       setDisplay("none");
     }
   };
+  useEffect(() => {
+    if (window.innerWidth <= 1000) {
+      setDisplay("none");
+    } else {
+      setDisplay("flex");
+    }
+  }, [window.innerWidth]);
+
   return (
     <div className="header">
       <div className="header-logo">
@@ -19,9 +27,13 @@ const Header = () => {
       <div className="hamburger">
         <i class="fa-solid fa-bars" onClick={show}></i>
       </div>
-      <div className="header-form" style={{ display: `${display}` }}>
+      <div className="header-form hide" style={{ display: `${display}` }}>
         <input type="text" placeholder="Companies" />
-        <input type="text" placeholder="Location" />
+        <input type="text" placeholder="Location" list="cityname" />
+        <datalist id="cityname">
+          <option value="Boston" />
+          <option value="Cambridge" />
+        </datalist>
         <button>Search</button>
       </div>
     </div>

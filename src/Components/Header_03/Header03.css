@@ -1,0 +1,17 @@
+.header3 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+  padding: 0px !important;
+}
+
+.header3 .header-logo img {
+  width: 300px;
+}
+.header3-button {
+  background: #272b65 !important;
+}
+@media only screen and (max-width: 1000px) {
+  .header3 .header-logo img {
+    width: 200px;
+    padding: 30px;
+  }
+}

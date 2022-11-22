@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import applelogo from "../../assets/AppleLogo.png";
+import StarRatings from "react-star-ratings";
 const Card = () => {
   return (
     <>
@@ -20,126 +21,66 @@ const Card = () => {
           <div className="row3-row1">
             <p>On time payement</p>
             <div className="ratings">
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-regular fa-star-half-stroke"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-star"
-                style={{ opacity: ".1", margin: "0 2px" }}
-              ></i>
+              <StarRatings
+                rating={4.5}
+                starRatedColor="gold"
+                starDimension="22px"
+                numberOfStars={5}
+                starSpacing="0px"
+                name="rating"
+              />
             </div>
           </div>
           <div className="row3-row1">
             <p>Negotiation</p>
             <div className="ratings">
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-regular fa-star-half-stroke"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-star"
-                style={{ opacity: ".1", margin: "0 2px" }}
-              ></i>
+              <StarRatings
+                rating={4.5}
+                starRatedColor="gold"
+                starDimension="22px"
+                numberOfStars={5}
+                starSpacing="0px"
+                name="rating"
+              />
             </div>
           </div>
           <div className="row3-row1">
             <p>Responsive</p>
             <div className="ratings">
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-regular fa-star-half-stroke"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-star"
-                style={{ opacity: ".1", margin: "0 2px" }}
-              ></i>
+              <StarRatings
+                rating={4.5}
+                starRatedColor="gold"
+                starDimension="22px"
+                numberOfStars={5}
+                starSpacing="0px"
+                name="rating"
+              />
             </div>
           </div>
           <div className="row3-row1">
             <p>Ethical</p>
             <div className="ratings">
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-regular fa-star-half-stroke"
-                style={{ color: "#F7AB17", margin: "0 2px" }}
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-star"
-                style={{ opacity: ".1", margin: "0 2px" }}
-              ></i>
+              <StarRatings
+                rating={4.5}
+                starRatedColor="gold"
+                starDimension="22px"
+                numberOfStars={5}
+                starSpacing="0px"
+                name="rating"
+              />
             </div>
           </div>
         </div>
         <div className="row4">
           <div className="ratings">
-            <i
-              class="fa-solid fa-star"
-              style={{ color: "#F7AB17", margin: "0 3px" }}
-            ></i>
-            <i
-              class="fa-solid fa-star"
-              style={{ color: "#F7AB17", margin: "0 3px" }}
-            ></i>
-            <i
-              class="fa-solid fa-star"
-              style={{ color: "#F7AB17", margin: "0 3px" }}
-            ></i>
-            <i
-              class="fa-solid fa-star-half"
-              style={{ color: "#F7AB17", margin: "0 3px" }}
-            ></i>
-            <i
-              class="fa-sharp fa-solid fa-star"
-              style={{ opacity: ".1", margin: "0 3px" }}
-            ></i>
+            <StarRatings
+              rating={4.5}
+              starRatedColor="gold"
+              starDimension="22px"
+              numberOfStars={5}
+              starSpacing="0px"
+              name="rating"
+            />
           </div>
         </div>
       </div>

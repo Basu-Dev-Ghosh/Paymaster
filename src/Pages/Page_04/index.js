@@ -26,12 +26,8 @@ const index = () => {
           <h3>Date of Birth</h3>
           <div className="row3-row2">
             <div className="form-input">
-              <label htmlFor="month">Month</label>
-              <input type="text" id="month" />
-            </div>
-            <div className="form-input">
-              <label htmlFor="year">Year</label>
-              <input type="text" id="year" />
+              <label htmlFor="month"></label>
+              <input type="date" id="month" />
             </div>
           </div>
           <label htmlFor="company">Company Name</label>
