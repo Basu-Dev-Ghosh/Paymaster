@@ -9,13 +9,13 @@
 }
 .page5-row1 p {
   font-family: "Nexa Light";
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(74, 73, 73);
 }
 .page5-button {
   background: #fab00b !important;
   color: #303160 !important;
-  font-size: 40px !important;
+  font-size: 30px !important;
   width: 240px !important;
   padding: 18px !important;
   border-radius: 34px !important;
@@ -33,7 +33,7 @@
   justify-content: flex-start;
 }
 .image-section img {
-  width: 95px;
+  width: 74px;
 }
 .text-section {
   margin-left: 20px;
@@ -45,16 +45,16 @@
 }
 .text-row1 h1 {
   font-family: "Nexa Bold";
-  font-size: 44px;
+  font-size: 34px;
 }
 .text-row1 p {
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Causten-Regular";
   margin-left: 15px;
   margin-top: 10px;
 }
 .text-row2 p {
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Causten-Regular";
   color: #2a2b55;
 }
@@ -65,31 +65,43 @@
   flex-wrap: nowrap;
   padding: 30px;
 }
+.submit-button {
+  margin-left: auto;
+  padding: 15px;
+  width: 180px;
+  border: 0;
+  background: #171a41;
+  color: #fff;
+  font-family: "Nexa Bold";
+  font-size: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
 .page5-row2 .row2-input {
   margin-top: 30px;
   margin-left: 20px;
 }
 .page5-row2 .row2-input textarea {
-  padding: 50px;
-  height: 300px;
-  width: 700px;
+  padding: 30px;
+  height: 250px;
+  width: 650px;
   border-radius: 25px;
   font-family: "Causten-Regular";
-  font-size: 40px;
+  font-size: 25px;
 }
 .page5-row2 .row2-buttons {
+  width: 100%;
   display: flex;
-  padding: 10px 30px;
+  padding: 20px 30px;
   align-items: center;
-  opacity: 0.7;
 }
 .row2-buttons i {
-  font-size: 60px;
+  font-size: 40px;
   cursor: pointer;
 }
 .row2-buttons i:nth-child(2) {
   margin-left: 30px;
-  font-size: 65px;
+  font-size: 42px;
 }
 .page5-row2 {
   width: 100%;
@@ -102,15 +114,15 @@
   width: 100%;
 }
 .page5-row3-col1 p {
-  font-size: 35px;
+  font-size: 25px;
   margin: 10px 0;
   font-family: "Causten-Regular";
 }
 
 .page5-row3-col2 .stars {
   width: auto;
-  margin: 10px 0;
-  margin-left: 60px;
+  margin: 15px 0 !important;
+  margin-left: 30px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +133,7 @@
   color: #bcbbba;
 }
 .stars {
-  margin: 17px 30px !important;
+  margin: 24px 30px !important;
 }
 @media only screen and (max-width: 1000px) {
   .page5-container {
@@ -201,7 +213,11 @@
     display: flex;
     padding: 10px 10px;
     align-items: center;
-    opacity: 0.7;
+  }
+  .submit-button {
+    padding: 10px;
+    width: 130px;
+    font-size: 18px;
   }
   .row2-buttons i {
     font-size: 33px;
@@ -220,12 +236,12 @@
   }
 
   .page5-row3-col1 p {
-    font-size: 21px;
-    margin: 12px 1px;
+    font-size: 18px;
+    margin: 12px 0px;
     font-family: "Causten-Regular";
   }
 
   .stars {
-    margin: 10px 5px !important;
+    margin: 0px 0px !important;
   }
 }

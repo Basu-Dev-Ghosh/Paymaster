@@ -10,7 +10,7 @@ const Index = () => {
     <>
       <Header03 />
       <div className="page06-container">
-        <aside className="side-section">
+        <div className="side-section">
           <div className="side-row1">
             <img src={applelogo} alt="Apple Logo" />
             <h1>Apple</h1>
@@ -88,13 +88,13 @@ const Index = () => {
               />
             </div>
           </div>
-        </aside>
-        <main className="main-section">
+        </div>
+        <div className="main-section">
           <Card02 />
           <Card02 />
           <Card02 />
           <Card02 />
-        </main>
+        </div>
       </div>
       <Footer />
     </>

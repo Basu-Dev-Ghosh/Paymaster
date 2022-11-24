@@ -4,6 +4,7 @@ import Page03 from "./Pages/Page_03";
 import Page04 from "./Pages/Page_04";
 import Page05 from "./Pages/Page_05";
 import Page06 from "./Pages/Page_06";
+import Page07 from "./Pages/Page_07";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/page04" element={<Page04 />} />
         <Route path="/page05" element={<Page05 />} />
         <Route path="/page06" element={<Page06 />} />
+        <Route path="/page07" element={<Page07 />} />
       </Routes>
     </>
   );

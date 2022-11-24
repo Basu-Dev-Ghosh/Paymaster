@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header03 from "../../Components/Header/Header";
+import Header03 from "../../Components/Header_03/Header03";
 import "./Main.css";
 import applelogo from "../../assets/AppleLogo.png";
 import Footer from "../../Components/Footer/Footer";
@@ -46,7 +46,7 @@ const Index = () => {
             <div className="row2-buttons">
               <i class="fa-regular fa-image"></i>
               <i class="fa-solid fa-square-plus"></i>
-              <img src="" alt="" />
+              <button className="submit-button">Submit</button>
             </div>
           </div>
           <div className="page5-row3">
@@ -62,7 +62,7 @@ const Index = () => {
                   changeRating={changeRating}
                   rating={rating.OnTimePayment}
                   starRatedColor="gold"
-                  starDimension="25px"
+                  starDimension="20px"
                   numberOfStars={5}
                   starSpacing="2px"
                   starHoverColor="gold"
@@ -75,7 +75,7 @@ const Index = () => {
                   changeRating={changeRating}
                   rating={rating.Negotiation}
                   starRatedColor="gold"
-                  starDimension="25px"
+                  starDimension="20px"
                   numberOfStars={5}
                   starSpacing="2px"
                   starHoverColor="gold"
@@ -87,7 +87,7 @@ const Index = () => {
                   changeRating={changeRating}
                   rating={rating.Responsive}
                   starRatedColor="gold"
-                  starDimension="25px"
+                  starDimension="20px"
                   numberOfStars={5}
                   starSpacing="2px"
                   starHoverColor="gold"
@@ -99,7 +99,7 @@ const Index = () => {
                   changeRating={changeRating}
                   rating={rating.Ethical}
                   starRatedColor="gold"
-                  starDimension="25px"
+                  starDimension="20px"
                   numberOfStars={5}
                   starSpacing="2px"
                   starHoverColor="gold"

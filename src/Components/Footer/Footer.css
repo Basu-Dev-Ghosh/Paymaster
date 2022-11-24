@@ -2,14 +2,15 @@
   width: 100vw;
   height: auto;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin: 0 !important;
   position: relative;
   bottom: 0;
-  z-index: 2;
+  z-index: 22;
   background-color: #272b65;
   display: flex;
   justify-content: space-around;
   overflow-x: hidden;
+  padding: 25px 0px;
 }
 .footer-logo {
   display: flex;
@@ -42,7 +43,10 @@
   margin: 0 20px;
   color: #fff;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .footer {
+    padding: 0 !important;
+  }
   .footer-logo {
     margin: 6px 0;
   }

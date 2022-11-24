@@ -1,0 +1,107 @@
+.page07-container {
+  display: flex;
+  flex-direction: column;
+}
+.page07-container .upper {
+  width: 100%;
+  background-color: #000;
+  height: 300px;
+}
+.page07-container .upper .upper-row1 {
+  width: 100%;
+  display: flex;
+  margin: 0px 300px;
+  margin-top: 40px;
+}
+.page07-container .upper .upper-row2 {
+  padding: 30px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 0px 350px !important;
+}
+.page07-container .upper .upper-row1 .stars {
+  margin-left: 300px !important;
+}
+.page07-container .upper .upper-row1 .image-section img {
+  width: 100px;
+}
+.page07-container .upper .upper-row1 .text-section .text-row1 h1 {
+  font-size: 40px;
+}
+.page07-container .upper .upper-row1 .text-section .text-row1 p {
+  font-size: 30px;
+}
+.page07-container .upper .upper-row1 .text-section .text-row2 p {
+  font-size: 24px;
+}
+.page07-container .upper .upper-row2 .row3-row1 {
+  margin: 5px 30px;
+}
+.page07-container .upper .upper-row2 .row3-row1 p {
+  color: #fff;
+  font-size: 20px !important;
+}
+.page07-container .upper .upper-row2 .row3-row1 .ratings {
+  margin: 3px 30px;
+}
+.page07-container .lower {
+  margin: 70px 320px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .page07-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .page07-container .upper {
+    width: 100%;
+    background-color: #000;
+    height: auto;
+  }
+  .page07-container .upper .upper-row1 {
+    width: 100%;
+    display: flex;
+    margin: 0px 10px;
+    margin-top: 10px;
+  }
+  .page07-container .upper .upper-row2 {
+    padding: 0px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 10px 0px !important;
+  }
+  .page07-container .upper .upper-row1 .stars {
+    margin: 0 auto !important;
+  }
+  .page07-container .upper .upper-row1 .image-section img {
+    width: 60px;
+  }
+  .page07-container .upper .upper-row1 .text-section .text-row1 h1 {
+    font-size: 20px;
+  }
+  .page07-container .upper .upper-row1 .text-section .text-row1 p {
+    font-size: 13px;
+  }
+  .page07-container .upper .upper-row1 .text-section .text-row2 p {
+    font-size: 10px;
+  }
+  .page07-container .upper .upper-row2 .row3-row1 {
+    margin: 5px 10px;
+  }
+  .page07-container .upper .upper-row2 .row3-row1 p {
+    color: #fff;
+    font-size: 10px !important;
+  }
+  .page07-container .upper .upper-row2 .row3-row1 .ratings {
+    margin: 0px 10px;
+  }
+  .page07-container .lower {
+    margin: 20px 20px;
+  }
+}

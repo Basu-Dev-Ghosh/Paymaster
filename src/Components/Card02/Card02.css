@@ -38,13 +38,13 @@
     height: auto !important;
     border: 1px solid #000;
     margin: 8px 7px;
-    width: 180px;
+    width: 170px;
   }
   .page6-card .row1 .logo img {
-    width: 50px !important;
+    width: 40px !important;
   }
   .page6-card .row1 .title h1 {
-    font-size: 23px;
+    font-size: 20px;
   }
   .page6-card .row2 {
     display: flex;
@@ -54,6 +54,9 @@
   }
   .page6-card .row1 {
     padding: 2px !important;
+  }
+  .page6-card .row2 p {
+    font-size: 10px;
   }
   .page6-card .row2 p:nth-child(2) {
     margin-top: 0px;
@@ -69,7 +72,7 @@
     padding: 0 !important;
   }
   .page6-card .row3 .row3-row1 p {
-    font-size: 8px;
+    font-size: 6px;
     margin: 0 !important;
   }
   .page6-card .row3 {
