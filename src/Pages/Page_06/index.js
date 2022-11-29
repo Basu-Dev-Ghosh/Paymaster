@@ -18,15 +18,16 @@ const Index = () => {
   const navigate = useNavigate();
   const getCompanyById = async () => {
     try {
+      setShowLoader(true);
       const res = await axios.get(`${serverLink}/company/${id}`, {
         withCredentials: true,
       });
       if (res.status === 202) {
-        console.log(res.data.company);
         setCompany(res.data.company);
-        console.log(company);
+        setShowLoader(false);
       }
     } catch (err) {
+      setShowLoader(false);
       toast.error(err.data.Messege, {
         position: "top-center",
         autoClose: 3000,
