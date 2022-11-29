@@ -15,11 +15,14 @@ const Index = () => {
   const [showLoader, setShowLoader] = useState(false);
   const getCompaniesByName = async () => {
     try {
+      setShowLoader(true)
       const res = await axios.get(`${serverLink}/company/${name}/${location}`, { withCredentials: true })
       if (res.status === 202) {
         setCompanies(res.data.company)
+        setShowLoader(false)
       }
     } catch (err) {
+      setShowLoader(false)
       toast.error(err.data.Messege, {
         position: "top-center",
         autoClose: 3000,
