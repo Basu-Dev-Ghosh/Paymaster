@@ -62,6 +62,7 @@ const Index = () => {
       });
     } else {
       try {
+        setShowLoader(true);
         const res = await axios.post(
           `${serverLink}/company/create`,
           companyData,
@@ -84,6 +85,7 @@ const Index = () => {
           navigate(`/page06/${res.data.company._id}`);
         }
       } catch (err) {
+        setShowLoader(false);
         toast.error(err.data.Messege, {
           position: "top-center",
           autoClose: 3000,

@@ -40,6 +40,7 @@ const Index = () => {
   };
   const getCompanies = async () => {
     try {
+      setShowLoader(true);
       const res = await axios.get(`${serverLink}/company`, {
         withCredentials: true,
       });
@@ -48,12 +49,15 @@ const Index = () => {
           return c._id !== id;
         });
         setCompanies(cmps);
+        setShowLoader(false);
       }
     } catch (err) {}
   };
   useEffect(() => {
+    setShowLoader(true);
     getCompanies();
     getCompanyById();
+    setShowLoader(false);
   }, []);
 
   return (
@@ -156,11 +160,16 @@ const Index = () => {
                 </button>
               </div>
             </div>
-            <div className="main-section">
-              {companies?.map((company) => {
-                return <Card02 company={company} />;
-              })}
-            </div>
+
+            {showLoader ? (
+              <Loader />
+            ) : (
+              <div className="main-section">
+                {companies?.map((company) => {
+                  return <Card02 company={company} />;
+                })}
+              </div>
+            )}
           </div>
           <Footer />
         </>

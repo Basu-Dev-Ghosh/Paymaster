@@ -36,7 +36,6 @@ const Index = () => {
   }
 
   useEffect(() => {
-    console.log("Hi");
     getCompaniesByName();
   }, [name, location]);
   return (

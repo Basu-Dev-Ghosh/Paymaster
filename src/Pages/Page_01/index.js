@@ -32,12 +32,14 @@ const Index = () => {
   const [companies, setCompanies] = useState([]);
   const getCompanies = async () => {
     try {
+      setShowLoader(true);
       const res = await axios.get(`${serverLink}/company`, { withCredentials: true })
       if (res.status === 202) {
         setCompanies(res.data.companies);
+        setShowLoader(false)
       }
     } catch (err) {
-
+      setShowLoader(false)
     }
   }
 

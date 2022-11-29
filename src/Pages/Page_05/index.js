@@ -80,6 +80,7 @@ const Index = () => {
   const AddRating = async () => {
     if (review) {
       try {
+        setShowLoader(true);
         const res = await axios.post(
           `${serverLink}/rating/create`,
           {
@@ -108,8 +109,10 @@ const Index = () => {
             Ethical: 0,
           });
           setScreenShots([]);
+          setShowLoader(false);
         }
       } catch (err) {
+        setShowLoader(false);
         toast.error(err.response.data.Messege, {
           position: "top-center",
           autoClose: 3000,
@@ -134,7 +137,9 @@ const Index = () => {
   };
 
   useEffect(() => {
+    setShowLoader(true);
     getCompanyById();
+    setShowLoader(false);
   }, []);
 
   return (

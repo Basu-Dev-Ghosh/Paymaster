@@ -47,10 +47,11 @@ const Card03 = ({ rating }) => {
         </div>
         <div className="col1-row3">
           <div className="screenshots">
-            <img src={ss} alt="ScreenShot" />
-            <img src={ss} alt="ScreenShot" />
-            <img src={ss} alt="ScreenShot" />
-            <img src={ss} alt="ScreenShot" />
+            {
+              rating.Screenshots.map((ss) => {
+                return <img src={ss} alt="ScreenShot" />
+              })
+            }
           </div>
         </div>
       </div>
