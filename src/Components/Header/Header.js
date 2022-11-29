@@ -75,20 +75,8 @@ const Header = ({ setShowLoader, companies }) => {
 
   }
   const search = () => {
-    console.log(filterName);
-    if (filterName) {
-      navigate(`/page08/${filterName}/${filterLocation == "" ? "_" : filterLocation}?`);
-    } else {
-      toast.warning("Please Input", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "light",
-      });
-    }
+    navigate(`/page08/${filterName == "" ? "_" : filterName}/${filterLocation == "" ? "_" : filterLocation}?`);
+
   }
 
 
