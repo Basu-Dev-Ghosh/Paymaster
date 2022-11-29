@@ -42,7 +42,8 @@ const Index = () => {
     <>{
       showLoader ? <Loader /> : (<>
         <Header setShowLoader={setShowLoader} />
-        <div page08-container>
+        <div className="page08-container">
+          <h1>Search results for {name === "_" ? location : name}</h1>
           <div className="search-results">
             {companies.length !== 0 ? (
               <div className="cards">
