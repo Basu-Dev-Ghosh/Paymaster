@@ -5,7 +5,7 @@ import "./Main.css";
 import axios from "axios";
 import Footer from "../../Components/Footer/Footer";
 import StarRatings from "react-star-ratings";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { serverLink } from "../../App";
 import Loader from "../../Components/Loader/Loader";
 const Index = () => {
@@ -14,6 +14,7 @@ const Index = () => {
   const [showLoader, setShowLoader] = useState(false);
   const [review, setReview] = useState("");
   const [company, setCompany] = useState();
+  const navigate = useNavigate();
   const [rating, setRating] = useState({
     OnTimePayment: 0,
     Negotiation: 0,
@@ -109,6 +110,7 @@ const Index = () => {
             Ethical: 0,
           });
           setScreenShots([]);
+          navigate("/page10");
           setShowLoader(false);
         }
       } catch (err) {

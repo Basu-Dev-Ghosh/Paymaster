@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css";
-import applelogo from "../../assets/AppleLogo.png";
 import StarRatings from "react-star-ratings";
 import Header03 from "../../Components/Header_03/Header03";
 import Card03 from "../../Components/Card03/Card03";

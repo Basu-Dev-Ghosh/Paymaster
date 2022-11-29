@@ -52,7 +52,8 @@ const Index = () => {
   return (
     <>
       {
-        showLoader ? <Loader /> : <div className="page01-container">
+        showLoader ? <Loader /> : 
+        <div className="page01-container">
           <Header setShowLoader={setShowLoader} companies={companies} />
           <div className="triangle-left" />
           <div className="contents">

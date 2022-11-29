@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Card03.css";
-import applelogo from "../../assets/AppleLogo.png";
-import ss from "../../assets/ScreenShot.jpeg";
 import StarRatings from "react-star-ratings";
 import axios from "axios";
 import { serverLink } from "../../App";

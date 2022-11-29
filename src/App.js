@@ -7,6 +7,7 @@ import Page06 from "./Pages/Page_06";
 import Page07 from "./Pages/Page_07";
 import Page08 from "./Pages/Page_08";
 import Page09 from "./Pages/Page_09";
+import Page10 from "./Pages/Page_10";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 export const serverLink = 'https://touristo-server.onrender.com/api';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/page07/:id" element={<Page07 />} />
         <Route path="/page09" exact element={<PrivateRoutes Component={Page09} />} />
         <Route path="/page08/:name/:location" element={<Page08 />} />
+        <Route path="/page10" element={<Page10 />} />
       </Routes>
 
     </>
