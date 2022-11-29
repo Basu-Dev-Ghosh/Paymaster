@@ -6,6 +6,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
+.logo {
+  cursor: pointer;
+}
 .form {
   display: flex;
   flex-direction: column;

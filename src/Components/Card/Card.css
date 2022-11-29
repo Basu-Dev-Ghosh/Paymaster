@@ -3,8 +3,10 @@
   height: 420px;
   background-color: #fff;
   border-radius: 38px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.08) 0px 48px 20px 0px;
   overflow-x: hidden;
+  margin: 10px;
+  cursor: pointer;
 }
 .row1 {
   display: flex;
@@ -13,18 +15,19 @@
   padding: 20px 0;
 }
 .row1 .logo img {
-  width: 80px;
+  width: 70px;
 }
 .row1 .title h1 {
   font-family: "MyriadPro-Regular";
-  font-size: 49px;
+  font-size: 29px;
   margin-left: 10px;
   color: #272b65;
 }
 .row2 {
   display: flex;
   justify-content: center;
-  font-size: 27px;
+  padding: 0 20px;
+  font-size: 20px;
   font-family: Causten-Regular;
 }
 .row3 {
@@ -36,7 +39,7 @@
   margin: 5px 0;
 }
 .row3-row1 p {
-  font-size: 18px;
+  font-size: 14px;
   font-family: Causten-Regular;
 }
 .row4 {
@@ -53,6 +56,7 @@
     border-radius: 18px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     overflow-x: hidden;
+    padding: 0;
   }
   .row1 {
     display: flex;
@@ -65,24 +69,24 @@
   }
   .row1 .title h1 {
     font-family: "MyriadPro-Regular";
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 4px;
     color: #272b65;
   }
   .row2 {
     display: flex;
     justify-content: center;
-    font-size: 13px;
+    font-size: 10px;
     font-family: Causten-Regular;
   }
   .row3 {
-    padding: 10px 20px;
+    padding: 0px 20px;
   }
   .row3-row1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 6px 0;
+    margin: 2px 0;
   }
   .row3-row1 p {
     font-size: 8px;
@@ -95,7 +99,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 10px;
   }
   .row4 i {
     font-size: 14px;

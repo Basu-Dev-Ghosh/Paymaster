@@ -1,7 +1,7 @@
 .page6-card {
   background: transparent !important;
   box-shadow: none !important;
-  height: auto !important;
+  max-height: 360px;
   border: 1px solid #000;
   margin: 10px 20px;
 }
@@ -19,7 +19,7 @@
 }
 .page6-card .row2 p:nth-child(2) {
   margin-top: 10px;
-  font-size: 20px !important;
+  font-size: 10px !important;
   text-align: center;
 }
 .page6-card .row3 .row3-row1 p {
@@ -29,7 +29,7 @@
   padding-top: 10px !important;
 }
 .page6-card .row4 {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 @media only screen and (max-width: 600px) {
   .page6-card {

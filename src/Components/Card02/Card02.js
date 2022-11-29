@@ -1,29 +1,30 @@
 import React from "react";
 import "./Card02.css";
-import applelogo from "../../assets/AppleLogo.png";
 import StarRatings from "react-star-ratings";
-const Card02 = () => {
+import { useNavigate } from "react-router-dom";
+const Card02 = ({ company }) => {
+  const navigate = useNavigate();
   return (
-    <div className="card page6-card">
+    <div className="card page6-card" onClick={(e) => {
+      navigate(`/page07/${company._id}`)
+    }}>
       <div className="row1">
         <div className="logo">
-          <img src={applelogo} alt="AppleLogo" style={{ width: "60px" }} />
+          <img src={company?.CompanyLogo} alt="Company Logo" style={{ width: "60px" }} />
         </div>
         <div className="title">
-          <h1>Apple</h1>
+          <h1>{company?.CompanyName}</h1>
         </div>
       </div>
       <div className="row2">
-        <p>Technology Company</p>
-
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>{company?.CompanyDescription}</p>
       </div>
       <div className="row3">
         <div className="row3-row1">
           <p>On time payement</p>
           <div className="ratings">
             <StarRatings
-              rating={4.5}
+              rating={company?.OTP}
               starRatedColor="orange"
               starDimension="10px"
               numberOfStars={5}
@@ -36,7 +37,7 @@ const Card02 = () => {
           <p>Negotiation</p>
           <div className="ratings">
             <StarRatings
-              rating={4.5}
+              rating={company?.Negotiation}
               starRatedColor="orange"
               starDimension="10px"
               numberOfStars={5}
@@ -49,7 +50,7 @@ const Card02 = () => {
           <p>Responsive</p>
           <div className="ratings">
             <StarRatings
-              rating={4.5}
+              rating={company?.Responsive}
               starRatedColor="orange"
               starDimension="10px"
               numberOfStars={5}
@@ -62,7 +63,7 @@ const Card02 = () => {
           <p>Ethical</p>
           <div className="ratings">
             <StarRatings
-              rating={4.5}
+              rating={company?.Ethical}
               starRatedColor="orange"
               starDimension="10px"
               numberOfStars={5}
@@ -75,7 +76,7 @@ const Card02 = () => {
       <div className="row4">
         <div className="ratings">
           <StarRatings
-            rating={4.5}
+            rating={(company?.OTP + company?.Negotiation + company?.Responsive + company?.Ethical) / 4}
             starRatedColor="orange"
             starDimension="28px"
             numberOfStars={5}

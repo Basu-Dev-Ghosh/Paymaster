@@ -1,7 +1,7 @@
 .page5-container {
   display: flex;
   flex-direction: column;
-  padding: 60px 150px;
+  padding: 70px 150px;
 }
 .page5-row1 {
   display: flex;
@@ -9,7 +9,7 @@
 }
 .page5-row1 p {
   font-family: "Nexa Light";
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(74, 73, 73);
 }
 .page5-button {
@@ -45,16 +45,16 @@
 }
 .text-row1 h1 {
   font-family: "Nexa Bold";
-  font-size: 34px;
+  font-size: 24px;
 }
 .text-row1 p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Causten-Regular";
   margin-left: 15px;
   margin-top: 10px;
 }
 .text-row2 p {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Causten-Regular";
   color: #2a2b55;
 }
@@ -92,16 +92,20 @@
 .page5-row2 .row2-buttons {
   width: 100%;
   display: flex;
-  padding: 20px 30px;
+  flex-wrap: wrap;
+  padding: 10px 30px;
   align-items: center;
 }
 .row2-buttons i {
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
 }
-.row2-buttons i:nth-child(2) {
+.row2-buttons label {
   margin-left: 30px;
-  font-size: 42px;
+  margin-top: 3px;
+}
+.row2-buttons label i {
+  font-size: 32px;
 }
 .page5-row2 {
   width: 100%;
@@ -140,7 +144,7 @@
     padding: 20px 40px;
   }
   .page5-row1 p {
-    font-size: 35px;
+    font-size: 27px;
   }
   .outer {
     flex-wrap: wrap;
@@ -183,10 +187,10 @@
   }
   .text-row1 h1 {
     font-family: "Nexa Bold";
-    font-size: 25px;
+    font-size: 20px;
   }
   .text-row1 p {
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Causten-Regular";
     margin-left: 5px;
     margin-top: 10px;
@@ -207,11 +211,11 @@
     width: 300px;
     border-radius: 25px;
     font-family: "Causten-Regular";
-    font-size: 19px;
+    font-size: 16px;
   }
   .page5-row2 .row2-buttons {
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 30px;
     align-items: center;
   }
   .submit-button {

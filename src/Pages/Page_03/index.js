@@ -8,7 +8,7 @@ const Index = () => {
     const navigate = useNavigate();
     return (
         <div className="page-02-container">
-            <div className="logo">
+            <div className="logo" onClick={(e) => navigate('/')}>
                 <img src={logo} alt="Logo" />
             </div>
             <div className="form">
