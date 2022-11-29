@@ -115,15 +115,18 @@ const Index = () => {
         }
       } catch (err) {
         setShowLoader(false);
-        toast.error(err.response.data.Messege, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          theme: "light",
-        });
+
+        setTimeout(() => {
+          toast.error(err.response.data.Messege, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          });
+        }, 100);
       }
     } else {
       toast.warning("Please add a review", {
