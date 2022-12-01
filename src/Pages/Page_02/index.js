@@ -87,9 +87,9 @@ const Index = () => {
             </div>
             <form className="row3" onSubmit={login}>
               <label htmlFor="email">Email Address</label>
-              <input type="text" name="Email" onChange={handleLogin} id="email" />
+              <input type="text" required name="Email" onChange={handleLogin} id="email" />
               <label htmlFor="password">Password</label>
-              <input type="password" name="Password" onChange={handleLogin} id="password" />
+              <input type="password" required name="Password" onChange={handleLogin} id="password" />
               <button type="submit" className="register-button">{buttonLoading !== "none" ? null : "Continue"} <div class="dots" style={{ display: buttonLoading }}></div></button>
             </form>
           </div>
