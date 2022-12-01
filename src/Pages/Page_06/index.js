@@ -9,10 +9,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { serverLink } from "../../App";
 import Loader from "../../Components/Loader/Loader";
+import Card03 from "../../Components/Card03/Card03";
+
 const Index = () => {
   const { id } = useParams();
   const [company, setCompany] = useState();
-  const [companies, setCompanies] = useState([]);
+  const [ratings, setRatings] = useState([]);
   const [showLoader, setShowLoader] = useState(false);
   const navigate = useNavigate();
   const getCompanyById = async () => {
@@ -38,25 +40,35 @@ const Index = () => {
       });
     }
   };
-  const getCompanies = async () => {
+
+  const getRatingsByCompanyId = async () => {
     try {
       setShowLoader(true);
-      const res = await axios.get(`${serverLink}/company`, {
+      const res = await axios.get(`${serverLink}/rating/${id}`, {
         withCredentials: true,
       });
       if (res.status === 202) {
-        let cmps = res.data.companies.filter((c) => {
-          return c._id !== id;
-        });
-        setCompanies(cmps);
+        setRatings(res.data.ratings);
         setShowLoader(false);
       }
-    } catch (err) {}
+    } catch (err) {
+      setShowLoader(false);
+      toast.error(err.data.Messege, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    }
   };
+
   useEffect(() => {
     setShowLoader(true);
-    getCompanies();
     getCompanyById();
+    getRatingsByCompanyId();
     setShowLoader(false);
   }, []);
 
@@ -74,7 +86,7 @@ const Index = () => {
                 <h1>{company?.CompanyName}</h1>
               </div>
               <div className="side-row2">
-                <h6>Lorem ipsum dolor sit amet, consectetur.</h6>
+                <h6>{company?.CompanyDescription}</h6>
               </div>
               <div className="side-row3">
                 <div className="side-row3-col1">
@@ -126,9 +138,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="side-row4">
-                <p>{company?.CompanyDescription}</p>
-              </div>
               <div className="side-row5">
                 <div className="stars">
                   <StarRatings
@@ -152,12 +161,6 @@ const Index = () => {
                 >
                   Rate
                 </button>
-                <button
-                  className="rate-button"
-                  onClick={(e) => navigate(`/page07/${id}`)}
-                >
-                  View Ratings
-                </button>
               </div>
             </div>
 
@@ -165,9 +168,13 @@ const Index = () => {
               <Loader />
             ) : (
               <div className="main-section">
-                {companies?.map((company) => {
-                  return <Card02 company={company} />;
-                })}
+                {ratings.length === 0 ? (
+                  <h3>No ratings available</h3>
+                ) : (
+                  ratings.map((rating, index) => {
+                    return <Card03 rating={rating} key={index} />;
+                  })
+                )}
               </div>
             )}
           </div>

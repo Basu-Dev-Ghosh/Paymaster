@@ -6,13 +6,13 @@
   align-items: center;
 }
 .page08-container h1 {
-  margin-left: 120px;
+  margin-left: 100px;
   font-family: "Nexa Light";
 }
 .page08-container .search-results .cards {
-  width: 90%;
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }

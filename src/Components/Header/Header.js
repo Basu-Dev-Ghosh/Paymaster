@@ -12,6 +12,7 @@ const Header = ({ setShowLoader, companies }) => {
   const [token, setToken] = useState(false);
   const [filterName, setFilterName] = useState('');
   const [filterLocation, setFilterLocation] = useState('');
+  const [locations, setLocations] = useState([]);
   const navigate = useNavigate();
   const show = (e) => {
     if (display === "none") {
@@ -30,11 +31,15 @@ const Header = ({ setShowLoader, companies }) => {
 
     }
   }
-
+  const gettingLocations = () => {
+    const unique = [...new Set(companies?.map((item) => item.CompanyLocation))];
+    setLocations(unique);
+  }
 
 
   useEffect(() => {
     isAuth();
+    gettingLocations();
     if (window.innerWidth <= 1000) {
       setDisplay("none");
     } else {
@@ -101,8 +106,8 @@ const Header = ({ setShowLoader, companies }) => {
           <input type="text" value={filterLocation} onChange={(e) => setFilterLocation(e.target.value)} placeholder="Location" list="cityname" />
           <datalist id="cityname">
             {
-              companies?.map((company) => {
-                return <option value={company.CompanyLocation} />
+              locations?.map((company) => {
+                return <option value={company} />
               })
             }
           </datalist>

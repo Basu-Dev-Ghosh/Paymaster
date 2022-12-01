@@ -1,6 +1,6 @@
 .card {
   width: 340px;
-  height: 420px;
+  height: auto;
   background-color: #fff;
   border-radius: 38px;
   box-shadow: rgba(17, 12, 46, 0.08) 0px 48px 20px 0px;
@@ -15,18 +15,19 @@
   padding: 20px 0;
 }
 .row1 .logo img {
-  width: 70px;
+  width: 60px;
 }
 .row1 .title h1 {
   font-family: "MyriadPro-Regular";
-  font-size: 29px;
+  font-size: 24px;
   margin-left: 10px;
+  text-transform: lowercase;
   color: #272b65;
 }
 .row2 {
   display: flex;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 10px;
   font-size: 20px;
   font-family: Causten-Regular;
 }
@@ -51,7 +52,7 @@
 @media only screen and (max-width: 600px) {
   .card {
     width: 170px;
-    height: auto;
+    height: 190px;
     background-color: #fff;
     border-radius: 18px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -65,22 +66,23 @@
     padding: 10px 0;
   }
   .row1 .logo img {
-    width: 30px;
+    width: 27px;
   }
   .row1 .title h1 {
     font-family: "MyriadPro-Regular";
-    font-size: 15px;
-    margin-left: 4px;
+    font-size: 12px;
+    margin-left: 3px;
     color: #272b65;
+    text-transform: lowercase;
   }
   .row2 {
     display: flex;
     justify-content: center;
-    font-size: 10px;
+    font-size: 8px;
     font-family: Causten-Regular;
   }
   .row3 {
-    padding: 0px 20px;
+    padding: 4px 10px;
   }
   .row3-row1 {
     display: flex;
@@ -89,19 +91,19 @@
     margin: 2px 0;
   }
   .row3-row1 p {
-    font-size: 8px;
+    font-size: 7px;
     font-family: Causten-Regular;
   }
   .ratings i {
-    font-size: 10px;
+    font-size: 7px;
   }
   .row4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
   }
   .row4 i {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
