@@ -6,7 +6,7 @@
   align-items: center;
 }
 .page08-container h1 {
-  margin-left: 100px;
+  margin-left: 10px;
   font-family: "Nexa Light";
 }
 .page08-container .search-results .cards {
@@ -17,7 +17,9 @@
   flex-wrap: wrap;
 }
 .notfound-text {
+  margin-top: 90px;
   display: flex;
+  height: 57vh;
   flex-direction: column;
 }
 .notfound-text h1 {

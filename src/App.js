@@ -10,8 +10,8 @@ import Page09 from "./Pages/Page_09";
 import Page10 from "./Pages/Page_10";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
-export const serverLink = 'https://touristo-server.onrender.com/api';
-// export const serverLink = 'http://localhost:4000/api';
+// export const serverLink = 'https://touristo-server.onrender.com/api';
+export const serverLink = 'http://localhost:4000/api';
 
 
 //<Route path="/" exact element={<PrivateRoutes Component={Page01} />} />
