@@ -10,7 +10,7 @@ import axios from "axios";
 import { serverLink } from "../../App";
 import Loader from "../../Components/Loader/Loader";
 import Card03 from "../../Components/Card03/Card03";
-
+import { CircularProgressbar } from "react-circular-progressbar";
 const Index = () => {
   const { id } = useParams();
   const [company, setCompany] = useState();
@@ -140,19 +140,40 @@ const Index = () => {
               </div>
               <div className="side-row5">
                 <div className="stars">
-                  <StarRatings
-                    rating={
-                      (company?.OTP +
+                  <CircularProgressbar
+                    value={
+                      ((company?.OTP +
                         company?.Negotiation +
                         company?.Responsive +
                         company?.Ethical) /
-                        4 || 0
+                        20) *
+                      100
                     }
-                    starRatedColor="gold"
-                    starDimension="34px"
-                    numberOfStars={5}
-                    starSpacing="4px"
-                    name="rating"
+                    text={`${
+                      ((company?.OTP +
+                        company?.Negotiation +
+                        company?.Responsive +
+                        company?.Ethical) /
+                        20) *
+                      100
+                    }%`}
+                    styles={{
+                      // Customize the root svg element
+                      root: { width: "22%" },
+                      path: {
+                        stroke: `rgba(255,160,0, ${
+                          ((company?.OTP +
+                            company?.Negotiation +
+                            company?.Responsive +
+                            company?.Ethical) /
+                            20) *
+                          100
+                        })`,
+                      },
+                      text: {
+                        fill: "#fff",
+                      },
+                    }}
                   />
                 </div>
                 <button

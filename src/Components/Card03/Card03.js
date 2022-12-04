@@ -4,6 +4,8 @@ import StarRatings from "react-star-ratings";
 import axios from "axios";
 import { serverLink } from "../../App";
 import Avatar from 'react-avatar';
+import { CircularProgressbar } from 'react-circular-progressbar';
+
 const Card03 = ({ rating }) => {
   const [user, setUser] = useState({});
   const getUserById = async () => {
@@ -56,14 +58,23 @@ const Card03 = ({ rating }) => {
       <div className="card03-col2">
         <div className="col2-row1">
           <div className="stars">
-            <StarRatings
-              rating={(rating.OTP + rating.Negotiation + rating.Responsive + rating.Ethical) / 4}
-              starRatedColor="orange"
-              starDimension="32px"
-              numberOfStars={5}
-              starSpacing="4px"
-              name="rating"
-            />
+            <CircularProgressbar value={((rating.OTP + rating.Negotiation + rating.Responsive + rating.Ethical) / 20) * 100} text={`${((rating.OTP + rating.Negotiation + rating.Responsive + rating.Ethical) / 20) * 100}%`} styles={{
+              // Customize the root svg element
+              root: { width: '18%', },
+              path: {
+                stroke: `rgba(255,160,0, ${((rating?.OTP +
+                  rating?.Negotiation +
+                  rating?.Responsive +
+                  rating?.Ethical) /
+                  20) *
+                  100
+                  })`,
+              },
+              text: {
+                fill: "#000",
+                fontSize: '26px',
+              },
+            }} />
           </div>
         </div>
 

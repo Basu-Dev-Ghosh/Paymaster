@@ -2,6 +2,9 @@ import React from "react";
 import "./Card.css";
 import StarRatings from "react-star-ratings";
 import { useNavigate } from "react-router-dom";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 const Card = ({ company }) => {
   const navigate = useNavigate();
   return (
@@ -74,18 +77,22 @@ const Card = ({ company }) => {
         </div>
         <div className="row4">
           <div className="ratings">
-            <StarRatings
-              rating={(company?.OTP +
-                company?.Negotiation +
-                company?.Responsive +
-                company?.Ethical) /
-                4 || 0}
-              starRatedColor="gold"
-              starDimension="22px"
-              numberOfStars={5}
-              starSpacing="0px"
-              name="rating"
-            />
+            <CircularProgressbar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} text={`${((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100}%`} styles={{
+              // Customize the root svg element
+              root: { width: '24%', },
+              path: {
+                stroke: `rgba(255,160,0, ${((company?.OTP +
+                  company?.Negotiation +
+                  company?.Responsive +
+                  company?.Ethical) /
+                  20) *
+                  100
+                  })`,
+              },
+              text: {
+                fill: "#000",
+              },
+            }} />
           </div>
         </div>
       </div>

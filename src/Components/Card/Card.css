@@ -49,6 +49,12 @@
   align-items: center;
   font-size: 28px;
 }
+.ratings {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-bottom: 10px;
+}
 @media only screen and (max-width: 600px) {
   .card {
     width: 170px;
@@ -105,5 +111,8 @@
   }
   .row4 i {
     font-size: 10px;
+  }
+  .ratings {
+    padding-bottom: 0px;
   }
 }
