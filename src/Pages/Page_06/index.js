@@ -66,10 +66,8 @@ const Index = () => {
   };
 
   useEffect(() => {
-    setShowLoader(true);
     getCompanyById();
     getRatingsByCompanyId();
-    setShowLoader(false);
   }, []);
 
   return (

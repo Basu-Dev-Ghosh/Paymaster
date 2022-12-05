@@ -34,14 +34,14 @@ const Card03 = ({ rating }) => {
     <div className="card03">
       <div className="card03-col1">
         <div className="col1-row1">
-          <Avatar name={user.FirstName} size="70" />
-          <h1>{`${user.FirstName} ${user.LastName}`}</h1>
-          <p>{user.CompanyName}</p>
+          <Avatar name={user?.FirstName} size="70" />
+          <h1>{`${user?.FirstName} ${user.LastName}`}</h1>
+          <p>{user?.CompanyName}</p>
         </div>
         <div className="col1-row2">
           <p>
             {
-              rating.Review
+              rating?.Review
             }
           </p>
         </div>
