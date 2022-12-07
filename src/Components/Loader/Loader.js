@@ -1,9 +1,13 @@
 import React from 'react'
 import './Loader.css'
+import HashLoader from "react-spinners/HashLoader";
 const Loader = () => {
     return (
         <div className='Loader-container'>
-            <div class="blob"></div>
+            <HashLoader
+                color="#DE3767"
+                size={80}
+            />
         </div>
     )
 }
