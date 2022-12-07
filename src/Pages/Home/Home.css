@@ -1,0 +1,187 @@
+.landing-container {
+  width: 100%;
+  height: 1000px;
+  background-color: #121f55;
+  position: relative;
+}
+.landing-text {
+  margin: 0 400px;
+  margin-top: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landing-text h1 {
+  font-size: 70px;
+  font-weight: lighter;
+  font-family: "Nexa Light";
+  color: #fff;
+}
+.landing-text h1 span {
+  font-family: "Nexa Bold";
+}
+.landing-text .landing-input {
+  margin-top: 40px;
+  padding: 32px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 70%;
+}
+.landing-input i {
+  transform: rotate(80deg);
+  font-size: 25px;
+  opacity: 0.5;
+}
+.landing-input input {
+  border: 0;
+  width: 100%;
+  font-family: "Nexa Light";
+  padding: 10px;
+  margin-left: 20px;
+  outline: none;
+  font-size: 22px;
+}
+.landing-text p {
+  width: 80%;
+  color: #fff;
+  font-family: "Nexa Light";
+  font-size: 23px;
+  text-align: center;
+  margin-top: 80px;
+  line-height: 30px;
+}
+
+.top-companies {
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  height: auto;
+  top: 940px;
+}
+.brand-info {
+  margin-top: 420px;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.brnad-info-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+.brnad-info-text p:nth-child(1) {
+  font-size: 60px;
+  font-family: "Nexa Light";
+  color: #121f55;
+  margin-left: 150px;
+}
+.brnad-info-text p:nth-child(2) {
+  font-size: 24px;
+  margin-top: 50px;
+  width: 647px;
+  font-family: "Nexa Light";
+  color: #707070;
+  line-height: 27px;
+}
+.brand-info-image {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .landing-container {
+    width: 100%;
+    height: 740px;
+    padding-top: 40px;
+    background-color: #121f55;
+  }
+  .landing-text {
+    margin: 0 40px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-text .landing-input {
+    margin-top: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+  }
+  .landing-input i {
+    transform: rotate(80deg);
+    font-size: 18px;
+    opacity: 0.5;
+  }
+  .landing-input input {
+    width: 100%;
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .landing-text p {
+    width: 100%;
+    color: #fff;
+    font-family: "Nexa Light";
+    font-size: 17px;
+    text-align: left;
+    margin-top: 60px;
+    line-height: 25px;
+  }
+  .top-companies {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    height: auto;
+    top: 680px;
+  }
+  .brand-info {
+    margin-top: 200px;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .brand-info-image img {
+    width: 400px;
+    height: 360px;
+  }
+  .brnad-info-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+  }
+  .brnad-info-text p:nth-child(1) {
+    font-size: 29px;
+    font-family: "Nexa Light";
+    color: #121f55;
+    margin-left: 15px;
+  }
+  .brnad-info-text p:nth-child(2) {
+    font-size: 16px;
+    margin-top: 20px;
+    width: 80%;
+    font-family: "Nexa Light";
+    color: #707070;
+    line-height: 20px;
+  }
+  .brand-info-image {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

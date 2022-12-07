@@ -1,21 +1,20 @@
 import React from "react";
-import footerlogo from "../../assets/logo2.png";
+import youtube from "../../assets/Path 20.svg";
+import facebook from "../../assets/Path 19.svg";
+import instagram from "../../assets/Group 62.svg";
+import twitter from "../../assets/Path 15.svg";
 import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-logo">
-        <img src={footerlogo} alt="Footer-Logo" />
-        <h3>paymaster</h3>
-      </div>
       <div className="copyright">
-        <p>Copyright &copy; 2008-2022, Paymaster, Inc.</p>
+        <p>Copyright © 2008-2022, Paymaster, Inc.</p>
       </div>
       <div className="links">
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
+        <img src={youtube} alt="Youtube icon" />
+        <img src={twitter} alt="Twitter icon" />
+        <img src={instagram} alt="Instagram icon" />
+        <img src={facebook} alt="Facebook icon" />
       </div>
     </div>
   );

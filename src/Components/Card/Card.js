@@ -1,9 +1,49 @@
 import React from "react";
 import "./Card.css";
 import StarRatings from "react-star-ratings";
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
+
+
+
+
+
 import { useNavigate } from "react-router-dom";
 import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import ProgressBar from "../ProgressBar/ProgressBar";
+// import { CircularProgressBar } from "@tomik23/react-circular-progress-bar";
+// import 'react-circular-progressbar/dist/styles.css';
+// import { DashedProgress } from "react-dashed-progress";
+const Star = (
+  <path d="M62 25.154H39.082L32 3l-7.082 22.154H2l18.541 13.693L13.459 61L32 47.309L50.541 61l-7.082-22.152L62 25.154z" />
+);
+
+const customStyles = {
+  itemShapes: Star,
+  boxBorderWidth: 0,
+
+  activeFillColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+  activeBoxColor: ['#DE3767', '#DE3767', '#DE3767', '#DE3767', '#DE3767'],
+  activeBoxBorderColor: ['#DE3767', '#DE3767', '#DE3767', '#DE3767', '#DE3767'],
+
+  inactiveFillColor: '#fff',
+  inactiveBoxColor: '#E3E3E3',
+  inactiveBoxBorderColor: '#fff',
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Card = ({ company }) => {
   const navigate = useNavigate();
@@ -16,83 +56,91 @@ const Card = ({ company }) => {
           </div>
           <div className="title">
             <h1>{company?.CompanyName}</h1>
+            <p>{company?.CompanyDescription}</p>
           </div>
-        </div>
-        <div className="row2">
-          <p>{company?.CompanyDescription}</p>
         </div>
         <div className="row3">
           <div className="row3-row1">
             <p>On time payement</p>
             <div className="ratings">
-              <StarRatings
-                rating={company?.OTP || 0}
-                starRatedColor="gold"
-                starDimension="12px"
-                numberOfStars={5}
-                starSpacing="0px"
-                name="rating"
+              <Rating
+                style={{ maxWidth: 100 }}
+                value={Math.floor(company.OTP)}
+                readOnly={true}
+                itemStyles={customStyles}
+                radius="full"
+                spaceBetween="small"
+                spaceInside="small"
               />
             </div>
           </div>
           <div className="row3-row1">
             <p>Negotiation</p>
             <div className="ratings">
-              <StarRatings
-                rating={company?.Negotiation || 0}
-                starRatedColor="gold"
-                starDimension="12px"
-                numberOfStars={5}
-                starSpacing="0px"
-                name="rating"
+              <Rating
+                style={{ maxWidth: 100 }}
+                value={Math.floor(company?.Negotiation) || 0}
+                readOnly={true}
+                itemStyles={customStyles}
+                radius="full"
+                spaceBetween="small"
+                spaceInside="small"
               />
             </div>
           </div>
           <div className="row3-row1">
             <p>Responsive</p>
             <div className="ratings">
-              <StarRatings
-                rating={company?.Responsive || 0}
-                starRatedColor="gold"
-                starDimension="12px"
-                numberOfStars={5}
-                starSpacing="0px"
-                name="rating"
+              <Rating
+                style={{ maxWidth: 100 }}
+                value={Math.floor(company?.Responsive) || 0}
+                readOnly={true}
+                itemStyles={customStyles}
+                radius="full"
+                spaceBetween="small"
+                spaceInside="small"
               />
             </div>
           </div>
           <div className="row3-row1">
             <p>Ethical</p>
             <div className="ratings">
-              <StarRatings
-                rating={company?.Ethical || 0}
-                starRatedColor="gold"
-                starDimension="12px"
-                numberOfStars={5}
-                starSpacing="0px"
-                name="rating"
+              <Rating
+                style={{ maxWidth: 100 }}
+                value={Math.floor(company?.Ethical) || 0}
+                readOnly={true}
+                itemStyles={customStyles}
+                radius="full"
+                spaceBetween="small"
+                spaceInside="small"
               />
             </div>
           </div>
         </div>
         <div className="row4">
           <div className="ratings">
-            <CircularProgressbar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} text={`${((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100}%`} styles={{
-              // Customize the root svg element
-              root: { width: '24%', },
-              path: {
-                stroke: `rgba(255,160,0, ${((company?.OTP +
-                  company?.Negotiation +
-                  company?.Responsive +
-                  company?.Ethical) /
-                  20) *
-                  100
-                  })`,
-              },
-              text: {
-                fill: "#000",
-              },
-            }} />
+            {// <CircularProgressbar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} text={`${((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100}%`}
+              //   styles={{
+              //     // Customize the root svg element
+              //     root: { width: '24%', },
+              //     path: {
+              //       stroke: `rgba(255,160,0, ${((company?.OTP +
+              //         company?.Negotiation +
+              //         company?.Responsive +
+              //         company?.Ethical) /
+              //         20) *
+              //         100
+              //         })`,
+              //     },
+              //     text: {
+              //       fill: "#000",
+              //     },
+              //   }} />
+            }
+            <ProgressBar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} />
+
+
+
           </div>
         </div>
       </div>

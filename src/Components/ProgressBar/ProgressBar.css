@@ -1,0 +1,37 @@
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+.circle .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 50%;
+  font-size: 1em;
+  font-weight: 300;
+  color: rgba(1, 1, 1, 0.75);
+}
+
+@media only screen and (max-width: 1000px) {
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+  .circle .inner {
+    width: 30px;
+    height: 30px;
+    font-size: 0.4em;
+  }
+}
