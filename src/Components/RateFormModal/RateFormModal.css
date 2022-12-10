@@ -1,0 +1,306 @@
+.rate-form-modal {
+  width: 1208px;
+  height: auto;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 25px #00000024;
+  border-radius: 49px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 77;
+  padding: 30px;
+}
+.rate-form-header {
+  display: flex;
+  align-items: center;
+}
+.rate-form-logo {
+  width: 110px;
+  height: 110px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.rate-form-logo img {
+  width: 70%;
+}
+.rate-form-logo-text {
+  margin-left: 20px;
+  font-family: "Nexa Light";
+}
+.rate-form-logo-text p:nth-child(1) {
+  font-family: "Nexa Bold";
+  font-size: 30px;
+}
+.rate-form-logo-text p:nth-child(2) {
+  font-size: 18px;
+  margin-top: 8px;
+}
+.rate-form-review {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.rate-form-input-text {
+  width: 832px;
+  height: 255px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+}
+.rate-form-input-text textarea {
+  border: 0;
+  width: 100%;
+  height: 60%;
+  background: transparent;
+  font-family: "Nexa Light";
+  font-size: 18px;
+}
+.rate-form-input-image {
+  width: 218px;
+  height: 218px;
+  /* UI Properties */
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: column;
+  background: #f5f7fe 0% 0% no-repeat padding-box;
+  border: 1px solid #c2c9e3;
+  border-radius: 13px;
+}
+.rate-form-input-image p {
+  font-family: "Nexa Light";
+  font-size: 20px;
+  text-align: center;
+  width: 70%;
+  color: #8a93af;
+  margin-top: 20px;
+}
+.rate-form-rating {
+  width: 1110px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+}
+.rate-form-ratings {
+  margin: 0 60px;
+  display: flex;
+  flex-direction: column;
+}
+.rate-form-ratings p {
+  color: #000;
+  font-family: "Nexa Light";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.rate-form-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  align-items: center;
+}
+.rate-form-recommended {
+  display: flex;
+  flex-direction: column;
+}
+.rate-form-recommended p {
+  font-size: 25px;
+  font-family: "Nexa Light";
+}
+.recommended-buttons {
+  margin-top: 17px;
+  display: flex;
+}
+.recommended-buttons button {
+  width: 88px;
+  height: 41px;
+  border: 0;
+  margin: 0 20px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 12px #38373729;
+  border-radius: 27px;
+  font-family: "Nexa Light";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.thumbsup:hover {
+  background-color: rgb(9, 87, 94);
+  color: #fff;
+}
+.thumbsdown:hover {
+  background-color: rgb(94, 18, 9);
+  color: #fff;
+}
+.rate-form-submit button {
+  width: 218px;
+  height: 60px;
+  /* UI Properties */
+  background: #121f55 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 12px #00000029;
+  border-radius: 27px;
+  color: #fff;
+  font-size: 22px;
+  font-family: "Nexa Light";
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.rate-form-submit button:hover {
+  background-color: #050f3a;
+}
+.cross {
+  position: absolute;
+  right: 50px;
+  color: #121f55;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .rate-form-modal {
+    width: 90%;
+    border-radius: 29px;
+    position: absolute;
+    top: 60%;
+    padding: 10px;
+  }
+  .rate-form-header {
+    display: flex;
+    align-items: center;
+  }
+  .rate-form-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .rate-form-logo img {
+    width: 70%;
+  }
+  .rate-form-logo-text {
+    margin-left: 10px;
+    font-family: "Nexa Light";
+  }
+  .rate-form-logo-text p:nth-child(1) {
+    font-family: "Nexa Bold";
+    font-size: 20px;
+  }
+  .rate-form-logo-text p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .rate-form-review {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rate-form-input-text {
+    width: 100%;
+    height: 165px;
+  }
+  .rate-form-input-text textarea {
+    font-size: 14px;
+  }
+  .rate-form-input-image {
+    width: 100%;
+    height: 60px;
+    margin-left: auto;
+    margin-top: 10px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rate-form-input-image img {
+    width: 30px;
+  }
+
+  .rate-form-input-image p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .rate-form-rating {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    /* UI Properties */
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px;
+  }
+  .rate-form-ratings {
+    margin: 0 0px;
+    display: flex;
+    padding: 7px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .rate-form-ratings p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .rate-form-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    align-items: center;
+  }
+  .rate-form-recommended {
+    display: flex;
+    flex-direction: column;
+  }
+  .rate-form-recommended p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .recommended-buttons {
+    margin-top: 17px;
+    display: flex;
+  }
+  .recommended-buttons button {
+    width: 98px;
+    height: 41px;
+    margin: 0 10px;
+    border-radius: 19px;
+    font-size: 13px;
+  }
+  .recommended-buttons button img {
+    width: 18px;
+  }
+
+  .rate-form-submit button {
+    width: 218px;
+    height: 50px;
+    margin-top: 24px;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+  .cross {
+    position: absolute;
+    right: 10px;
+    color: #121f55;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,144 @@
+.search-result-box {
+  width: 80%;
+  height: auto;
+  background-color: #f4f6fd;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+}
+.dropdown-div {
+  height: 50px;
+  border: 0;
+  width: 200px;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px #00000029;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-div .dropdown {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+  border: 0;
+  vertical-align: middle;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Nexa Bold";
+}
+.dropdown-div::after {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  content: "\2304";
+  font-size: 30px;
+  line-height: 23px;
+  padding-right: 12px;
+}
+
+.search-result-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef1ff !important;
+  height: 120px;
+  width: 100%;
+  padding: 30px;
+}
+.search-result-box-header p {
+  font-family: "Nexa Bold";
+  font-size: 35px;
+}
+.search-result-box-header p span {
+  font-size: 28px;
+  font-family: "Nexa Light";
+}
+.search-result-box-content {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.search-result-box-content h1 {
+  text-align: center;
+  font-family: "Nexa Light";
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .search-result-box {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .dropdown-div {
+    height: 40px;
+    border: 0;
+    width: 160px;
+    border-radius: 16px;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-end;
+    margin-left: 10px;
+  }
+  .dropdown-div .dropdown {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+    border: 0;
+    vertical-align: middle;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    font-size: 14px;
+    font-family: "Nexa Bold";
+  }
+  .dropdown-div::after {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    content: "\2304";
+    font-size: 25px;
+    line-height: 23px;
+    padding-right: 12px;
+  }
+
+  .search-result-box-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef1ff !important;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+  }
+  .search-result-box-header p {
+    font-family: "Nexa Bold";
+    font-size: 18px;
+  }
+  .search-result-box-header p span {
+    font-size: 14px;
+    font-family: "Nexa Light";
+  }
+  .search-result-box-content {
+    padding: 0px 0px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 100%;
+  }
+}

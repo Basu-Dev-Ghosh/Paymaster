@@ -11,8 +11,8 @@ import Loader from "../../Components/Loader/Loader";
 const Index = () => {
   const { id } = useParams();
   const [screenshots, setScreenShots] = useState([]);
-  const [showLoader, setShowLoader] = useState(false);
   const [review, setReview] = useState("");
+  const [showLoader, setShowLoader] = useState(false);
   const [company, setCompany] = useState();
   const navigate = useNavigate();
   const [rating, setRating] = useState({

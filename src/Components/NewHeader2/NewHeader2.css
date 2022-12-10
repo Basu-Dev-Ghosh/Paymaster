@@ -1,0 +1,21 @@
+.landing-input-2 {
+  margin-top: 0px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 25%;
+  margin-left: 400px;
+}
+@media only screen and (max-width: 1000px) {
+  .landing-input-2 {
+    width: 65%;
+    margin-left: 0px;
+    padding: 6px;
+    margin-top: 10px;
+  }
+  .landing-input-2 input {
+    font-size: 13px;
+  }
+}

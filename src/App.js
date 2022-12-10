@@ -9,14 +9,16 @@ import Page08 from "./Pages/Page_08";
 import Page09 from "./Pages/Page_09";
 import Page10 from "./Pages/Page_10";
 
-import ProgressBar from "./Components/ProgressBar/ProgressBar";
+import ProgressBar from "./Components/ProgressBarHigh/ProgressBar";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 import Signup from "./Pages/Signup/Signup";
 import Signup2 from "./Pages/Signup2/Signup2";
+import SearchResult from "./Pages/SearchResult/SearchResult";
+import Company from "./Pages/Company/Company";
 
-export const serverLink = 'https://paymaster-backend.onrender.com/api';
-// export const serverLink = 'http://localhost:4000/api';
+// export const serverLink = 'https://paymaster-backend.onrender.com/api';
+export const serverLink = 'http://localhost:4000/api';
 
 
 //<Route path="/" exact element={<PrivateRoutes Component={Page01} />} />
@@ -28,6 +30,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup2" element={<Signup2 />} />
+        <Route path="/search-result/:searchinput" element={<SearchResult />} />
+        <Route path="/company/:id" element={<Company />} />
         <Route path="/page05/:id" exact element={<PrivateRoutes Component={Page05} />} />
         <Route path="/page06/:id" element={<Page06 />} />
         <Route path="/page07/:id" element={<Page07 />} />

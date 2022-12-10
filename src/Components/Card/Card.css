@@ -1,5 +1,5 @@
 .card {
-  width: 360px;
+  width: 330px;
   height: auto;
   background-color: #fff;
   border-radius: 10px;
@@ -61,7 +61,7 @@
 }
 @media only screen and (max-width: 600px) {
   .card {
-    width: 170px;
+    width: 100%;
     height: auto;
     background-color: #fff;
     border-radius: 12px;

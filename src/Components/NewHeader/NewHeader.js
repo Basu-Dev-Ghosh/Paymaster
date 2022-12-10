@@ -69,7 +69,7 @@ const NewHeader = ({ setShowLoader }) => {
         </div>
         {token ? (
           <a onClick={logout}>
-            <i class="fa-solid fa-right-from-bracket"></i> Logout
+            <i class="fa-solid fa-right-from-bracket"></i> Sign out
           </a>
         ) : (
           <a onClick={(e) => navigate('/login')}>

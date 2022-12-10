@@ -1,0 +1,80 @@
+.review-box {
+  margin-top: 200px;
+  width: 88%;
+}
+.review-total-text p:nth-child(1) {
+  font-family: "Nexa Bold";
+  font-size: 25px;
+  opacity: 0.3;
+  margin-bottom: 8px;
+}
+.review-total-text p:nth-child(2) span {
+  font-family: "Nexa Light";
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.review-box-header {
+  height: auto;
+}
+.dropdowns {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+.review-box-content {
+  display: flex !important;
+  width: 100%;
+}
+.review-box-content .long-cards {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+}
+.review-box-content .short-cards {
+  align-items: center;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  padding: 2px 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .review-box {
+    margin-top: 30px;
+    width: 90%;
+  }
+  .review-total-text p:nth-child(1) {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .review-total-text p:nth-child(2) span {
+    font-family: "Nexa Light";
+    font-size: 18px;
+    margin-left: 0px;
+  }
+  .review-box-header {
+    height: auto;
+    padding: 20px;
+  }
+  .dropdowns {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .review-box-content {
+    display: flex !important;
+    width: 100%;
+  }
+  .review-box-content .long-cards {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .review-box-content .short-cards {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 0px;
+  }
+}

@@ -9,6 +9,8 @@ import { serverLink } from "../../App";
 import Loader from "../../Components/Loader/Loader";
 import group from "../../assets/Group 20.png";
 import Footer from "../../Components/Footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -31,7 +33,9 @@ const responsive = {
 
 const Home = () => {
   const [showLoader, setShowLoader] = useState(false);
+  const [searchinput, setSearchinput] = useState("");
   const [companies, setCompanies] = useState([]);
+  const navigate = useNavigate();
   const getCompanies = async () => {
     try {
       setShowLoader(true);
@@ -51,6 +55,26 @@ const Home = () => {
     getCompanies();
   }, []);
 
+  const search = (e) => {
+    e.preventDefault();
+    if (searchinput === "") {
+      toast.error("Please Input something", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    }
+    else {
+      navigate(`/search-result/${searchinput}`)
+    }
+  }
+
+
+
   return (
     <div>
       {showLoader ? (
@@ -63,13 +87,14 @@ const Home = () => {
               <h1>
                 Who pays you <span>on time?</span>
               </h1>
-              <div className="landing-input">
+              <form className="landing-input" onSubmit={search}>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
                   type="text"
                   placeholder="Search Company, Brand, Location"
+                  onChange={(e) => setSearchinput(e.target.value)}
                 />
-              </div>
+              </form>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
                 saepe quam ea est itaque doloremque minus quo ipsum nulla
@@ -108,6 +133,7 @@ const Home = () => {
             </div>
           </div>
           <Footer />
+          <ToastContainer />
         </>
       )}
     </div>

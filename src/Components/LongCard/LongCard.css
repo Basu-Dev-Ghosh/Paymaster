@@ -1,0 +1,377 @@
+.long-card {
+  width: 1085px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0px 3px 20px #00000012;
+  border-radius: 12px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  display: flex;
+  position: relative;
+  margin: 30px 0;
+}
+.long-card-col1 {
+  width: 34%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.long-card-col1 .user-info {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+}
+.user-info-text {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.user-info-text p:nth-child(1) {
+  font-family: "Nexa Bold";
+  font-size: 22px;
+}
+.user-info-text p:nth-child(2) {
+  font-family: "Nexa Light";
+  font-size: 16px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+.rating-wheel {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider1 {
+  width: 400px;
+  height: 2px;
+  background-color: #00000012;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 70px;
+  top: 220px;
+}
+.long-card-col2 {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 100%;
+}
+.long-card-col2-row1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.recommended {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.recommended-icon {
+  width: 75px;
+  height: 75px;
+  /* UI Properties */
+  background: #17bf91 0% 0% no-repeat padding-box;
+  border-radius: 27px;
+  display: grid;
+  place-items: center;
+}
+.recommended-icon img {
+  width: 50%;
+}
+.recommended-text {
+  margin-left: 9px;
+}
+.recommended-text p:nth-child(1) {
+  font-family: "Nexa Bold";
+  font-size: 32px;
+  color: #2a2a2a;
+}
+.recommended-text p:nth-child(2) {
+  font-family: "Nexa Light";
+  font-size: 15px;
+  margin-top: 4px;
+  color: #747474;
+}
+.recommended-screenshots {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.recommended-screenshots img {
+  margin: 0 5px;
+  width: 60px;
+}
+.recommended-screenshots .see-more-ss {
+  width: 78px;
+  height: 78px;
+  /* UI Properties */
+  background: #f5f7fe 0% 0% no-repeat padding-box;
+  border: 1px solid #c2c9e3;
+  border-radius: 13px;
+  color: #8a93af;
+  font-family: "Nexa Bold";
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  margin: 0 5px;
+}
+.review-text {
+  margin-top: 15px;
+  width: 70%;
+}
+.review-text p {
+  font-family: "Nexa Light";
+  color: #3d3d3d;
+  font-size: 18px;
+}
+.divider2 {
+  width: 700px;
+  height: 2px;
+  background-color: #00000012;
+  position: absolute;
+  right: 100px;
+  top: 180px;
+  display: none;
+}
+.long-card-col2-row2 {
+  margin-top: 70px;
+}
+.helpful-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.helpful-buttons p {
+  color: #3d3d3d;
+  font-family: "Nexa Light";
+  font-size: 18px;
+}
+.helpful-buttons button {
+  margin: 0 10px;
+  width: 98px;
+  height: 41px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 27px;
+  font-family: "Nexa Bold";
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.helpful-buttons .yes-button:hover {
+  background-color: #17bf91;
+  color: #fff;
+}
+.helpful-buttons .no-button:hover {
+  background-color: #d22424 !important;
+  color: #fff;
+}
+.helpful-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.helpful-info p span {
+  font-family: "Nexa Bold";
+  font-size: 18px;
+}
+.helpful-info p {
+  font-family: "Nexa Light";
+  font-size: 18px;
+  margin: 3px 0;
+}
+.divider3 {
+  width: 700px;
+  height: 2px;
+  background-color: #00000012;
+  position: absolute;
+  right: 100px;
+  top: 350px;
+}
+.show-more-icon {
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  bottom: 10px;
+  z-index: 111;
+  right: 70px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.show-more-icon i {
+  font-size: 25px;
+}
+.long-card-col2-row3 .rating-heading {
+  font-family: "Nexa Bold";
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.individual-ratings {
+  width: 70%;
+}
+@media only screen and (max-width: 1000px) {
+  .long-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+    padding: 10px;
+  }
+  .long-card-col1 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .long-card-col1 .user-info {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .user-info-text {
+    margin-left: 10px;
+  }
+  .user-info-text p:nth-child(1) {
+    font-family: "Nexa Bold";
+    font-size: 18px;
+  }
+  .user-info-text p:nth-child(2) {
+    font-family: "Nexa Light";
+    font-size: 14px;
+    margin-top: 3px;
+    opacity: 0.8;
+  }
+  .rating-wheel {
+    height: 100%;
+    margin-left: auto;
+  }
+  .divider1 {
+    width: 70px;
+    height: 2px;
+    background-color: #00000012;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 198px;
+    top: 50px;
+  }
+  .long-card-col2 {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .recommended {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .recommended-icon {
+    width: 45px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .recommended-icon img {
+    width: 25%;
+  }
+  .recommended-text {
+    margin-left: 4px;
+  }
+  .recommended-text p:nth-child(1) {
+    font-size: 17px;
+  }
+  .recommended-text p:nth-child(2) {
+    font-size: 10px;
+  }
+  .recommended-screenshots {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .recommended-screenshots img {
+    margin: 0 5px;
+    width: 30px;
+  }
+  .recommended-screenshots .see-more-ss {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-left: 7px;
+  }
+  .review-text {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .review-text p {
+    font-family: "Nexa Light";
+    color: #3d3d3d;
+    font-size: 14px;
+  }
+  .divider2 {
+    width: 900px;
+    height: 2px;
+    background-color: #00000012;
+    position: absolute;
+    right: 10px;
+    top: 260px;
+  }
+  .long-card-col2-row2 {
+    margin-top: 40px;
+  }
+  .helpful-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .helpful-buttons p {
+    color: #3d3d3d;
+    font-family: "Nexa Light";
+    font-size: 14px;
+  }
+  .helpful-buttons button {
+    margin: 0 6px;
+    width: 58px;
+    height: 28px;
+    border-radius: 22px;
+    font-size: 12px;
+  }
+  .helpful-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .helpful-info p span {
+    font-family: "Nexa Bold";
+    font-size: 12px;
+  }
+  .helpful-info p {
+    font-family: "Nexa Light";
+    font-size: 12px;
+    margin: 3px 0;
+  }
+  .divider3 {
+    right: 10px;
+    top: 370px;
+  }
+  .show-more-icon {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .show-more-icon i {
+    font-size: 20px;
+  }
+  .long-card-col2-row3 .rating-heading {
+    font-family: "Nexa Bold";
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .individual-ratings {
+    width: 60%;
+  }
+}

@@ -11,6 +11,7 @@
   margin-left: 180px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .new-header-logo img {
   width: 50px;
@@ -39,6 +40,7 @@
 @media only screen and (max-width: 1000px) {
   .new-header {
     padding: 30px 20px;
+    flex-wrap: wrap;
   }
   .new-header-logo {
     margin-left: 0px;

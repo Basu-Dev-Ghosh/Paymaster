@@ -1,0 +1,82 @@
+.warning-modal {
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 321px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 25px #00000024;
+  border-radius: 39px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 77;
+}
+.warning-modal i {
+  font-size: 40px;
+  margin: 40px 45%;
+  color: rgb(175, 14, 94);
+}
+.warning-modal .warning-text {
+  width: 100%;
+  text-align: center;
+  font-family: "Nexa Light";
+  font-size: 25px;
+}
+.warning-modal .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.warning-modal .buttons button {
+  padding: 13px;
+  width: 30%;
+  margin: 0 20px;
+  border: 0;
+  box-shadow: 0px 0px 12px #00000029;
+  border-radius: 27px;
+  font-size: 17px;
+  font-family: "Nexa Bold";
+  background-color: rgb(42, 115, 42);
+  color: #fff;
+  cursor: pointer;
+}
+.buttons button:nth-child(1) {
+  background-color: rgb(162, 50, 30);
+}
+@media only screen and (max-width: 1000px) {
+  .warning-modal {
+    width: 278px;
+    height: 171px;
+  }
+  .warning-modal i {
+    font-size: 26px;
+    margin: 14px 46%;
+  }
+  .warning-modal .warning-text {
+    width: 100%;
+    font-size: 18px;
+  }
+  .warning-modal .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+  }
+  .warning-modal .buttons button {
+    padding: 10px;
+    width: 40%;
+    margin: 0 10px;
+    font-size: 14px;
+    border-radius: 17px;
+  }
+  .buttons button:nth-child(1) {
+    background-color: rgb(162, 50, 30);
+  }
+}

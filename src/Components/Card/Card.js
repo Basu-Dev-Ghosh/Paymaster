@@ -1,6 +1,5 @@
 import React from "react";
 import "./Card.css";
-import StarRatings from "react-star-ratings";
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
@@ -15,11 +14,11 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 // import { CircularProgressBar } from "@tomik23/react-circular-progress-bar";
 // import 'react-circular-progressbar/dist/styles.css';
 // import { DashedProgress } from "react-dashed-progress";
-const Star = (
+export const Star = (
   <path d="M62 25.154H39.082L32 3l-7.082 22.154H2l18.541 13.693L13.459 61L32 47.309L50.541 61l-7.082-22.152L62 25.154z" />
 );
 
-const customStyles = {
+export const customStyles = {
   itemShapes: Star,
   boxBorderWidth: 0,
 
@@ -34,22 +33,11 @@ const customStyles = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 const Card = ({ company }) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="card" onClick={(e) => navigate(`/page06/${company._id}`)}>
+      <div className="card" onClick={(e) => navigate(`/company/${company._id}`)}>
         <div className="row1">
           <div className="logo">
             <img src={company?.CompanyLogo} alt="AppleLogo" />
@@ -119,24 +107,7 @@ const Card = ({ company }) => {
         </div>
         <div className="row4">
           <div className="ratings">
-            {// <CircularProgressbar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} text={`${((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100}%`}
-              //   styles={{
-              //     // Customize the root svg element
-              //     root: { width: '24%', },
-              //     path: {
-              //       stroke: `rgba(255,160,0, ${((company?.OTP +
-              //         company?.Negotiation +
-              //         company?.Responsive +
-              //         company?.Ethical) /
-              //         20) *
-              //         100
-              //         })`,
-              //     },
-              //     text: {
-              //       fill: "#000",
-              //     },
-              //   }} />
-            }
+
             <ProgressBar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} />
 
 
