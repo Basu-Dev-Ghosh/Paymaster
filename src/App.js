@@ -17,8 +17,8 @@ import Signup2 from "./Pages/Signup2/Signup2";
 import SearchResult from "./Pages/SearchResult/SearchResult";
 import Company from "./Pages/Company/Company";
 
-// export const serverLink = 'https://paymaster-backend.onrender.com/api';
-export const serverLink = 'http://localhost:4000/api';
+export const serverLink = 'https://paymaster-backend.onrender.com/api';
+// export const serverLink = 'http://localhost:4000/api';
 
 
 //<Route path="/" exact element={<PrivateRoutes Component={Page01} />} />
