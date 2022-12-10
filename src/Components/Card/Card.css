@@ -1,13 +1,13 @@
 .card {
-  width: 330px;
+  width: 380px;
   height: auto;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: rgba(17, 12, 46, 0.08) 0px 48px 20px 0px;
   overflow-x: hidden;
-  margin: 10px;
+  margin-left: 6px;
   cursor: pointer;
-  padding: 30px;
+  padding: 10px;
 }
 .row1 {
   display: flex;
@@ -61,10 +61,10 @@
 }
 @media only screen and (max-width: 600px) {
   .card {
-    width: 100%;
+    width: 95%;
     height: auto;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     overflow-x: hidden;
     padding: 7px;
@@ -74,10 +74,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 6px 10px;
+    padding: 2px 10px;
   }
   .row1 .logo img {
-    width: 30px;
+    width: 40px;
   }
   .row1 .title h1 {
     font-family: "MyriadPro-Regular";
@@ -90,7 +90,8 @@
     font-size: 8px;
   }
   .row3 {
-    padding: 0px 14px;
+    width: 70%;
+    padding: 0px 10px;
   }
   .row3-row1 {
     display: flex;
@@ -110,7 +111,7 @@
     justify-content: flex-end;
     position: absolute;
     top: 10px;
-    right: 5px;
+    right: 10px;
   }
   .ratings {
     padding-bottom: 0px;

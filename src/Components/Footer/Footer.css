@@ -33,7 +33,7 @@
 
 @media only screen and (max-width: 1000px) {
   .footer {
-    padding: 0 !important;
+    padding: 20px !important;
     margin-top: 140px !important;
   }
   .footer-logo {
@@ -46,10 +46,16 @@
     width: 40px;
   }
   .links {
-    margin: 10px 0;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-  .links i {
-    font-size: 17px;
+  .links img {
+    width: 16px;
+  }
+  .links img:nth-child(4) {
+    width: 10px;
   }
   .copyright {
     margin: 9px 0;
