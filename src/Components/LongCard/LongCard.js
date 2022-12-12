@@ -65,7 +65,7 @@ const LongCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
         })
         if (res.status === 202) {
 
-          setNewRatingLikes([...newRatingLikes, user._id])
+          setNewRatingLikes([...newRatingLikes, user?._id])
 
         }
       } catch (err) {
@@ -84,7 +84,7 @@ const LongCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
         })
         if (res.status === 202) {
           console.log(res.data);
-          setNewRatingDisLikes([...newRatingDisLikes, user._id])
+          setNewRatingDisLikes([...newRatingDisLikes, user?._id])
         }
       } catch (err) {
         toast.warning("Rating Dislike failed")

@@ -45,7 +45,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
         })
         if (res.status === 202) {
 
-          setNewRatingLikes([...newRatingLikes, user._id])
+          setNewRatingLikes([...newRatingLikes, user?._id])
 
         }
       } catch (err) {
@@ -64,7 +64,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
           withCredentials: true,
         })
         if (res.status === 202) {
-          setNewRatingDisLikes([...newRatingDisLikes, user._id])
+          setNewRatingDisLikes([...newRatingDisLikes, user?._id])
         }
       } catch (err) {
         toast.warning("Rating Dislike failed")
