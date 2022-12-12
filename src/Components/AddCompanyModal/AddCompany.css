@@ -1,0 +1,64 @@
+.add-company-form-logo {
+  cursor: pointer;
+}
+.company-name-input {
+  height: 60px;
+  margin-left: 30px;
+  width: 300px;
+}
+.company-name-input input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: transparent;
+  font-family: "Nexa Light";
+  font-size: 16px;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+}
+.rate-form-input-text-add-company {
+  width: 100%;
+  height: 255px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.rate-form-input-text-add-company textarea {
+  border: 0;
+  width: 100%;
+  height: 80%;
+  background: transparent;
+  font-family: "Nexa Light";
+  font-size: 18px;
+}
+.rate-form-header-add-company {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .company-name-input {
+    margin-top: 10px;
+  }
+  .rate-form-header-add-company {
+    flex-direction: column;
+  }
+  .rate-form-input-text-add-company {
+    margin-left: 30px;
+    height: 150px;
+    width: 300px;
+  }
+  .company-name-input input {
+    font-size: 14px;
+  }
+  .rate-form-input-text-add-company textarea {
+    font-size: 14px;
+  }
+}

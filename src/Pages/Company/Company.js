@@ -13,6 +13,7 @@ import Review from "../../Components/Review/Review";
 import Footer from "../../Components/Footer/Footer";
 import WarningModal from "../../Components/WarningModal/WarningModal";
 import RateFormModal from "../../Components/RateFormModal/RateFormModal";
+import ScreenShot from "../../Components/ScreenShotSliderModal/ScreenShot";
 
 const Company = () => {
   const { id } = useParams();
@@ -67,7 +68,7 @@ const Company = () => {
         withCredentials: true,
       });
       if (res.status === 202) {
-        setRatings(res.data.ratings);
+        setRatings(res.data.ratings.reverse());
         setShowLoader(false);
       }
     } catch (err) {
@@ -115,6 +116,11 @@ const Company = () => {
 
 
 
+
+
+
+
+
   useEffect(() => {
     getCompanyById();
     getRatingsByCompanyId();
@@ -139,6 +145,7 @@ const Company = () => {
         setShowRateFormModal={setShowRateFormModal}
         company={company}
       />
+
       {showLoader ? (
         <Loader />
       ) : (
@@ -162,6 +169,7 @@ const Company = () => {
                 </div>
                 <div className="info-text">
                   <p>{capitalize(company?.CompanyName)}</p>
+                  <a href={company?.CompanyUrl} target='_blank'>{company?.CompanyUrl}</a>
                   <p>{company?.CompanyDescription}</p>
                 </div>
               </div>
@@ -237,7 +245,7 @@ const Company = () => {
               />
             </div>{" "}
           </div>
-          <Review ratings={ratings} />
+          <Review ratings={ratings} isLoggedin={isLoggedin} setShowWarningPopup={setShowWarningPopup} user={user} />
           <Footer />
         </div>
       )}

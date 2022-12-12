@@ -10,10 +10,10 @@
 }
 @media only screen and (max-width: 1000px) {
   .landing-input-2 {
-    width: 65%;
+    width: 100%;
     margin-left: 0px;
     padding: 6px;
-    margin-top: 10px;
+    margin: 20px 0;
   }
   .landing-input-2 input {
     font-size: 13px;

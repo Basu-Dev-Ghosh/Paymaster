@@ -1,6 +1,7 @@
 .progress {
   width: 100px;
   height: 100px;
+  font-family: "Nexa Light";
 }
 
 @media only screen and (max-width: 1000px) {

@@ -37,6 +37,20 @@
   margin-right: 15px;
   font-size: 18px;
 }
+
+.user-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  margin-left: auto;
+  margin-right: 50px;
+  place-items: center;
+  background-color: #fff;
+}
+.user-icon i {
+  font-size: 26px;
+}
 @media only screen and (max-width: 1000px) {
   .new-header {
     padding: 30px 20px;
@@ -44,6 +58,14 @@
   }
   .new-header-logo {
     margin-left: 0px;
+  }
+  .user-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 14px;
+  }
+  .user-icon i {
+    font-size: 20px;
   }
   .new-header-logo img {
     width: 30px;

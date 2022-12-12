@@ -100,9 +100,14 @@ const NewHeader2 = ({ setShowLoader, setIsLoggedin, setUser }) => {
                     />
                 </form>
                 {token ? (
-                    <a onClick={logout}>
-                        <i class="fa-solid fa-right-from-bracket"></i> Sign out
-                    </a>
+                    <>
+                        <div className="user-icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <a onClick={logout}>
+                            <i class="fa-solid fa-right-from-bracket"></i> Sign out
+                        </a>
+                    </>
                 ) : (
                     <a onClick={(e) => navigate('/login')}>
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>Login

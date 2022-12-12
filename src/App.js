@@ -1,7 +1,5 @@
 import Home from "./Pages/Home/Home";
-// import Page02 from "./Pages/Page_02";
 import Login from "./Pages/Login/Login";
-
 import Page05 from "./Pages/Page_05";
 import Page06 from "./Pages/Page_06";
 import Page07 from "./Pages/Page_07";
@@ -9,7 +7,6 @@ import Page08 from "./Pages/Page_08";
 import Page09 from "./Pages/Page_09";
 import Page10 from "./Pages/Page_10";
 
-import ProgressBar from "./Components/ProgressBarHigh/ProgressBar";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 import Signup from "./Pages/Signup/Signup";

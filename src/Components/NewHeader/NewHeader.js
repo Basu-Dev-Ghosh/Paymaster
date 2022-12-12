@@ -12,19 +12,21 @@ const NewHeader = ({ setShowLoader }) => {
 
   const isAuth = async () => {
     try {
-      const res = await axios.get(`${serverLink}/auth/isauth`, { withCredentials: true })
+      const res = await axios.get(`${serverLink}/auth/isauth`, {
+        withCredentials: true,
+      });
       if (res.status === 200) {
         setToken(true);
       }
-    } catch (err) {
-
-    }
-  }
+    } catch (err) {}
+  };
 
   const logout = async () => {
     try {
       setShowLoader(true);
-      const res = await axios.get(`${serverLink}/auth/logout`, { withCredentials: true });
+      const res = await axios.get(`${serverLink}/auth/logout`, {
+        withCredentials: true,
+      });
       if (res.status === 204) {
         toast.success(res.data.Messege, {
           position: "top-center",
@@ -36,11 +38,10 @@ const NewHeader = ({ setShowLoader }) => {
           theme: "light",
         });
         setTimeout(() => {
-          navigate('/login')
+          navigate("/login");
         }, 2100);
       }
-    }
-    catch (err) {
+    } catch (err) {
       toast.error(err.data.Messege, {
         position: "top-center",
         autoClose: 3000,
@@ -51,10 +52,7 @@ const NewHeader = ({ setShowLoader }) => {
         theme: "light",
       });
     }
-
-  }
-
-
+  };
 
   useEffect(() => {
     isAuth();
@@ -68,11 +66,16 @@ const NewHeader = ({ setShowLoader }) => {
           <h3>paymaster</h3>
         </div>
         {token ? (
-          <a onClick={logout}>
-            <i class="fa-solid fa-right-from-bracket"></i> Sign out
-          </a>
+          <>
+            <div className="user-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <a onClick={logout}>
+              <i class="fa-solid fa-right-from-bracket"></i> Sign out
+            </a>
+          </>
         ) : (
-          <a onClick={(e) => navigate('/login')}>
+          <a onClick={(e) => navigate("/login")}>
             <i class="fa-solid fa-arrow-right-to-bracket"></i>Login
           </a>
         )}

@@ -3,7 +3,7 @@ import LongCard from "../LongCard/LongCard";
 import ShortCard from "../ShortCard/ShortCard";
 import "./Review.css";
 
-const Review = ({ ratings }) => {
+const Review = ({ ratings, isLoggedin, setShowWarningPopup, user }) => {
   const [rating1, setRating1] = useState([]);
   const [rating2, setRating2] = useState([]);
 
@@ -18,7 +18,6 @@ const Review = ({ ratings }) => {
       setRating1(ratings);
     }
   }, [ratings]);
-  console.log(rating1, rating2);
   return (
     <div className="search-result-box review-box">
       <div className="search-result-box-header review-box-header">
@@ -59,13 +58,13 @@ const Review = ({ ratings }) => {
         ) : (
           <>
             <div className="long-cards">
-              {rating1?.map((rating) => {
-                return <LongCard rating={rating} />;
+              {rating1?.map((rating, index) => {
+                return <LongCard rating={rating} key={index} isLoggedin={isLoggedin} setShowWarningPopup={setShowWarningPopup} user={user} />;
               })}
             </div>
             <div className="short-cards">
-              {rating2?.map((rating) => {
-                return <ShortCard rating={rating} />;
+              {rating2?.map((rating, index) => {
+                return <ShortCard rating={rating} key={index} isLoggedin={isLoggedin} setShowWarningPopup={setShowWarningPopup} user={user} />;
               })}
             </div>
           </>

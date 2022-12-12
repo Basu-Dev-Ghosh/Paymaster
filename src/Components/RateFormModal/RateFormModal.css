@@ -4,13 +4,13 @@
   /* UI Properties */
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 25px #00000024;
-  border-radius: 49px;
-  position: absolute;
+  border-radius: 29px;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 77;
-  padding: 30px;
+  padding: 20px;
 }
 .rate-form-header {
   display: flex;
@@ -167,7 +167,7 @@
 }
 .cross {
   position: absolute;
-  right: 50px;
+  right: 10px;
   color: #121f55;
   font-size: 30px;
   cursor: pointer;
@@ -175,19 +175,22 @@
 
 @media only screen and (max-width: 1000px) {
   .rate-form-modal {
-    width: 90%;
-    border-radius: 29px;
+    width: 100%;
+    border-radius: 20px;
     position: absolute;
-    top: 60%;
-    padding: 10px;
+    top: 50%;
+    padding: 20px;
   }
   .rate-form-header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .rate-form-logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    align-self: flex-start;
   }
   .rate-form-logo img {
     width: 70%;
@@ -299,6 +302,7 @@
   .cross {
     position: absolute;
     right: 10px;
+    top: 10px;
     color: #121f55;
     font-size: 30px;
     cursor: pointer;

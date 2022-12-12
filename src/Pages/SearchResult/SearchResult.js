@@ -7,9 +7,11 @@ import Card from "../../Components/Card/Card";
 import { serverLink } from "../../App";
 import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
+import AddCompany from "../../Components/AddCompanyModal/AddCompany";
 
 const SearchResult = () => {
   const [filter, setFilter] = useState("");
+  const [display, setDisplay] = useState(false);
   const { searchinput } = useParams();
   const [companies, setCompanies] = useState([]);
   const [companies2, setCompanies2] = useState([]);
@@ -72,38 +74,50 @@ const SearchResult = () => {
 
   useEffect(() => {
     getCompaniesByName();
+    return () => {
+      setDisplay(false);
+    };
   }, [searchinput]);
   return (
     <>
-      <NewHeader2 />
-      <div className="search-result-box">
-        <div className="search-result-box-header">
-          <p>
-            Search Results for {searchinput}{" "}
-            <span>{`(${companies.length} Results)`}</span>
-          </p>
-          <div className="dropdown-div">
-            <select className="dropdown" onChange={searchWithFilter}>
-              <option value="" disabled selected hidden>
-                Rating Range
-              </option>
-              <option value="75-100">75-100%</option>
-              <option value="50-75">50-75%</option>
-              <option value="25-50">25-50%</option>
-              <option value="0-25">0-25%</option>
-            </select>
+      <AddCompany display={display} setDisplay={setDisplay} />
+      <div style={display ? { filter: "blur(4px" } : { filter: "blur(0px)" }}>
+        <NewHeader2 />
+        <div className="search-result-box">
+          <div className="search-result-box-header">
+            <p>
+              Search Results for {searchinput}{" "}
+              <span>{`(${companies.length} Results)`}</span>
+            </p>
+            <div className="dropdown-div">
+              <select className="dropdown" onChange={searchWithFilter}>
+                <option value="" disabled selected hidden>
+                  Rating Range
+                </option>
+                <option value="75-100">75-100%</option>
+                <option value="50-75">50-75%</option>
+                <option value="25-50">25-50%</option>
+                <option value="0-25">0-25%</option>
+              </select>
+            </div>
+          </div>
+          <div className="search-result-box-content">
+            {companies.length === 0 ? (
+              <div className="Add-company-button">
+                <h1>No results found</h1>
+                <button onClick={(e) => setDisplay(true)}>
+                  <i className="fa-solid fa-plus"></i> Add a new company
+                </button>
+              </div>
+            ) : (
+              companies.map((company) => {
+                return <Card company={company} />;
+              })
+            )}
           </div>
         </div>
-        <div className="search-result-box-content">
-          {companies.length === 0 ? (
-            <h1>No results found</h1>
-          ) : (
-            companies.map((company) => {
-              return <Card company={company} />;
-            })
-          )}
-        </div>
       </div>
+
       <Footer />
     </>
   );

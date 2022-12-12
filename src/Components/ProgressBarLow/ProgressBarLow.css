@@ -1,6 +1,7 @@
 .progressLow {
   width: 80px;
   height: 80px;
+  font-family: "Nexa Light";
   position: relative;
 }
 .progressLow .progress-icon {
