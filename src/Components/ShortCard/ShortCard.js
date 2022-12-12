@@ -108,7 +108,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
         <div className="short-card-row3">
           <div className="helpful-buttons">
             {
-              newRatingLikes?.includes(`${user._id}`) || newRatingDisLikes?.includes(user._id) ?
+              newRatingLikes?.includes(user?._id) || newRatingDisLikes?.includes(user?._id) ?
                 <p>You Reviewd this rating</p>
                 : <>
                   <p>Was this review helpful?</p>
