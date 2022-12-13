@@ -60,7 +60,7 @@ const LongCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
     } else {
       try {
 
-        const res = await axios.put(`${serverLink}/rating/like/${rating._id}`, {}, {
+        const res = await axios.get(`${serverLink}/rating/like/${rating._id}`, {
           withCredentials: true,
         })
         if (res.status === 202) {
@@ -79,7 +79,7 @@ const LongCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
       setShowWarningPopup(true);
     } else {
       try {
-        const res = await axios.put(`${serverLink}/rating/dislike/${rating._id}`, {}, {
+        const res = await axios.get(`${serverLink}/rating/dislike/${rating._id}`, {
           withCredentials: true,
         })
         if (res.status === 202) {
@@ -123,7 +123,7 @@ const LongCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
               </div>
               <div className="recommended-text">
                 <p>Recommended</p>
-                <p>POSTED {rating.Time.toUpperCase()}</p>
+                <p>POSTED {rating?.Time?.toUpperCase()}</p>
               </div>
               <div className="recommended-screenshots">
                 {rating?.Screenshots?.length >= 3 ? (

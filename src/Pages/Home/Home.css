@@ -57,11 +57,10 @@
   width: 100%;
   position: absolute;
   background-color: transparent;
-  height: auto;
   top: 940px;
 }
 .brand-info {
-  margin-top: 420px;
+  margin-top: 320px;
   width: 100%;
   height: auto;
   display: flex;
@@ -146,7 +145,7 @@
     top: 680px;
   }
   .brand-info {
-    margin-top: 200px;
+    margin-top: 138px;
     width: 100%;
     height: auto;
     flex-wrap: wrap;

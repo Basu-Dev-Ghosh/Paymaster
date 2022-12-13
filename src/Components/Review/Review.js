@@ -24,7 +24,7 @@ const Review = ({ ratings, isLoggedin, setShowWarningPopup, user }) => {
         <div className="review-total-text">
           <p>Overall Reviews</p>
           <p>
-            Very Positive<span>(2548 Reviews)</span>
+            Very Positive<span>({ratings?.length || '0'} Reviews)</span>
           </p>
         </div>
         <div className="dropdowns">

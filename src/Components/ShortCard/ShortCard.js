@@ -40,7 +40,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
     } else {
       try {
 
-        const res = await axios.put(`${serverLink}/rating/like/${rating._id}`, {}, {
+        const res = await axios.get(`${serverLink}/rating/like/${rating._id}`, {
           withCredentials: true,
         })
         if (res.status === 202) {
@@ -55,12 +55,12 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
   }
 
   const disLike = async () => {
-    alert("hi")
+
     if (!isLoggedin) {
       setShowWarningPopup(true);
     } else {
       try {
-        const res = await axios.put(`${serverLink}/rating/dislike/${rating._id}`, {}, {
+        const res = await axios.get(`${serverLink}/rating/dislike/${rating._id}`, {
           withCredentials: true,
         })
         if (res.status === 202) {
@@ -95,7 +95,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
             <ProgressBar value={value} />
             <div className="user-info-text">
               <p>{ratingUser?.Name || ratingUser?.FirstName}</p>
-              <p>{rating?.Time}</p>
+              <p>{rating?.Time.toUpperCase}</p>
             </div>
           </div>
         </div>
