@@ -13,7 +13,7 @@ const ScreenShot = ({ display, setShowScrenShotsModal, ss }) => {
         onClick={(e) => setShowScrenShotsModal(false)}
       ></i>
       <SimpleImageSlider
-        width={500}
+        width={400}
         height={300}
         images={ss}
         showBullets={true}

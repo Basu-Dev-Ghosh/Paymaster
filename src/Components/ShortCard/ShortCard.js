@@ -95,7 +95,7 @@ const ShortCard = ({ rating, isLoggedin, setShowWarningPopup, user }) => {
             <ProgressBar value={value} />
             <div className="user-info-text">
               <p>{ratingUser?.Name || ratingUser?.FirstName}</p>
-              <p>{rating?.Time.toUpperCase}</p>
+              <p>{rating?.Time?.toUpperCase}</p>
             </div>
           </div>
         </div>

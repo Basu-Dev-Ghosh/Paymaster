@@ -28,6 +28,7 @@
   align-items: center;
   background-color: #fff;
   width: 70%;
+  position: relative;
 }
 .landing-input i {
   transform: rotate(80deg);
@@ -43,6 +44,10 @@
   outline: none;
   font-size: 22px;
 }
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .landing-text p {
   width: 80%;
   color: #fff;
@@ -144,6 +149,10 @@
     height: auto;
     top: 680px;
   }
+  datalist {
+    width: 400px !important;
+  }
+
   .brand-info {
     margin-top: 138px;
     width: 100%;

@@ -14,6 +14,7 @@ import Footer from "../../Components/Footer/Footer";
 import WarningModal from "../../Components/WarningModal/WarningModal";
 import RateFormModal from "../../Components/RateFormModal/RateFormModal";
 import ScreenShot from "../../Components/ScreenShotSliderModal/ScreenShot";
+import CongratsModal from "../../Components/CongratsModal/CongratsModal";
 
 const Company = () => {
   const { id } = useParams();
@@ -26,6 +27,7 @@ const Company = () => {
   const [userRated, setUserRated] = useState(false)
   const [showWarningPopup, setShowWarningPopup] = useState(false);
   const [showRateFormModal, setShowRateFormModal] = useState(false);
+  const [showCongratsModal, setShowCongratsModal] = useState(false);
   const navigate = useNavigate();
 
   const getCompanyById = async () => {
@@ -144,6 +146,12 @@ const Company = () => {
         display={showRateFormModal}
         setShowRateFormModal={setShowRateFormModal}
         company={company}
+        setShowCongratsModal={setShowCongratsModal}
+        setUserRated={setUserRated}
+      />
+      <CongratsModal
+        display={showCongratsModal}
+        setShowCongratsModal={setShowCongratsModal}
       />
 
       {showLoader ? (
@@ -151,7 +159,7 @@ const Company = () => {
       ) : (
         <div
           style={
-            showWarningPopup || showRateFormModal
+            showWarningPopup || showRateFormModal || showCongratsModal
               ? { filter: "blur(5px)" }
               : { filter: "blur(0px)" }
           }

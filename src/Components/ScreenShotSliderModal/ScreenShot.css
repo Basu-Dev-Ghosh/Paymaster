@@ -1,17 +1,17 @@
 .screenshot-slider {
-  width: 848px;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 621px;
+  height: auto;
   /* UI Properties */
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 25px #00000024;
-  border-radius: 39px;
   position: fixed;
   top: 50%;
   left: 50%;
+  padding: 60px;
   transform: translate(-50%, -50%);
   z-index: 447;
 }
@@ -28,7 +28,7 @@
   .screenshot-slider {
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 60px;
     position: fixed;
     top: 50%;
   }

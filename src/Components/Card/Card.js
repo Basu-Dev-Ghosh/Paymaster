@@ -37,7 +37,7 @@ const Card = ({ company }) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="card" onClick={(e) => navigate(`/company/${company._id}`)}>
+      <div className="card" onClick={(e) => navigate(`/company/${company.CompanyName.toLowerCase()}/${company._id}`)}>
         <div className="row1">
           <div className="logo">
             <img src={company?.CompanyLogo} alt="AppleLogo" />

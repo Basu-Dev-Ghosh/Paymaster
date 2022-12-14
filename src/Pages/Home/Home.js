@@ -35,6 +35,7 @@ const Home = () => {
   const [showLoader, setShowLoader] = useState(false);
   const [searchinput, setSearchinput] = useState("");
   const [companies, setCompanies] = useState([]);
+
   const navigate = useNavigate();
   const getCompanies = async () => {
     try {
@@ -93,7 +94,16 @@ const Home = () => {
                   type="text"
                   placeholder="Search Company, Brand, Location"
                   onChange={(e) => setSearchinput(e.target.value)}
+                  list={searchinput === "" ? "" : "Companies"}
                 />
+                <datalist id="Companies" >
+                  {
+                    companies?.map((comp) => {
+                      return <option value={comp.CompanyName.toLowerCase()} />
+                    })
+                  }
+                </datalist>
+
               </form>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus

@@ -28,7 +28,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup2" element={<Signup2 />} />
         <Route path="/search-result/:searchinput" element={<SearchResult />} />
-        <Route path="/company/:id" element={<Company />} />
+        <Route path="/company/:name/:id" element={<Company />} />
         <Route path="/page05/:id" exact element={<PrivateRoutes Component={Page05} />} />
         <Route path="/page06/:id" element={<Page06 />} />
         <Route path="/page07/:id" element={<Page07 />} />

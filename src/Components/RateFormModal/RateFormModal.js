@@ -27,7 +27,13 @@ export const customStyles = {
   inactiveBoxColor: "#E3E3E3",
   inactiveBoxBorderColor: "#fff",
 };
-const RateFormModal = ({ display, setShowRateFormModal, company }) => {
+const RateFormModal = ({
+  display,
+  setShowRateFormModal,
+  company,
+  setShowCongratsModal,
+  setUserRated,
+}) => {
   const [OnTimePayment, setOnTimePayment] = useState(0);
   const [Negotiation, setNegotiation] = useState(0);
   const [Responsive, setResponsive] = useState(0);
@@ -71,9 +77,10 @@ const RateFormModal = ({ display, setShowRateFormModal, company }) => {
   const AddRating = async () => {
     if (review) {
       const today = new Date();
+      const dat = today.getDate();
       const td = today.toLocaleString("default", { month: "long" });
       const year = today.getFullYear();
-      const date = td + " " + year;
+      const date = dat + " " + td + " " + year;
       try {
         setShowLoader(true);
         const res = await axios.post(
@@ -89,22 +96,15 @@ const RateFormModal = ({ display, setShowRateFormModal, company }) => {
           { withCredentials: true }
         );
         if (res.status === 201) {
-          toast.success(res.data.Messege, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "light",
-          });
+          setUserRated(true);
           setReview("");
           setOnTimePayment(0);
           setNegotiation(0);
           setResponsive(0);
           setEthical(0);
           setScreenShots([]);
-          navigate("/page10");
+          setShowRateFormModal(false);
+          setShowCongratsModal(true);
           setShowLoader(false);
         }
       } catch (err) {
