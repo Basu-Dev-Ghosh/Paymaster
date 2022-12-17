@@ -1,6 +1,5 @@
 import React from "react";
 import "./ScreenShot.css";
-import SimpleImageSlider from "react-simple-image-slider";
 
 const ScreenShot = ({ display, setShowScrenShotsModal, ss }) => {
   return (
@@ -12,13 +11,11 @@ const ScreenShot = ({ display, setShowScrenShotsModal, ss }) => {
         class="fa-solid fa-circle-xmark cross-ss"
         onClick={(e) => setShowScrenShotsModal(false)}
       ></i>
-      <SimpleImageSlider
-        width={400}
-        height={300}
-        images={ss}
-        showBullets={true}
-        showNavs={true}
-      />
+      <div className="ss-box">
+        {ss?.map((sss) => {
+          return <img src={sss} alt="Image" />;
+        })}
+      </div>
     </div>
   );
 };

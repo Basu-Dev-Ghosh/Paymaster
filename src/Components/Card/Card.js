@@ -107,12 +107,9 @@ const Card = ({ company }) => {
         </div>
         <div className="row4">
           <div className="ratings">
-
             <ProgressBar value={((company.OTP + company.Negotiation + company.Responsive + company.Ethical) / 20) * 100} />
-
-
-
           </div>
+          <p>{company?.Raters.length} Reviews</p>
         </div>
       </div>
     </>
