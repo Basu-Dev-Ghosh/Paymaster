@@ -22,7 +22,7 @@
   place-items: center;
 }
 .logo-circle img {
-  width: 67%;
+  width: 40%;
 }
 .company-info-row1 .info-text {
   margin-left: 30px;
@@ -156,7 +156,7 @@
     height: 70px;
   }
   .logo-circle img {
-    width: 70%;
+    width: 50%;
   }
   .company-info-row1 .info-text {
     margin-left: 10px;
