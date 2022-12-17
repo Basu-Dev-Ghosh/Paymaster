@@ -86,7 +86,8 @@
     padding: 2px 1px;
   }
   .row1 .logo img {
-    width: 40px;
+    width: 30px;
+    height: 30px;
   }
   .row1 .title h1 {
     font-family: "MyriadPro-Regular";
@@ -125,5 +126,8 @@
   }
   .ratings {
     padding-bottom: 0px;
+  }
+  .row4 p {
+    display: none;
   }
 }
