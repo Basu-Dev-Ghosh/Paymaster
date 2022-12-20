@@ -46,12 +46,16 @@
 @media only screen and (max-width: 1000px) {
   .company-name-input {
     margin-top: 10px;
+    margin-left: 0;
+  }
+  .add-company-form-logo {
+    margin-bottom: 20px;
   }
   .rate-form-header-add-company {
     flex-direction: column;
   }
   .rate-form-input-text-add-company {
-    margin-left: 30px;
+    margin-left: 0px;
     height: 150px;
     width: 300px;
   }
