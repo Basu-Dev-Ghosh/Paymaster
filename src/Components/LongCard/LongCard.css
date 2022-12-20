@@ -307,12 +307,7 @@
     font-size: 14px;
   }
   .divider2 {
-    width: 900px;
-    height: 2px;
-    background-color: #00000012;
-    position: absolute;
-    right: 10px;
-    top: 260px;
+    display: none;
   }
   .long-card-col2-row2 {
     margin-top: 40px;
@@ -351,6 +346,7 @@
   .divider3 {
     right: 10px;
     top: 370px;
+    display: none;
   }
   .show-more-icon {
     position: absolute;

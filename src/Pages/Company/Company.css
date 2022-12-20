@@ -228,17 +228,17 @@
     background-color: #fff;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 39px;
-    width: 176px;
-    height: 60px;
+    width: 146px;
+    height: 54px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 5px;
+    margin: 10px 2px;
   }
   .rating-box p {
     font-family: "Nexa Light";
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
   }
 }
