@@ -8,6 +8,8 @@ import { serverLink } from "../../App";
 import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import AddCompany from "../../Components/AddCompanyModal/AddCompany";
+import WarningModal from "../../Components/WarningModal/WarningModal";
+
 
 const SearchResult = () => {
   const [filter, setFilter] = useState("");
@@ -17,6 +19,24 @@ const SearchResult = () => {
   const [companies2, setCompanies2] = useState([]);
   const navigate = useNavigate();
   const [showLoader, setShowLoader] = useState(false);
+  const [showWarningPopup, setShowWarningPopup] = useState(false);
+  const [token,setToken]=useState(false)
+
+  const isAuth = async () => {
+    try {
+      const res = await axios.get(`${serverLink}/auth/isauth`, { withCredentials: true })
+      if (res.status === 200) {
+        setToken(true);
+      }
+    } catch (err) {
+
+    }
+  }
+
+
+
+
+
   const getCompaniesByName = async () => {
     try {
       setShowLoader(true);
@@ -74,12 +94,17 @@ const SearchResult = () => {
 
   useEffect(() => {
     getCompaniesByName();
+    isAuth();
     return () => {
       setDisplay(false);
     };
   }, [searchinput]);
   return (
     <>
+    <WarningModal
+        display={showWarningPopup}
+        setShowWarningPopup={setShowWarningPopup}
+      />
       <AddCompany display={display} setDisplay={setDisplay} />
       <div style={display ? { filter: "blur(4px" } : { filter: "blur(0px)" }}>
         <NewHeader2 />
@@ -105,7 +130,13 @@ const SearchResult = () => {
             {companies.length === 0 ? (
               <div className="Add-company-button">
                 <h1>No results found</h1>
-                <button onClick={(e) => setDisplay(true)}>
+                <button onClick={(e) =>{
+                  if(token){
+                    setDisplay(true)
+                  }else{
+                    setShowWarningPopup(true)
+                  }
+                } }>
                   <i className="fa-solid fa-plus"></i> Add a new company
                 </button>
               </div>
