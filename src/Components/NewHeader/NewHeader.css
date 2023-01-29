@@ -51,6 +51,28 @@
 .user-icon i {
   font-size: 26px;
 }
+.invoice-logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.invoice-logo{
+  color: #fff;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgb(220, 46, 151);
+  
+}
+.invoice-logo-container p{
+  margin-top: 24px;
+  margin-left: 5px;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Nexa Bold";
+
+}
 @media only screen and (max-width: 1000px) {
   .new-header {
     padding: 30px 20px;
@@ -84,5 +106,17 @@
   .new-header a i {
     margin-right: 10px;
     font-size: 14px;
+  }
+  .invoice-logo{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  .invoice-logo-container p{
+    margin-top: 15px;
+    margin-left: 3px;
+    font-size: 10px;
+  
   }
 }

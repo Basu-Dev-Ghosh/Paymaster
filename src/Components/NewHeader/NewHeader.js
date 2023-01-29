@@ -64,6 +64,11 @@ const NewHeader = ({ setShowLoader }) => {
         <div className="new-header-logo">
           <img src={footerlogo} alt="Footer-Logo" />
           <h3>paymaster</h3>
+          <div className="invoice-logo-container" onClick={()=>navigate("/invoice")}>
+          <i className="fa-solid fa-receipt invoice-logo"></i>
+          <p>Invoice</p>
+          </div>
+          
         </div>
         {token ? (
           <>

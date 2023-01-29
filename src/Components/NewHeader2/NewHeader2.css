@@ -8,6 +8,17 @@
   width: 25%;
   margin-left: 400px;
 }
+.invoice-logo-main{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 35px;
+  margin-bottom: 13px;
+}
+.paymaster-logo{
+  width: 24px !important;
+  margin-left: 5px;
+   margin-top: 24px;
+}
 @media only screen and (max-width: 1000px) {
   .landing-input-2 {
     width: 100%;

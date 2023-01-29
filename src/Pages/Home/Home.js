@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import "./Home.css";
 import NewHeader from "../../Components/NewHeader/NewHeader";
 import Carousel from "react-multi-carousel";
@@ -11,6 +11,8 @@ import group from "../../assets/Group 20.png";
 import Footer from "../../Components/Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { GoogleApiWrapper,Autocomplete } from 'google-maps-react';
+import MyComponent from "../../Components/MyComponent";
 
 const responsive = {
   superLargeDesktop: {
@@ -31,10 +33,15 @@ const responsive = {
   },
 };
 
-const Home = () => {
+const Home = (props) => {
+  const CONTEXT_KEY = "a0b28f7ada0a94681";
+  const API_KEY = "AIzaSyCeh7pOVQbPZ4qLPXOCmtw-9wd5ukOHf7w"
   const [showLoader, setShowLoader] = useState(false);
   const [searchinput, setSearchinput] = useState("");
   const [companies, setCompanies] = useState([]);
+  const [company, setCompany] = useState(null);
+  const [logoUrl, setLogoUrl] = useState(null);
+  const inputRef=useRef(null);
 
   const navigate = useNavigate();
   const getCompanies = async () => {
@@ -73,8 +80,28 @@ const Home = () => {
       navigate(`/search-result/${searchinput}`)
     }
   }
+ 
 
+    
 
+    // useEffect(() => {
+    //   if (!company) {
+    //     return;
+    //   }
+  
+    //   fetch("https://www.heritageit.edu")
+    //     .then(response => response.text())
+    //     .then(html => {
+    //       const parser = new DOMParser();
+    //       const doc = parser.parseFromString(html, 'text/html');
+    //       const logo = doc.querySelector('img[alt="logo"]');
+    //       console.log(doc);
+    //       if (logo) {
+    //         console.log(logo);
+    //         setLogoUrl(logo.src);
+    //       }
+    //     });
+    // }, [company]);
 
   return (
     <div>
@@ -90,12 +117,15 @@ const Home = () => {
               </h1>
               <form className="landing-input" onSubmit={search}>
                 <i class="fa-solid fa-magnifying-glass"></i>
+        
                 <input
                   type="text"
+                  ref={inputRef}
                   placeholder="Search Company, Brand, Location"
                   onChange={(e) => setSearchinput(e.target.value)}
                   list={searchinput === "" ? "" : "Companies"}
                 />
+      
                 <datalist id="Companies" >
                   {
                     companies?.map((comp) => {
@@ -147,7 +177,11 @@ const Home = () => {
         </>
       )}
     </div>
+    // <MyComponent/>
   );
 };
 
-export default Home;
+export default GoogleApiWrapper({
+  libraries:['places'],
+  apiKey: 'AIzaSyDAUyECVOodLqV4H-h4b0GgX5RC2qs0pcc'
+})(Home);
