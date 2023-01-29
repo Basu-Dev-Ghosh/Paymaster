@@ -11,8 +11,8 @@ import group from "../../assets/Group 20.png";
 import Footer from "../../Components/Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { GoogleApiWrapper,Autocomplete } from 'google-maps-react';
-import MyComponent from "../../Components/MyComponent";
+// import { GoogleApiWrapper,Autocomplete } from 'google-maps-react';
+// import MyComponent from "../../Components/MyComponent";
 
 const responsive = {
   superLargeDesktop: {
@@ -181,7 +181,4 @@ const Home = (props) => {
   );
 };
 
-export default GoogleApiWrapper({
-  libraries:['places'],
-  apiKey: 'AIzaSyDAUyECVOodLqV4H-h4b0GgX5RC2qs0pcc'
-})(Home);
+export default Home;
