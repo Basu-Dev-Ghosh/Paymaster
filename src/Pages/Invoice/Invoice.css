@@ -377,3 +377,432 @@ font-family: 'Nexa Bold';
     border: 0;
     padding: 17px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .invoice-upper{
+        width: 100%;
+        height: auto;
+        background-color: #121f55;
+        padding:10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .invoice-lower{
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .invoice-upper-col1{
+        display: flex;
+        flex-direction: column;
+         /* margin-top: ; */
+    }
+    .invoice-upper-col2{
+        margin-top: 20px;
+    }
+    
+    .invoice-upper-col1-row1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom:10px;
+        width: 100%;
+    }
+    
+    .row1-dropdown-div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .dropdown-div{
+        width: 100%;
+        margin-top:5px;
+    }
+    .row1-dropdown-div p{
+        font-family: 'Nexa Bold';
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+    .input-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top:10px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .para-div{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Nexa Bold';
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .input-div input[type="text"]{
+        padding: 15px;
+        margin-left: 0px;
+        outline: none;
+        font-size: 10px;
+        width:100%;
+    }
+    .input-div input[type="text"]::placeholder{
+        font-weight: bold;
+        font-family: "Nexa Bold";
+        font-size: 15px;
+    }
+    .input-checkbox-div{
+        display: flex;
+        margin-left: 0px;
+        margin-top: 10px;
+        color: #fff;
+        font-family: 'Nexa Bold';
+        align-items: center;
+
+    }
+    .input-checkbox-div input[type="checkbox"]{
+        width: 20px;
+        height: 16px;
+    }
+    .input-checkbox-div p{
+        margin-top: 4px;
+        margin-left: 6px;
+    }
+    .checkbox-div{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-family: 'Nexa Bold';
+        padding: 0px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .checkbox-div p{
+        margin-left: 0px;
+       margin-bottom: 20px;
+    }
+    .checkbox-div .input-checkbox-div{
+        margin-top:-10px;
+    }
+    .input-checkbox-div p{
+        margin-left: 10px;
+    }
+    .checkbox-div .input-checkbox-div p{
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+    .row1-dropdown-div textarea{
+        width: 100%;
+        height: 100px;
+    }
+    .row2-input{
+        width: 100% !important;
+    }
+    
+    .invoice-upper-col2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: #fff;
+        font-family: "Nexa Bold";
+    }
+    .invoice-upper-col2 .balance-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .balance-div p:nth-child(1){
+        font-size: 15px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .balance-div p:nth-child(2){
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-top: 0px;
+    }
+    .invoice-upper-col2 .input-div{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    
+    .filter-row{
+        display: flex;
+        width: 100%;
+        justify-content:center;
+        height: 70px;
+    }
+    .filter-row .row1-dropdown-div{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+       
+    }
+    .filter-row .row1-dropdown-div p{
+        color: black;
+        font-size: 15px;
+    }
+    .table-row{
+        margin-top:30px;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: scroll;
+       
+    }
+    table{
+        width: 100%;
+    }
+    .table-row thead{
+        color: rgb(89, 86, 86);
+        font-family: 'Nexa Light';
+        font-size: 8px;
+        width: 100%;
+       
+    }
+    thead tr{
+        display: flex;    
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+ 
+    tbody{
+        width: 100%;
+    }
+    .table-row tbody tr{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .table-row tbody tr td{
+       font-size: 8px !important;
+    
+    }
+    tbody .table-row-input td:last-child i{
+        font-size: 20px;
+    }
+    .table-sign{
+        margin-right: 0px !important;
+        opacity: .6;
+        font-size: 10px;
+    }
+    table,th,td{
+     border-collapse: collapse;
+    }
+    .table-row-input{
+        display: flex;
+        flex-direction: column;
+    }
+    tbody tr td{
+       border-bottom: 1px solid rgb(185, 183, 183);
+    }
+    .table-buttons{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        justify-content: space-between;   
+    }
+    .subtotal{
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: flex-end;
+    }
+    .subtotal p{
+        margin-right: 20px;
+        font-size: 16px;
+        font-family: 'Nexa Light';
+    }
+    .subtotal p:nth-child(2){
+        font-family: 'Nexa Bold';
+    }
+    .table-buttons button{
+        background: #fff !important;
+        padding: 8px;
+        height: auto;
+        width: 100px;
+       margin-right: 20px;
+       border-radius: 30px;
+       cursor: pointer;
+       transition: .6s ease;
+       font-family: 'Nexa Bold';
+       font-size: 10px;
+    }
+    .table-buttons button:hover{
+        background: #121f55 !important;
+        color: #fff;
+    }
+    .table-input{
+    border: 0;
+    padding: 10px;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Nexa Bold';
+    }
+    .table-input:focus{
+        border: 1px solid rgb(52, 50, 50);
+        background: rgb(223, 222, 222);
+        border-radius: 10px;
+    }
+    .form-row{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .form-row-col1{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Nexa Light';
+    }
+    .form-row-col1 textarea{
+        height: 80px;
+    }
+    .textarea-div1,.textarea-div2{
+        margin-bottom: 10px;
+    }
+    .textarea-div1 p,.textarea-div2 p{
+        color: rgb(101, 97, 97);
+        margin-bottom: 10px;
+    }
+    .textarea-div1 textarea,.textarea-div2 textarea{
+        outline: none;
+        padding:10px;
+        border-radius: 10px;
+    }
+    .textarea-div3{
+        margin-top: 10px;
+    }
+    .para{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+    }
+    .para p:nth-child(1){
+        display: flex;
+        align-items: center;
+    }
+    .para p i{
+        margin-right: 10px;
+    }
+    .textarea-div3 .para p{
+        color: rgb(101, 97, 97);
+        margin-bottom: 10px;
+    }
+    .file-input{
+        width:100%;
+        border: 1px solid rgb(142, 142, 142);
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-family: 'Nexa Light';
+        color: rgb(95, 93, 93);
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .file-input label{
+        cursor: pointer;
+    }
+    .file-input input {
+        width: 0;
+    }
+    .input-div1{
+        margin-top: 30px;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+    .input-div1 .dropdown-div{
+flex:.7;
+    }
+    .input-div1 input{
+        width: 100px;
+        background: #fff;
+        height: 40px;
+        border: 0;
+        outline: none;
+        border-radius: 16px;
+       margin-top: 30px;
+        box-shadow: 0px 3px 6px #00000029;
+        padding:8px;
+    }
+    .input-div1 p{
+        font-family: 'Nexa Bold';
+        font-size: 16px;
+        margin-top: 30px;
+
+    }
+    .input-div2,.input-div3,.input-div4,.input-div5
+    {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .input-div2 p,.input-div3 p,.input-div4 p,.input-div5 p{
+        font-family: 'Nexa Light';
+        font-size: 16px;
+    }
+    .input-div4 p:nth-child(2),.input-div5 p:nth-child(2){
+        font-family: 'Nexa Bold';
+    }
+    .input-div2 input,.input-div3 input{
+        width: 100px;
+        padding: 10px;
+        outline: navajowhite;
+        border: 0;
+        border:1px solid #c7c7c7 !important;
+    }
+    .preview-row{
+        width:100%;
+        background-color: #000;
+        height: 100px;
+        margin-top: 40px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .buttons1,.buttons2{
+        display: flex;
+    }
+    .buttons1 button{
+      width: 100px;
+      padding: 10px;
+      margin: 0 10px;
+      background: #ffffff;
+      font-family: 'Nexa Bold';
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .buttons2 button{
+      width: 100px;
+      padding: 10px;
+      margin: 0 10px;
+      background: #ffffff;
+      font-family: 'Nexa Bold';
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    .buttons2 button:nth-child(2){
+        width: 100px;
+        background-color: #c932a3;
+        color: #fff;
+        border: 0;
+        padding: 10px;
+    }
+}

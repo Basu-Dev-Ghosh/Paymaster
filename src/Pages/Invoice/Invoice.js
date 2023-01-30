@@ -136,7 +136,6 @@ const Invoice = () => {
               <th></th>
               <th>#</th>
               <th>PRODUCT/SERVICE</th>
-              <th>HSN/SAC</th>
               <th>DESCRIPTION</th>
               <th>QTY</th>
               <th>RATE</th>
@@ -152,7 +151,7 @@ const Invoice = () => {
               </td>
               <td>1</td>
               <td>2D</td>
-              <td></td>
+         
               <td>2 minute</td>
               <td>1</td>
               <td>20,000</td>
@@ -168,7 +167,7 @@ const Invoice = () => {
               </td>
               <td>2</td>
               <td>2D</td>
-              <td></td>
+        
               <td>2 minute</td>
               <td>1</td>
               <td>20,000</td>
@@ -179,7 +178,7 @@ const Invoice = () => {
               </td>
             </tr>
             {addLineMode && (
-              <tr>
+              <tr className="table-row-input">
                 <td>
                   <i class="fa-solid fa-plus table-sign"></i>
                 </td>
@@ -189,13 +188,6 @@ const Invoice = () => {
                     type="text"
                     className="table-input"
                     placeholder="Product/Service"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    className="table-input"
-                    placeholder="HSN/SAC"
                   />
                 </td>
                 <td>
