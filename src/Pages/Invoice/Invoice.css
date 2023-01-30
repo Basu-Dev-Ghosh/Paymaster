@@ -635,6 +635,7 @@ font-family: 'Nexa Light';
        transition: .6s ease;
        font-family: 'Nexa Light';
        font-size: 10px;
+       margin-top: 10px;
     }
     .table-buttons button:hover{
         background: #121f55 !important;
