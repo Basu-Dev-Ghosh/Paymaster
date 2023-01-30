@@ -251,7 +251,7 @@ const Invoice = () => {
           <div className="form-row-col1">
             <div className="textarea-div1">
               <p>Messege on</p>
-              <textarea name="" id="" cols="50" rows="10"></textarea>
+              <textarea name="" id="" cols="25" rows="10"></textarea>
             </div>
             
            
@@ -261,7 +261,7 @@ const Invoice = () => {
               <div className="dropdown-div">
                 <select className="dropdown" id="dropdown">
                   <option value="all" selected>
-                    Discount percent
+                    Discount %
                   </option>
                   <option value="positive">Tamilnadu</option>
                   <option value="negative">Bihar</option>
