@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import Invoice_Header from "../../Components/Invoice_Header/Invoice_Header";
+import logo from '../../assets/logo2.png'
 import "./Invoice.css";
 const Invoice = () => {
   const [addLineMode, setAddLineMode] = useState(false);
+  const [options, setOptions] = useState();
 
   return (
     <>
@@ -20,6 +22,7 @@ const Invoice = () => {
                   </option>
                   <option value="positive">Positive</option>
                   <option value="negative">Negative</option>
+                  <option value="negative">butt</option>
                 </select>
               </div>
             </div>
@@ -29,11 +32,8 @@ const Invoice = () => {
                 <p>Ce/Bsc</p>
               </div>
               <input type="text" placeholder="Seperate emails with comma" />
-              <div className="input-checkbox-div">
-                <input type="checkbox" />
-                <p>Send</p>
-              </div>
             </div>
+
             <div className="checkbox-div">
               <p>Setup</p>
               <div className="input-checkbox-div">
@@ -41,8 +41,12 @@ const Invoice = () => {
                 <p>Razorpay</p>
               </div>
             </div>
+            <div className="input-checkbox-div input-checkbox-div2">
+              <input type="checkbox" />
+              <p>Send</p>
+            </div>
           </div>
-          <div className="invoice-upper-col1-row1">
+          <div className="invoice-upper-col1-row1 invoice-upper-col1-row2">
             <div className="row1-dropdown-div">
               <p>Billing</p>
               <div>
@@ -104,8 +108,7 @@ const Invoice = () => {
         </div>
         <div className="invoice-upper-col2">
           <div className="balance-div">
-            <p>Balance</p>
-            <p>* 23,600.00</p>
+            <img src={logo} alt="" />
           </div>
           <div className="input-div">
             <div className="para-div">
@@ -151,7 +154,7 @@ const Invoice = () => {
               </td>
               <td>1</td>
               <td>2D</td>
-         
+
               <td>2 minute</td>
               <td>1</td>
               <td>20,000</td>
@@ -167,7 +170,7 @@ const Invoice = () => {
               </td>
               <td>2</td>
               <td>2D</td>
-        
+
               <td>2 minute</td>
               <td>1</td>
               <td>20,000</td>
@@ -248,24 +251,10 @@ const Invoice = () => {
           <div className="form-row-col1">
             <div className="textarea-div1">
               <p>Messege on</p>
-              <textarea name="" id="" cols="30" rows="7"></textarea>
+              <textarea name="" id="" cols="50" rows="10"></textarea>
             </div>
-            <div className="textarea-div2">
-              <p>Messege on</p>
-              <textarea name="" id="" cols="30" rows="7"></textarea>
-            </div>
-            <div className="textarea-div3">
-              <div className="para">
-                <p>
-                  <i class="fa-solid fa-paperclip"></i>Attachments
-                </p>
-                <p>Maximum size 20 MB</p>
-              </div>
-              <div className="file-input">
-                <label htmlFor="file">Select file</label>
-                <input type="file" name="" id="file" />
-              </div>
-            </div>
+            
+           
           </div>
           <div className="form-row-col2">
             <div className="input-div1">
@@ -283,33 +272,34 @@ const Invoice = () => {
             </div>
             <div className="input-div2">
               <p>CGST 9% on</p>
-              <input type="text" placeholder="1900.00"/>
+              <input type="text" placeholder="1900.00" />
             </div>
             <div className="input-div3">
               <p>SGST 9% on</p>
-              <input type="text" placeholder="1900.00"/>
+              <input type="text" placeholder="1900.00" />
             </div>
             <div className="input-div4">
               <p>Tot</p>
               <p>23,600.00</p>
             </div>
-            <div className="input-div5">  <p>Balance</p>
-            <p>23,600.00</p></div>
-          
+            <div className="input-div5">
+              {" "}
+              <p>Balance</p>
+              <p>23,600.00</p>
+            </div>
           </div>
         </div>
-        
       </div>
       <div className="preview-row">
         <div className="buttons1">
-        <button>Cancel</button>
-        <button>Clear</button>
+          <button>Cancel</button>
+          <button>Clear</button>
         </div>
         <div className="buttons2">
-        <button>Save</button>
-        <button>Print or Preview</button>
+          <button>Save</button>
+          <button>Print or Preview</button>
         </div>
-        </div>
+      </div>
     </>
   );
 };

@@ -6,6 +6,18 @@
     display: flex;
     justify-content: space-between;
 }
+.invoice-upper select,option{
+    font-family: 'Nexa Light' !important;
+}
+.invoice-lower select,option{
+    font-family: 'Nexa Light' !important;
+}
+.invoice-upper input,textarea{
+    border-radius: 18px;
+}
+.invoice-lower input,textarea{
+    border-radius: 18px;
+}
 .invoice-lower{
     width: 100%;
     height: auto;
@@ -23,48 +35,20 @@
     align-items: center;
     margin-bottom: 15px;
 }
-/*
-.input-field{
+.invoice-upper-col1-row2{
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    margin-top: 30px;
+    margin-bottom: 15px;
 }
-.invoice-upper-col1-row1 .input-field input:nth-child(1){
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    margin-left: 40px;
-    outline: none;
-    font-size: 15px;
-}
-.invoice-upper-col1-row1 input:nth-child(3){
-    height: 20px;
-    margin-left: 40px;
-    padding: 0px;
-    margin-top: 10px;
-    width: 50px;
 
-}
-.checkbox-text{
-    margin-top: 15px;
-    color: #fff;
-    font-family: 'Nexa Bold';
-    font-size: 18px;
-}
-.invoice-upper-col1-row1 input::placeholder{
-    font-weight: bold;
-    font-family: "Nexa Bold";
-    font-size: 15px;
-} */
 .row1-dropdown-div{
     display: flex;
     flex-direction: column;
 }
 .row1-dropdown-div p{
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 4px;
 }
 .input-div{
@@ -76,9 +60,9 @@
 .para-div{
     display: flex;
     justify-content: space-between;
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 4px;
 }
 .input-div input[type="text"]{
@@ -87,18 +71,18 @@
     outline: none;
     font-size: 15px;
     width:300px;
+    font-family: 'Nexa Light';
 }
 .input-div input[type="text"]::placeholder{
-    font-weight: bold;
-    font-family: "Nexa Bold";
-    font-size: 15px;
+    font-family: "Nexa Light";
+    font-size: 16px;
 }
 .input-checkbox-div{
     display: flex;
     margin-left: 16px;
     margin-top: 10px;
     color: #fff;
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     align-items: center;
 }
 .input-checkbox-div input[type="checkbox"]{
@@ -108,17 +92,23 @@
 .input-checkbox-div p{
     margin-top: 4px;
     margin-left: 6px;
+    font-family: 'Nexa Light';
+}
+
+.input-checkbox-div2{
+    margin-top: 30px;
 }
 .checkbox-div{
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     padding: 20px;
 }
 .checkbox-div p{
     margin-left: 20px;
    margin-bottom: 20px;
+   font-family: 'Nexa Light';
 }
 .checkbox-div .input-checkbox-div{
     margin-top:-10px;
@@ -134,7 +124,7 @@
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-family: "Nexa Bold";
+    font-family: "Nexa Light";
 }
 .invoice-upper-col2 .balance-div{
     display: flex;
@@ -179,7 +169,7 @@
     padding: 30px 0 !important;
     text-align: center;
     /* padding: 30px !important; */
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
 
 }
 .table-sign{
@@ -209,7 +199,7 @@ tbody tr td{
     font-family: 'Nexa Light';
 }
 .subtotal p:nth-child(2){
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
 }
 .table-buttons button{
     background: #fff !important;
@@ -220,7 +210,7 @@ tbody tr td{
    border-radius: 30px;
    cursor: pointer;
    transition: .6s ease;
-   font-family: 'Nexa Bold';
+   font-family: 'Nexa Light';
 }
 .table-buttons button:hover{
     background: #121f55 !important;
@@ -231,7 +221,7 @@ border: 0;
 padding: 10px;
 text-align: center;
 outline: none;
-font-family: 'Nexa Bold';
+font-family: 'Nexa Light';
 }
 .table-input:focus{
     border: 1px solid rgb(52, 50, 50);
@@ -317,7 +307,7 @@ font-family: 'Nexa Bold';
     padding: 10px;
 }
 .input-div1 p{
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     font-size: 16px;
 }
 .input-div2,.input-div3,.input-div4,.input-div5
@@ -333,7 +323,7 @@ font-family: 'Nexa Bold';
     font-size: 16px;
 }
 .input-div4 p:nth-child(2),.input-div5 p:nth-child(2){
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
 }
 .input-div2 input,.input-div3 input{
     width: 100px;
@@ -357,7 +347,7 @@ font-family: 'Nexa Bold';
   padding: 14px;
   margin: 0 10px;
   background: #ffffff;
-  font-family: 'Nexa Bold';
+  font-family: 'Nexa Light';
   border-radius: 16px;
   cursor: pointer;
 }
@@ -366,7 +356,7 @@ font-family: 'Nexa Bold';
   padding: 14px;
   margin: 0 10px;
   background: #ffffff;
-  font-family: 'Nexa Bold';
+  font-family: 'Nexa Light';
   border-radius: 16px;
   cursor: pointer;
 }
@@ -398,7 +388,7 @@ font-family: 'Nexa Bold';
     .invoice-upper-col1{
         display: flex;
         flex-direction: column;
-         /* margin-top: ; */
+        /* margin-top: 0; */
     }
     .invoice-upper-col2{
         margin-top: 20px;
@@ -422,7 +412,7 @@ font-family: 'Nexa Bold';
         margin-top:5px;
     }
     .row1-dropdown-div p{
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
         color: #fff;
         font-size: 15px;
         margin-bottom: 4px;
@@ -438,7 +428,7 @@ font-family: 'Nexa Bold';
     .para-div{
         display: flex;
         justify-content: space-between;
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
         color: #fff;
         font-size: 15px;
         margin-bottom: 5px;
@@ -452,7 +442,7 @@ font-family: 'Nexa Bold';
     }
     .input-div input[type="text"]::placeholder{
         font-weight: bold;
-        font-family: "Nexa Bold";
+        font-family: "Nexa Light";
         font-size: 15px;
     }
     .input-checkbox-div{
@@ -460,7 +450,7 @@ font-family: 'Nexa Bold';
         margin-left: 0px;
         margin-top: 10px;
         color: #fff;
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
         align-items: center;
 
     }
@@ -476,7 +466,7 @@ font-family: 'Nexa Bold';
         display: flex;
         flex-direction: column;
         color: #fff;
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
         padding: 0px;
         width: 100%;
         margin-top: 15px;
@@ -508,7 +498,7 @@ font-family: 'Nexa Bold';
         flex-direction: column;
         width: 100%;
         color: #fff;
-        font-family: "Nexa Bold";
+        font-family: "Nexa Light";
     }
     .invoice-upper-col2 .balance-div{
         display: flex;
@@ -621,7 +611,7 @@ font-family: 'Nexa Bold';
         font-family: 'Nexa Light';
     }
     .subtotal p:nth-child(2){
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
     }
     .table-buttons button{
         background: #fff !important;
@@ -632,7 +622,7 @@ font-family: 'Nexa Bold';
        border-radius: 30px;
        cursor: pointer;
        transition: .6s ease;
-       font-family: 'Nexa Bold';
+       font-family: 'Nexa Light';
        font-size: 10px;
     }
     .table-buttons button:hover{
@@ -646,7 +636,7 @@ font-family: 'Nexa Bold';
     outline: none;
     width: 100%;
     font-size: 14px;
-    font-family: 'Nexa Bold';
+    font-family: 'Nexa Light';
     }
     .table-input:focus{
         border: 1px solid rgb(52, 50, 50);
@@ -739,7 +729,7 @@ flex:.7;
         padding:8px;
     }
     .input-div1 p{
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
         font-size: 16px;
         margin-top: 30px;
 
@@ -757,7 +747,7 @@ flex:.7;
         font-size: 16px;
     }
     .input-div4 p:nth-child(2),.input-div5 p:nth-child(2){
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Light';
     }
     .input-div2 input,.input-div3 input{
         width: 100px;
@@ -783,7 +773,7 @@ flex:.7;
       padding: 10px;
       margin: 0 10px;
       background: #ffffff;
-      font-family: 'Nexa Bold';
+      font-family: 'Nexa Light';
       border-radius: 16px;
       cursor: pointer;
       font-size: 10px;
@@ -793,16 +783,15 @@ flex:.7;
       padding: 10px;
       margin: 0 10px;
       background: #ffffff;
-      font-family: 'Nexa Bold';
+      font-family: 'Nexa Light';
       border-radius: 16px;
       cursor: pointer;
-      font-size: 10px;
     }
     .buttons2 button:nth-child(2){
-        width: 100px;
+        width: 200px;
         background-color: #c932a3;
         color: #fff;
         border: 0;
-        padding: 10px;
+        padding: 17px;
     }
 }
