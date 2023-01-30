@@ -130,6 +130,11 @@
     display: flex;
     flex-direction: column;
 }
+.balance-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .balance-div p:nth-child(1){
     font-size: 15px;
     text-transform: uppercase;
@@ -401,7 +406,12 @@ font-family: 'Nexa Light';
         margin-bottom:10px;
         width: 100%;
     }
-    
+    .balance-div{
+        display: block;
+        width: 100%;
+        
+      
+    }
     .row1-dropdown-div{
         display: flex;
         flex-direction: column;
@@ -499,10 +509,11 @@ font-family: 'Nexa Light';
         width: 100%;
         color: #fff;
         font-family: "Nexa Light";
+        align-items: center;
+        justify-content: center;
     }
     .invoice-upper-col2 .balance-div{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
     }
     .balance-div p:nth-child(1){
@@ -779,19 +790,23 @@ flex:.7;
       font-size: 10px;
     }
     .buttons2 button{
-      width: 100px;
-      padding: 10px;
-      margin: 0 10px;
-      background: #ffffff;
-      font-family: 'Nexa Light';
-      border-radius: 16px;
-      cursor: pointer;
+        width: 100px;
+        padding: 10px;
+        margin: 0 10px;
+        background: #ffffff;
+        font-family: 'Nexa Light';
+        border-radius: 16px;
+        cursor: pointer;
+        font-size: 10px;
     }
     .buttons2 button:nth-child(2){
-        width: 200px;
-        background-color: #c932a3;
-        color: #fff;
-        border: 0;
-        padding: 17px;
+        width: 100px;
+        padding: 10px;
+        margin: 0 10px;
+        background: #cf24e6;
+        font-family: 'Nexa Light';
+        border-radius: 16px;
+        cursor: pointer;
+        font-size: 10px;
     }
 }
