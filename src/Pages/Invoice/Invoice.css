@@ -16,7 +16,7 @@
     border-radius: 18px;
 }
 .invoice-lower input,textarea{
-    border-radius: 18px;
+    border-radius: 18px !important;
 }
 .invoice-lower{
     width: 100%;
@@ -54,7 +54,6 @@
 .input-div{
     display: flex;
     flex-direction: column;
-    margin-top:18px;
     margin-left: 20px;
 }
 .para-div{
@@ -134,6 +133,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
 }
 .balance-div p:nth-child(1){
     font-size: 15px;
@@ -186,7 +188,7 @@ table,th,td{
  border-collapse: collapse;
 }
 
-tbody tr td{
+.table-row tbody tr td{
    border-bottom: 1px solid rgb(185, 183, 183);
 }
 .table-buttons{
@@ -340,7 +342,7 @@ font-family: 'Nexa Light';
 .preview-row{
     width:100%;
     background-color: #000;
-    height: 100px;
+    height: auto;
     margin-top: 40px;
     padding: 30px;
     display: flex;
@@ -514,7 +516,8 @@ font-family: 'Nexa Light';
     }
     .invoice-upper-col2 .balance-div{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        width: fit-content;
     }
     .balance-div p:nth-child(1){
         font-size: 15px;

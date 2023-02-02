@@ -39,8 +39,8 @@
 }
 
 .user-icon {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: grid;
   margin-left: auto;
@@ -72,6 +72,10 @@
   color: #fff;
   font-family: "Nexa Bold";
 
+}
+.companyLogo{
+  width: 80%;
+  height: 80%;
 }
 @media only screen and (max-width: 1000px) {
   .new-header {

@@ -10,3 +10,31 @@
 .back img {
   margin-right: 20px;
 }
+.logo-input{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo-input label{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   cursor: pointer;
+
+}
+.logo-input label p{
+  margin-left: 18px;
+  margin-top: 0;
+  font-family: 'Nexa Light';
+  font-size: 14px;
+  color: rgb(121, 122, 123);
+}
+.logo-input label i{
+  margin-right: 18px;
+  font-size: 18px;
+}
+.logo-input input{
+  display: none;
+}

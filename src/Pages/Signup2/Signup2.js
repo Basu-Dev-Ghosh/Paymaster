@@ -16,6 +16,7 @@ const Signup2 = () => {
     Name: "",
     DOB: "",
     CompanyName: "",
+    CompanyLogo:"",
     Position: "",
     Location: "",
     Email: "",
@@ -77,6 +78,7 @@ const Signup2 = () => {
         }
       } catch (err) {
         setButtonLoading("none");
+        console.log(err);
         toast.error(err.response.data.Messege, {
           position: "top-center",
           autoClose: 3000,
@@ -112,6 +114,35 @@ const Signup2 = () => {
       setForm2Display("block");
     }
   };
+
+  const handleSignupLogo=async(e)=>{
+    const data = new FormData();
+    data.append("file", e.target.files[0]);
+    data.append("upload_preset", "paymaster");
+    data.append("cloud_name", "basustudent");
+    try {
+      setShowLoader(true);
+      const res = await axios.post(
+        "https://api.cloudinary.com/v1_1/basustudent/image/upload",
+        data
+      );
+      const dat = res.data;
+      setUserData({ ...userData, CompanyLogo: dat.secure_url });
+      setShowLoader(false);
+    } catch (err) {
+      setShowLoader(false);
+      toast.error(err.data.Messege, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    }
+  }
+
 
   return (
     <>
@@ -174,6 +205,23 @@ const Signup2 = () => {
                     name="CompanyName"
                     onChange={handleSignup}
                     placeholder="Company Name"
+                  />
+                </div>
+                <div className="email-input logo-input">
+                 <label htmlFor="companyLogo"><p>Company Logo</p>
+                 {
+                  userData.CompanyLogo? <i class="fa-solid fa-check" style={{color:"green"}}></i>: <i class="fa-solid fa-upload"></i>
+                 }
+              
+                 
+                 </label>
+                  <input
+                    type="file"
+                    required
+                    name="CompanyLogo"
+                    id="companyLogo"
+                    onChange={handleSignupLogo}
+                    placeholder="Company Logo"
                   />
                 </div>
                 <div className="email-input">

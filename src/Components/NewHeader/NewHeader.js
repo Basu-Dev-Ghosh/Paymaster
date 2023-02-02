@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const NewHeader = ({ setShowLoader }) => {
   const [token, setToken] = useState(false);
+  const [user,setUser]=useState(null)
   const navigate = useNavigate();
 
   const isAuth = async () => {
@@ -17,6 +18,7 @@ const NewHeader = ({ setShowLoader }) => {
       });
       if (res.status === 200) {
         setToken(true);
+        setUser(res.data.user)
       }
     } catch (err) {}
   };
@@ -73,7 +75,12 @@ const NewHeader = ({ setShowLoader }) => {
         {token ? (
           <>
             <div className="user-icon">
-              <i class="fa-solid fa-user-tie"></i>
+            {
+              user.CompanyLogo?
+              <img className="companyLogo" src={user.CompanyLogo} alt="Logo"  />
+              :<i class="fa-solid fa-user-tie"></i>
+            }
+              
             </div>
             <a onClick={logout}>
               <i class="fa-solid fa-right-from-bracket"></i> Sign out

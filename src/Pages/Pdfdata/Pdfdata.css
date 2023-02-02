@@ -1,0 +1,391 @@
+.pdf-container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    background-color: #121f55;
+    place-items: center;
+    position: relative;
+}
+.download-buttons{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    font-size: 30px;
+    color: #fff;
+}
+.pdf-page{
+    width: 800px;
+    height: 1000px;
+    padding: 30px;
+    background-color: #fff;
+}
+.pdf-page .ofr{
+    text-align: right;
+    color: #98999d;
+    font-family: 'NEXA LIGHT';
+    padding: 5px 30px;
+}
+.pdf-page-row1{
+    padding: 0px 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.pdf-page-row1-col1{
+    display: flex;
+    flex-direction: column;
+}
+.pdf-page-row1-col1 .heading{
+    font-weight: bold;
+    font-family: 'Nexa Bold';
+    font-size: 17px;
+}
+.pdf-page-row1-col1 p{
+    margin-bottom: 5px;
+}
+.pdf-page-row1-col1 .data{
+    font-family: 'Nexa Light';
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 7px;
+    width: 70%;
+}
+.pdf-page-row1-col1 .data p{
+    margin-bottom: 4px;
+    line-height: 15px;
+}
+
+.pdf-page-row2{
+    padding: 0px 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.pdf-page-row2 .heading{
+    margin-bottom: 20px;
+    font-family: 'Nexa Bold';
+    font-size: 24px;
+    color: #41ac77;
+    letter-spacing: 2px;
+}
+.pdf-page-row2 .data{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nexa Light';
+    align-items:  center;
+}
+.pdf-page-row2 .data .pdf-page-row2-col1{
+    display: flex;
+    flex-direction: column;
+}
+.invoice-to{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+}
+.invoice-to p:nth-child(1){
+    font-family: 'Nexa Bold';
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.invoice-to p:nth-child(2){
+    font-size: 13px;
+}
+.pdf-page-row2 .data .pdf-page-row2-col2{
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.invoice-details{
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+   
+    width: 200px;
+}
+.invoice-details p:nth-child(1){
+    font-family: 'Nexa Bold';
+    margin-right: 10px;
+    font-size: 14px;
+}
+.invoice-details p:nth-child(2){
+    font-size: 13px;
+    margin-left: 10px;
+}
+.pdf-page-row2 hr{
+    color: #41ac77;
+    margin-top: 14px;
+    height: 1px;
+    background-color: rgb(78, 199, 140);
+    border: none;
+}
+.pdf-page-row3{
+    width: 100%;
+    margin-top: 50px;
+}
+.pdf-page-row3 table,.pdf-page-row3 thead{
+    width: 100%;
+    display: inline;
+}
+.pdf-page-row3 table tbody{
+    width: 100%;
+    display: inline;
+}
+.pdf-page-row3 table thead tr{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(139, 203, 197, 0.4);
+    padding: 6px;
+    color: #05b474;
+    font-family: 'Nexa Light';
+    font-size: 12px;
+    align-items: center;
+
+}
+.pdf-page-row3 table thead tr th:nth-child(2){
+    flex: .3;
+}
+.pdf-page-row3 table tbody tr{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px;
+    text-align: center;
+    font-family: 'Nexa Light';
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.pdf-page-row3 table tbody tr td:nth-child(2){
+    flex: .3;
+   
+}
+.pdf-page-row3 table tbody tr td:nth-child(2) p:nth-child(1){
+    font-family: 'Nexa Bold';
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.pdf-page-row3{
+    border-bottom: 2px dashed rgb(166, 164, 164);
+    padding-bottom: 20px;
+}
+.pdf-page-row4{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-family: 'Nexa Light';
+    font-size: 12px;
+}
+.pdf-page-row4 p:nth-child(3){
+    flex: .2;
+    font-family: "Nexa Bold";
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pdf-container{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding: 0 0px;
+        background-color: #121f55;
+        place-items: center;
+    }
+    .download-buttons{
+        display: flex;
+        width: 200px;
+        justify-content: space-evenly;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        font-size: 25px;
+        color: #fff;
+    }
+    .pdf-page{
+        width: 365px;
+        height: 600px;
+        padding: 10px;
+        background-color: #fff;
+    }
+    .pdf-page .ofr{
+        text-align: right;
+        color: #98999d;
+        font-family: 'NEXA LIGHT';
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .pdf-page-row1{
+        padding: 0px 10px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pdf-page-row1-col1{
+        display: flex;
+        flex-direction: column;
+    }
+    .pdf-page-row1-col1 .heading{
+        font-weight: bold;
+        font-family: 'Nexa Bold';
+        font-size: 15px;
+    }
+    .pdf-page-row1-col1 p{
+        margin-bottom: 5px;
+    }
+    .pdf-page-row1-col1 .data{
+        font-family: 'Nexa Light';
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 7px;
+        width: 100px;
+    }
+    .pdf-page-row1-col1 .data p{
+        margin-bottom: 4px;
+    }
+    .pdf-page-row1-col2 img{
+        width: 80px;
+        height: auto;
+    }
+    
+    .pdf-page-row2{
+        padding: 0px 0px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .pdf-page-row2 .heading{
+        margin-bottom: 10px;
+        font-family: 'Nexa Bold';
+        font-size: 16px;
+        color: #41ac77;
+        letter-spacing: 2px;
+    }
+    .pdf-page-row2 .data{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Nexa Light';
+        align-items:  center;
+    }
+    .pdf-page-row2 .data .pdf-page-row2-col1{
+        display: flex;
+        flex-direction: column;
+    }
+    .invoice-to{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+    
+    }
+    .invoice-to p:nth-child(1){
+        font-family: 'Nexa Bold';
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .invoice-to p:nth-child(2){
+        font-size: 9px;
+    }
+    .pdf-page-row2 .data .pdf-page-row2-col2{
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .invoice-details{
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        width: 160px;
+    }
+    .invoice-details p:nth-child(1){
+        font-family: 'Nexa Bold';
+        margin-right: 10px;
+        font-size: 10px;
+    }
+    .invoice-details p:nth-child(2){
+        font-size: 9px;
+        margin-left: 0px;
+    }
+    .pdf-page-row2 hr{
+        color: #41ac77;
+        margin-top: 10px;
+        height: .8px;
+        background-color: rgb(78, 199, 140);
+        border: none;
+    }
+    .pdf-page-row3{
+        width: 100%;
+        margin-top: 35px;
+    }
+    .pdf-page-row3 table,.pdf-page-row3 thead{
+        width: 100%;
+        display: inline;
+    }
+    .pdf-page-row3 table tbody{
+        width: 100%;
+        display: inline;
+    }
+    .pdf-page-row3 table thead tr{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: rgba(139, 203, 197, 0.4);
+        padding: 4px;
+        color: #05b474;
+        font-family: 'Nexa Light';
+        font-size: 12px;
+        align-items: center;
+    
+    }
+    .pdf-page-row3 table thead tr th:nth-child(2){
+        flex: .3;
+    }
+    .pdf-page-row3 table tbody tr{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 4px;
+        font-family: 'Nexa Light';
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .pdf-page-row3 table tbody tr td:nth-child(2){
+        flex: .2;
+    }
+    .pdf-page-row3 table tbody tr td{
+        text-align: center;
+        border-bottom: 0;
+    }
+    .pdf-page-row3 table tbody tr td:nth-child(2) p:nth-child(1){
+        font-family: 'Nexa Bold';
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .pdf-page-row3{
+        border-bottom: 1px dashed rgb(166, 164, 164);
+        padding-bottom: 20px;
+    }
+    .pdf-page-row4{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        font-family: 'Nexa Light';
+        font-size: 10px;
+        margin-left: 25px;
+    }
+    .pdf-page-row4 p:nth-child(1){
+        width: 100px;
+    }
+    .pdf-page-row4 p:nth-child(3){
+        flex: .6;
+        font-family: "Nexa Bold";
+        font-size: 12px;
+    }
+    
+}

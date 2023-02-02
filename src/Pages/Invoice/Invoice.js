@@ -1,14 +1,166 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Invoice_Header from "../../Components/Invoice_Header/Invoice_Header";
-import logo from '../../assets/logo2.png'
+import logo from "../../assets/logo2.png";
 import "./Invoice.css";
+import { ToastContainer, toast } from "react-toastify";
+import jsPDF from "jspdf";
+import Component from "../Component";
+import Pdfdata from "../Pdfdata/Pdfdata";
+import { serverLink } from "../../App";
+import axios from "axios";
+
 const Invoice = () => {
   const [addLineMode, setAddLineMode] = useState(false);
-  const [options, setOptions] = useState();
+  const [invoiceList, setInvoiceList] = useState([]);
+  const [invoiceData, setInvoiceData] = useState({});
+  const [subTotal, setSubtotal] = useState(0);
+  const [user, setUser] = useState();
+  const [discountPercent, setDiscountPercent] = useState(0);
+  const [totalWithDiscount, setTotalWithDiscount] = useState(0);
+  const [sgst, setSgst] = useState(0);
+  const [cgst, setCgst] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [pdfPreviewMode,setPdfPreviewMode]=useState(false);
+  const [companyLogo,setCompanyLogo]=useState("")
+  const [pdfData, setPdfData] = useState({
+    razorPay:false,
+    send:false
+  });
+
+  const isAuth = async () => {
+    try {
+      const res = await axios.get(`${serverLink}/auth/isauth`, {
+        withCredentials: true,
+      });
+      if (res.status === 200) {
+        setCompanyLogo(res.data.user.CompanyLogo)
+        setUser(res.data.user);
+        setPdfData({...pdfData,companyName:res.data.user.CompanyName})
+      }
+    } catch (err) {}
+  };
+  useEffect(() => {
+    isAuth();
+    console.log(companyLogo);
+  }, []);
+
+  useEffect(() => {
+    let dis = subTotal - (subTotal * discountPercent) / 100;
+    setTotalWithDiscount(dis);
+    setTotal(dis);
+  }, [discountPercent, subTotal]);
+ useEffect(() => {
+  setPdfData({...pdfData,total:total.toFixed(2)})
+ }, [total]);
+
+  useEffect(() => {
+    let tot = 0;
+    if (sgst >= 0) {
+      tot = parseInt(sgst) + (parseInt(sgst) * 9) / 100;
+      setTotal(tot);
+    }
+    if (!sgst) {
+      if (!cgst) {
+        let dis = subTotal - (subTotal * discountPercent) / 100;
+        setTotalWithDiscount(dis);
+        setTotal(dis);
+      } else {
+        tot = parseInt(cgst) + (parseInt(cgst) * 9) / 100;
+        setTotal(tot);
+      }
+    }
+  }, [sgst]);
+  useEffect(() => {
+    let tot = 0;
+    if (cgst >= 0) {
+      tot = parseInt(cgst) + (parseInt(cgst) * 9) / 100;
+      setTotal(tot);
+    }
+    if (!cgst) {
+      if (!sgst) {
+        let dis = subTotal - (subTotal * discountPercent) / 100;
+        setTotalWithDiscount(dis);
+        setTotal(dis);
+      } else {
+        tot = parseInt(sgst) + (parseInt(sgst) * 9) / 100;
+        setTotal(tot);
+      }
+    }
+  }, [cgst]);
+
+  const handleList = (e) => {
+    const newList = { ...invoiceData };
+    newList[e.target.name] = e.target.value;
+    setInvoiceData(newList);
+  };
+
+  const addList = () => {
+    if (
+      !invoiceData.product ||
+      !invoiceData.description ||
+      !invoiceData.qty ||
+      !invoiceData.rate ||
+      !invoiceData.amount ||
+      !invoiceData.tax
+    ) {
+      toast.warning("Fill the fields", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    } else {
+      setInvoiceList((oldData) => {
+        return [...oldData, invoiceData];
+      });
+      setInvoiceData({});
+      setAddLineMode(false);
+    }
+  };
+  useEffect(() => {
+    if (invoiceData.qty && invoiceData.rate) {
+      let amount = invoiceData.qty * invoiceData.rate;
+      setInvoiceData({ ...invoiceData, amount });
+    }
+    if (!invoiceData.qty || !invoiceData.rate) {
+      setInvoiceData({ ...invoiceData, amount: 0 });
+    }
+  }, [invoiceData.qty, invoiceData.rate]);
+
+  const deleteItem = (index) => {
+    setInvoiceList((oldData) => {
+      return oldData.filter((data, ind) => {
+        return ind !== index;
+      });
+    });
+  };
+
+  const addSubTotal = () => {
+    let subt = 0;
+    invoiceList.map((item) => {
+      subt += item.amount;
+    });
+    setSubtotal(subt);
+  };
+
+  useEffect(() => {
+    let subt = 0;
+    invoiceList.map((item) => {
+      subt += item.amount;
+    });
+    setSubtotal(subt);
+  }, [invoiceList]);
 
   return (
     <>
+    {
+      pdfPreviewMode ? <Pdfdata pdfInfo={pdfData} invoiceList={invoiceList} companyLogo={companyLogo} setPdfPreviewMode={setPdfPreviewMode}/>
+      :
+      <>
       <Invoice_Header />
       <div className="invoice-upper">
         <div className="invoice-upper-col1">
@@ -16,13 +168,13 @@ const Invoice = () => {
             <div className="row1-dropdown-div">
               <p>Client</p>
               <div className="dropdown-div">
-                <select className="dropdown" id="dropdown">
+                <select className="dropdown" id="dropdown" onChange={(e)=>setPdfData({...pdfData,client:e.target.value})}>
                   <option value="all" selected>
                     Select a client
                   </option>
-                  <option value="positive">Positive</option>
-                  <option value="negative">Negative</option>
-                  <option value="negative">butt</option>
+                  <option value="Amazon">Amazon</option>
+                  <option value="Flipcart">Flipcart</option>
+                  <option value="Google">Google</option>
                 </select>
               </div>
             </div>
@@ -31,24 +183,24 @@ const Invoice = () => {
                 <p>Client</p>
                 <p>Ce/Bsc</p>
               </div>
-              <input type="text" placeholder="Seperate emails with comma" />
+              <input type="text" placeholder="Seperate emails with comma" onChange={(e)=>setPdfData({...pdfData,clientEmail:e.target.value})}/>
             </div>
 
             <div className="checkbox-div">
               <p>Setup</p>
               <div className="input-checkbox-div">
-                <input type="checkbox" />
+                <input type="checkbox" onChange={(e)=>setPdfData({...pdfData,razorPay:e.target.checked})}/>
                 <p>Razorpay</p>
               </div>
             </div>
             <div className="input-checkbox-div input-checkbox-div2">
-              <input type="checkbox" />
+              <input type="checkbox" onChange={(e)=>setPdfData({...pdfData,send:e.target.checked})}/>
               <p>Send</p>
             </div>
           </div>
           <div className="invoice-upper-col1-row1 invoice-upper-col1-row2">
             <div className="row1-dropdown-div">
-              <p>Billing</p>
+              <p>Billing address</p>
               <div>
                 <textarea
                   name=""
@@ -56,6 +208,7 @@ const Invoice = () => {
                   cols="30"
                   rows="7"
                   style={{ outline: "none", padding: "20px" }}
+                  onChange={(e)=>setPdfData({...pdfData,billingAddress:e.target.value})}
                 ></textarea>
               </div>
             </div>
@@ -68,6 +221,7 @@ const Invoice = () => {
                 type="text"
                 className="row2-input"
                 placeholder="Due on recipt"
+                onChange={(e)=>setPdfData({...pdfData,terms:e.target.value})}
               />
             </div>
             <div className="input-div">
@@ -78,6 +232,7 @@ const Invoice = () => {
                 type="text"
                 className="row2-input"
                 placeholder="27/01/2022"
+                onChange={(e)=>setPdfData({...pdfData,invoiceDate:e.target.value})}
               />
             </div>
             <div className="input-div">
@@ -88,6 +243,7 @@ const Invoice = () => {
                 type="text"
                 className="row2-input"
                 placeholder="27/01/2022"
+                onChange={(e)=>setPdfData({...pdfData,dueDate:e.target.value})}
               />
             </div>
           </div>
@@ -95,7 +251,7 @@ const Invoice = () => {
             <div className="row1-dropdown-div">
               <p>Place of supply</p>
               <div className="dropdown-div">
-                <select className="dropdown" id="dropdown">
+                <select className="dropdown" id="dropdown" onChange={(e)=>setPdfData({...pdfData,placeOfSupply:e.target.value})}>
                   <option value="all" selected>
                     Select place
                   </option>
@@ -108,13 +264,13 @@ const Invoice = () => {
         </div>
         <div className="invoice-upper-col2">
           <div className="balance-div">
-            <img src={logo} alt="" />
+            <img src={user?.CompanyLogo} alt="Logo" />
           </div>
           <div className="input-div">
             <div className="para-div">
               <p>Invoice</p>
             </div>
-            <input type="text" className="row2-input" placeholder="2700" />
+            <input type="text" className="row2-input" placeholder="2700" onChange={(e)=>setPdfData({...pdfData,invoiceNo:e.target.value})}/>
           </div>
         </div>
       </div>
@@ -148,49 +304,43 @@ const Invoice = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <i class="fa-solid fa-layer-group table-sign"></i>
-              </td>
-              <td>1</td>
-              <td>2D</td>
+            {invoiceList.map((data, index) => {
+              return (
+                <tr>
+                  <td>
+                    <i class="fa-solid fa-layer-group table-sign"></i>
+                  </td>
+                  <td>{index + 1}</td>
+                  <td>{data.product}</td>
 
-              <td>2 minute</td>
-              <td>1</td>
-              <td>20,000</td>
-              <td>20,000.00</td>
-              <td>18%</td>
-              <td style={{ cursor: "pointer" }}>
-                <i class="fa-solid fa-trash"></i>
-              </td>
-            </tr>{" "}
-            <tr>
-              <td>
-                <i class="fa-solid fa-layer-group table-sign"></i>
-              </td>
-              <td>2</td>
-              <td>2D</td>
-
-              <td>2 minute</td>
-              <td>1</td>
-              <td>20,000</td>
-              <td>20,000.00</td>
-              <td>18%</td>
-              <td style={{ cursor: "pointer" }}>
-                <i class="fa-solid fa-trash"></i>
-              </td>
-            </tr>
+                  <td>{data.description}</td>
+                  <td>{data.qty}</td>
+                  <td>{data.rate}</td>
+                  <td>{data.amount}</td>
+                  <td>{data.tax} %</td>
+                  <td
+                    style={{ cursor: "pointer" }}
+                    onClick={(e) => deleteItem(index)}
+                  >
+                    <i class="fa-solid fa-trash"></i>
+                  </td>
+                </tr>
+              );
+            })}{" "}
             {addLineMode && (
               <tr className="table-row-input">
                 <td>
                   <i class="fa-solid fa-plus table-sign"></i>
                 </td>
-                <td>3</td>
+                <td>{invoiceList.length ? invoiceList.length + 1 : 1}</td>
                 <td>
                   <input
                     type="text"
                     className="table-input"
                     placeholder="Product/Service"
+                    name="product"
+                    value={invoiceData.product}
+                    onChange={handleList}
                   />
                 </td>
                 <td>
@@ -198,38 +348,53 @@ const Invoice = () => {
                     type="text"
                     className="table-input"
                     placeholder="Description"
+                    name="description"
+                    value={invoiceData.description}
+                    onChange={handleList}
                   />
                 </td>
                 <td>
                   <input
-                    type="text"
+                    type="number"
                     className="table-input"
                     placeholder="Qty"
+                    name="qty"
+                    value={invoiceData.qty}
+                    onChange={handleList}
                   />
                 </td>
                 <td>
                   <input
-                    type="text"
+                    type="number"
                     className="table-input"
                     placeholder="Rate"
+                    name="rate"
+                    value={invoiceData.rate}
+                    onChange={handleList}
                   />
                 </td>
                 <td>
                   <input
-                    type="text"
+                    type="number"
                     className="table-input"
                     placeholder="Amount"
+                    name="amount"
+                    value={invoiceData.amount}
+                    onChange={handleList}
                   />
                 </td>
                 <td>
                   <input
                     type="text"
                     className="table-input"
-                    placeholder="Tax"
+                    placeholder="Tax %"
+                    name="tax"
+                    value={invoiceData.tax}
+                    onChange={handleList}
                   />
                 </td>
                 <td style={{ cursor: "pointer" }}>
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-check" onClick={addList}></i>
                 </td>
               </tr>
             )}
@@ -240,21 +405,19 @@ const Invoice = () => {
             <button onClick={() => setAddLineMode(!addLineMode)}>
               Add line
             </button>
-            <button>Clear all lines</button>
-            <button>Add subtotal</button>
+            <button onClick={(e) => setInvoiceList([])}>Clear all lines</button>
+            <button onClick={addSubTotal}>Add subtotal</button>
           </div>
           <div className="subtotal">
-            <p>Subtot</p> <p>20,000.00</p>
+            <p>Subtot</p> <p>{parseInt(subTotal).toFixed(2)}</p>
           </div>
         </div>
         <div className="form-row">
           <div className="form-row-col1">
             <div className="textarea-div1">
               <p>Messege on</p>
-              <textarea name="" id="" cols="25" rows="10"></textarea>
+              <textarea name="" id="" cols="34" rows="10" onChange={(e)=>setPdfData({...pdfData,messege:e.target.value})}></textarea>
             </div>
-            
-           
           </div>
           <div className="form-row-col2">
             <div className="input-div1">
@@ -267,25 +430,31 @@ const Invoice = () => {
                   <option value="negative">Bihar</option>
                 </select>
               </div>
-              <input type="text" />
-              <p>0.00</p>
+              <input
+                type="number"
+                onChange={(e) => setDiscountPercent(e.target.value)}
+              />
+              <p>{totalWithDiscount.toFixed(2)}</p>
             </div>
             <div className="input-div2">
               <p>CGST 9% on</p>
-              <input type="text" placeholder="1900.00" />
+              <input
+                type="number"
+                placeholder="1900.00"
+                onChange={(e) => setSgst(e.target.value)}
+              />
             </div>
             <div className="input-div3">
               <p>SGST 9% on</p>
-              <input type="text" placeholder="1900.00" />
+              <input
+                type="number"
+                placeholder="1900.00"
+                onChange={(e) => setCgst(e.target.value)}
+              />
             </div>
             <div className="input-div4">
-              <p>Tot</p>
-              <p>23,600.00</p>
-            </div>
-            <div className="input-div5">
-              {" "}
-              <p>Balance</p>
-              <p>23,600.00</p>
+              <p>Total</p>
+              <p>{total.toFixed(2)}</p>
             </div>
           </div>
         </div>
@@ -297,10 +466,14 @@ const Invoice = () => {
         </div>
         <div className="buttons2">
           <button>Save</button>
-          <button>Print or Preview</button>
+          <button onClick={()=>setPdfPreviewMode(true)}>Print or Preview</button>
         </div>
       </div>
+      <ToastContainer />
     </>
+    }
+    </>
+    
   );
 };
 
