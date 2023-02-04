@@ -8,7 +8,7 @@ import Company from "./Pages/Company/Company";
 import Invoice from "./Pages/Invoice/Invoice";
 
 
-export const serverLink = 'https://paymaster-server-basu-dev-ghosh.vercel.app/api';
+export const serverLink = 'https://paymaster-server-basu-dev-ghosh.vercel.app//api';
 // export const serverLink = 'http://localhost:4000/api';
 
 

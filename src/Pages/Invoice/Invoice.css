@@ -55,6 +55,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    height: auto;
 }
 .para-div{
     display: flex;
@@ -64,17 +65,19 @@
     font-size: 16px;
     margin-bottom: 4px;
 }
-.input-div input[type="text"]{
-    padding: 15px;
+
+.input-div input[type="text"],.input-div input[type="date"]{
+    padding: 14px;
     margin-left: 10px;
     outline: none;
     font-size: 15px;
-    width:300px;
+    width:200px;
     font-family: 'Nexa Light';
+    cursor: pointer;
 }
 .input-div input[type="text"]::placeholder{
     font-family: "Nexa Light";
-    font-size: 16px;
+    font-size: 15px;
 }
 .input-checkbox-div{
     display: flex;
@@ -451,11 +454,15 @@ font-family: 'Nexa Light';
         outline: none;
         font-size: 10px;
         width:100%;
+       
     }
     .input-div input[type="text"]::placeholder{
-        font-weight: bold;
         font-family: "Nexa Light";
-        font-size: 15px;
+        font-size: 12px;
+    }
+    .invoice-lower input{
+        border: 0 !important;
+        outline: none;
     }
     .input-checkbox-div{
         display: flex;
@@ -806,12 +813,21 @@ flex:.7;
     }
     .buttons2 button:nth-child(2){
         width: 100px;
-        padding: 10px;
+        padding: 0px;
         margin: 0 10px;
         background: #cf24e6;
         font-family: 'Nexa Light';
         border-radius: 16px;
         cursor: pointer;
         font-size: 10px;
+    }
+    .invoice-upper input,textarea{
+        border-radius: 2px;
+    }
+    .invoice-lower input,textarea{
+        border-radius: 2px !important;
+    }
+    .row1-dropdown-div,.dropdown-div,.table-buttons button,.buttons1 button,.buttons2 button,.buttons2 button:nth-child(2){
+        border-radius: 2px;
     }
 }

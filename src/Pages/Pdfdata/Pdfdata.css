@@ -15,6 +15,7 @@
     top: 50px;
     font-size: 30px;
     color: #fff;
+
 }
 .pdf-page{
     width: 700px;
@@ -188,7 +189,9 @@
     font-family: "Nexa Bold";
     font-size: 16px;
 }
-
+.download-buttons i{
+    cursor: pointer;
+}
 @media only screen and (max-width: 1000px) {
     .pdf-container{
         width: 100%;
@@ -197,6 +200,9 @@
         padding: 0 0px;
         background-color: #121f55;
         place-items: center;
+    }
+    .download-buttons i{
+        cursor: pointer;
     }
     .download-buttons{
         display: flex;
