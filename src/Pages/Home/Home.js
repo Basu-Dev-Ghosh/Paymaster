@@ -11,6 +11,8 @@ import group from "../../assets/Group 20.png";
 import Footer from "../../Components/Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import WarningModal from "../../Components/WarningModal/WarningModal";
+
 // import { GoogleApiWrapper,Autocomplete } from 'google-maps-react';
 // import MyComponent from "../../Components/MyComponent";
 
@@ -42,6 +44,7 @@ const Home = (props) => {
   const [company, setCompany] = useState(null);
   const [logoUrl, setLogoUrl] = useState(null);
   const inputRef=useRef(null);
+  const [showWarningPopup,setShowWarningPopup]=useState(false)
 
   const navigate = useNavigate();
   const getCompanies = async () => {
@@ -104,13 +107,23 @@ const Home = (props) => {
     // }, [company]);
 
   return (
-    <div>
+    <>
+    <WarningModal
+    display={showWarningPopup}
+    setShowWarningPopup={setShowWarningPopup}
+  />
+    <div  style={
+      showWarningPopup 
+        ? { filter: "blur(5px)" }
+        : { filter: "blur(0px)" }
+    }>
       {showLoader ? (
         <Loader />
       ) : (
         <>
-          <NewHeader setShowLoader={setShowLoader} />
-          <div className="landing-container">
+       
+          <NewHeader setShowLoader={setShowLoader} setShowWarningPopup={setShowWarningPopup}/>
+          <div className="landing-container" >
             <div className="landing-text">
               <h1>
                 Who pays you <span>on time?</span>
@@ -177,6 +190,7 @@ const Home = (props) => {
         </>
       )}
     </div>
+    </>
     // <MyComponent/>
   );
 };

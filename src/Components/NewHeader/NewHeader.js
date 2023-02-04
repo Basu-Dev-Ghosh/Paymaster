@@ -6,7 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
-const NewHeader = ({ setShowLoader }) => {
+const NewHeader = ({ setShowLoader,setShowWarningPopup }) => {
   const [token, setToken] = useState(false);
   const [user,setUser]=useState(null)
   const navigate = useNavigate();
@@ -66,7 +66,11 @@ const NewHeader = ({ setShowLoader }) => {
         <div className="new-header-logo">
           <img src={footerlogo} alt="Footer-Logo" />
           <h3>paymaster</h3>
-          <div className="invoice-logo-container" onClick={()=>navigate("/invoice")}>
+          <div className="invoice-logo-container" onClick={()=>{
+          token ?navigate("/invoice"):
+            setShowWarningPopup(true)
+          
+          }}>
           <i className="fa-solid fa-receipt invoice-logo"></i>
           <p>Invoice</p>
           </div>
