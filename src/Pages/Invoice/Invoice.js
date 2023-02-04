@@ -11,7 +11,7 @@ import AddCompany from "../../Components/AddClientModal/AddClient";
 
 
 const Invoice = () => {
-  const [addLineMode, setAddLineMode] = useState(false);
+  const [addLineMode, setAddLineMode] = useState(true);
   const [invoiceList, setInvoiceList] = useState([]);
   const [invoiceData, setInvoiceData] = useState({});
   const [subTotal, setSubtotal] = useState(0);
