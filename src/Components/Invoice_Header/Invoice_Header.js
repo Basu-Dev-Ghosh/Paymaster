@@ -19,9 +19,9 @@ const NewHeader2 = ({ setAddClientMode }) => {
       });
       if (res.status === 200) {
         setToken(true);
-    
+
       }
-    } catch (err) {}
+    } catch (err) { }
   };
 
 
@@ -66,19 +66,12 @@ const NewHeader2 = ({ setAddClientMode }) => {
           </div>
         </div>
 
-        <div className="user-icon">
-          <i class="fa-solid fa-gear"></i>
-        </div>
-        <a className="help">
-          <i class="fa-solid fa-question"></i> Help
-        </a>
-       
-          <button className="add-client-button" onClick={(e)=>{
-           setAddClientMode(true)
-          }}>
-            <i class="fa-solid fa-plus"></i>Add client
-          </button>
-        
+        <button className="add-client-button" onClick={(e) => {
+          setAddClientMode(true)
+        }}>
+          <i class="fa-solid fa-plus"></i>Add client
+        </button>
+
         <a onClick={() => navigate("/")}>
           <i class="fa-solid fa-xmark" style={{ fontSize: "40px" }}></i>
         </a>

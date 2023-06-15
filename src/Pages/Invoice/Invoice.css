@@ -1,4 +1,4 @@
-.invoice-upper{
+.invoice-upper {
     width: 100%;
     height: auto;
     background-color: #121f55;
@@ -6,58 +6,72 @@
     display: flex;
     justify-content: space-between;
 }
-.invoice-upper select,option{
+
+.invoice-upper select,
+option {
     font-family: 'Nexa Light' !important;
 }
-.invoice-lower select,option{
+
+.invoice-lower select,
+option {
     font-family: 'Nexa Light' !important;
 }
-.invoice-upper input,textarea{
+
+.invoice-upper input,
+textarea {
     border-radius: 18px;
 }
-.invoice-lower input,textarea{
+
+.invoice-lower input,
+textarea {
     border-radius: 18px !important;
 }
-.invoice-lower{
+
+.invoice-lower {
     width: 100%;
     height: auto;
     padding: 20px 200px;
     display: flex;
     flex-direction: column;
 }
-.invoice-upper-col1{
+
+.invoice-upper-col1 {
     display: flex;
     flex-direction: column;
 }
 
-.invoice-upper-col1-row1{
+.invoice-upper-col1-row1 {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-.invoice-upper-col1-row2{
+
+.invoice-upper-col1-row2 {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
 }
 
-.row1-dropdown-div{
+.row1-dropdown-div {
     display: flex;
     flex-direction: column;
 }
-.row1-dropdown-div p{
+
+.row1-dropdown-div p {
     font-family: 'Nexa Light';
     color: #fff;
     font-size: 16px;
     margin-bottom: 4px;
 }
-.input-div{
+
+.input-div {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     height: auto;
 }
-.para-div{
+
+.para-div {
     display: flex;
     justify-content: space-between;
     font-family: 'Nexa Light';
@@ -66,20 +80,23 @@
     margin-bottom: 4px;
 }
 
-.input-div input[type="text"],.input-div input[type="date"]{
+.input-div input[type="text"],
+.input-div input[type="date"] {
     padding: 14px;
     margin-left: 10px;
     outline: none;
     font-size: 15px;
-    width:200px;
+    width: 200px;
     font-family: 'Nexa Light';
     cursor: pointer;
 }
-.input-div input[type="text"]::placeholder{
+
+.input-div input[type="text"]::placeholder {
     font-family: "Nexa Light";
     font-size: 15px;
 }
-.input-checkbox-div{
+
+.input-checkbox-div {
     display: flex;
     margin-left: 16px;
     margin-top: 10px;
@@ -87,199 +104,243 @@
     font-family: 'Nexa Light';
     align-items: center;
 }
-.input-checkbox-div input[type="checkbox"]{
+
+.input-checkbox-div input[type="checkbox"] {
     width: 30px;
     height: 22px;
 }
-.input-checkbox-div p{
+
+.input-checkbox-div p {
     margin-top: 4px;
     margin-left: 6px;
     font-family: 'Nexa Light';
 }
 
-.input-checkbox-div2{
+.input-checkbox-div2 {
     margin-top: 30px;
 }
-.checkbox-div{
+
+.checkbox-div {
     display: flex;
     flex-direction: column;
     color: #fff;
     font-family: 'Nexa Light';
     padding: 20px;
 }
-.checkbox-div p{
+
+.checkbox-div p {
     margin-left: 20px;
-   margin-bottom: 20px;
-   font-family: 'Nexa Light';
+    margin-bottom: 20px;
+    font-family: 'Nexa Light';
 }
-.checkbox-div .input-checkbox-div{
-    margin-top:-10px;
+
+.checkbox-div .input-checkbox-div {
+    margin-top: -10px;
 }
-.checkbox-div .input-checkbox-div p{
+
+.checkbox-div .input-checkbox-div p {
     margin-bottom: 0
 }
-.row2-input{
+
+.row2-input {
     width: 180px !important;
 }
 
-.invoice-upper-col2{
+.invoice-upper-col2 {
     display: flex;
     flex-direction: column;
     color: #fff;
     font-family: "Nexa Light";
 }
-.invoice-upper-col2 .balance-div{
+
+.invoice-upper-col2 .balance-div {
     display: flex;
     flex-direction: column;
 }
-.balance-div{
+
+.balance-div {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     width: fit-content;
     height: fit-content;
+    margin-left: 100px;
 }
-.balance-div p:nth-child(1){
+
+.balance-div p:nth-child(1) {
     font-size: 15px;
     text-transform: uppercase;
     text-align: right;
 }
-.balance-div p:nth-child(2){
+
+.balance-div p:nth-child(2) {
     font-size: 50px;
     text-transform: uppercase;
     margin-top: 20px;
 }
-.invoice-upper-col2 .input-div{
+
+.invoice-upper-col2 .input-div {
     margin-top: 100px;
 }
 
-.filter-row{
+.filter-row {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     height: 90px;
 }
-.filter-row .row1-dropdown-div{
+
+.filter-row .row1-dropdown-div {
     flex-direction: row;
     align-items: center;
 }
-.filter-row .row1-dropdown-div p{
+
+.filter-row .row1-dropdown-div p {
     color: black;
     margin-right: 20px;
 }
-.table-row{
+
+.table-row {
     margin-top: 30px;
 }
-.table-row thead{
+
+.table-row thead {
     color: rgb(89, 86, 86);
     font-family: 'Nexa Light';
 }
-.table-row tbody tr td{
+
+.table-row tbody tr td {
     padding: 30px 0 !important;
     text-align: center;
     /* padding: 30px !important; */
     font-family: 'Nexa Light';
 
 }
-.table-sign{
+
+.table-sign {
     margin-right: 30px !important;
     opacity: .6;
     font-size: 16px;
 }
-table,th,td{
- border-collapse: collapse;
+
+table,
+th,
+td {
+    border-collapse: collapse;
 }
 
-.table-row tbody tr td{
-   border-bottom: 1px solid rgb(185, 183, 183);
+.table-row tbody tr td {
+    border-bottom: 1px solid rgb(185, 183, 183);
 }
-.table-buttons{
+
+.table-buttons {
     margin-top: 30px;
     display: flex;
     width: 100%;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
-.subtotal{
+
+.subtotal {
     display: flex;
 }
-.subtotal p{
+
+.subtotal p {
     margin-right: 30px;
     font-size: 20px;
     font-family: 'Nexa Light';
 }
-.subtotal p:nth-child(2){
+
+.subtotal p:nth-child(2) {
     font-family: 'Nexa Light';
 }
-.table-buttons button{
+
+.table-buttons button {
     background: #fff !important;
     padding: 15px;
     height: auto;
     width: 140px;
-   margin-right: 20px;
-   border-radius: 30px;
-   cursor: pointer;
-   transition: .6s ease;
-   font-family: 'Nexa Light';
+    margin-right: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .6s ease;
+    font-family: 'Nexa Light';
 }
-.table-buttons button:hover{
+
+.table-buttons button:hover {
     background: #121f55 !important;
     color: #fff;
 }
-.table-input{
-border: 0;
-padding: 10px;
-text-align: center;
-outline: none;
-font-family: 'Nexa Light';
+
+.table-input {
+    border: 0;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    font-family: 'Nexa Light';
 }
-.table-input:focus{
+
+.table-input:focus {
     border: 1px solid rgb(52, 50, 50);
     background: rgb(223, 222, 222);
     border-radius: 10px;
 }
-.form-row{
+
+.form-row {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
-.form-row-col1{
+
+.form-row-col1 {
     display: flex;
     flex-direction: column;
     font-family: 'Nexa Light';
 }
-.textarea-div1,.textarea-div2{
+
+.textarea-div1,
+.textarea-div2 {
     margin-bottom: 20px;
 }
-.textarea-div1 p,.textarea-div2 p{
+
+.textarea-div1 p,
+.textarea-div2 p {
     color: rgb(101, 97, 97);
     margin-bottom: 10px;
 }
-.textarea-div1 textarea,.textarea-div2 textarea{
+
+.textarea-div1 textarea,
+.textarea-div2 textarea {
     outline: none;
     padding: 20px;
     border-radius: 8px;
 }
-.textarea-div3{
+
+.textarea-div3 {
     margin-top: 10px;
 }
-.para{
+
+.para {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.para p:nth-child(1){
+
+.para p:nth-child(1) {
     display: flex;
     align-items: center;
 }
-.para p i{
+
+.para p i {
     margin-right: 10px;
 }
-.textarea-div3 .para p{
+
+.textarea-div3 .para p {
     color: rgb(101, 97, 97);
     margin-bottom: 10px;
 }
-.file-input{
+
+.file-input {
     width: 400px;
     border: 1px solid rgb(142, 142, 142);
     padding: 20px;
@@ -292,20 +353,24 @@ font-family: 'Nexa Light';
     margin-top: 10px;
     border-radius: 10px;
 }
-.file-input label{
+
+.file-input label {
     cursor: pointer;
 }
+
 .file-input input {
     width: 0;
 }
-.input-div1{
+
+.input-div1 {
     display: flex;
     height: 70px;
     align-items: center;
-    width:400px;
+    width: 400px;
     justify-content: space-between;
 }
-.input-div1 input{
+
+.input-div1 input {
     width: 60px;
     background: #fff;
     height: 50px;
@@ -316,34 +381,46 @@ font-family: 'Nexa Light';
     box-shadow: 0px 3px 6px #00000029;
     padding: 10px;
 }
-.input-div1 p{
+
+.input-div1 p {
     font-family: 'Nexa Light';
     font-size: 16px;
 }
-.input-div2,.input-div3,.input-div4,.input-div5
-{
+
+.input-div2,
+.input-div3,
+.input-div4,
+.input-div5 {
     display: flex;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
 }
 
-.input-div2 p,.input-div3 p,.input-div4 p,.input-div5 p{
+.input-div2 p,
+.input-div3 p,
+.input-div4 p,
+.input-div5 p {
     font-family: 'Nexa Light';
     font-size: 16px;
 }
-.input-div4 p:nth-child(2),.input-div5 p:nth-child(2){
+
+.input-div4 p:nth-child(2),
+.input-div5 p:nth-child(2) {
     font-family: 'Nexa Light';
 }
-.input-div2 input,.input-div3 input{
+
+.input-div2 input,
+.input-div3 input {
     width: 100px;
     padding: 10px;
     outline: navajowhite;
     border: 0;
-    border:1px solid #c7c7c7 !important;
+    border: 1px solid #c7c7c7 !important;
 }
-.preview-row{
-    width:100%;
+
+.preview-row {
+    width: 100%;
     background-color: #000;
     height: auto;
     margin-top: 40px;
@@ -352,25 +429,28 @@ font-family: 'Nexa Light';
     justify-content: space-between;
     align-items: center;
 }
-.buttons1 button{
-  width: 100px;
-  padding: 14px;
-  margin: 0 10px;
-  background: #ffffff;
-  font-family: 'Nexa Light';
-  border-radius: 16px;
-  cursor: pointer;
+
+.buttons1 button {
+    width: 100px;
+    padding: 14px;
+    margin: 0 10px;
+    background: #ffffff;
+    font-family: 'Nexa Light';
+    border-radius: 16px;
+    cursor: pointer;
 }
-.buttons2 button{
-  width: 100px;
-  padding: 14px;
-  margin: 0 10px;
-  background: #ffffff;
-  font-family: 'Nexa Light';
-  border-radius: 16px;
-  cursor: pointer;
+
+.buttons2 button {
+    width: 100px;
+    padding: 14px;
+    margin: 0 10px;
+    background: #ffffff;
+    font-family: 'Nexa Light';
+    border-radius: 16px;
+    cursor: pointer;
 }
-.buttons2 button:nth-child(2){
+
+.buttons2 button:nth-child(2) {
     width: 200px;
     background-color: #c932a3;
     color: #fff;
@@ -380,67 +460,76 @@ font-family: 'Nexa Light';
 
 
 @media only screen and (max-width: 1000px) {
-    .invoice-upper{
+    .invoice-upper {
         width: 100%;
         height: auto;
         background-color: #121f55;
-        padding:10px;
+        padding: 10px;
         display: flex;
         flex-direction: column-reverse;
     }
-    .invoice-lower{
+
+    .invoice-lower {
         width: 100%;
         height: auto;
         padding: 20px 10px;
         display: flex;
         flex-direction: column;
     }
-    .invoice-upper-col1{
+
+    .invoice-upper-col1 {
         display: flex;
         flex-direction: column;
         /* margin-top: 0; */
     }
-    .invoice-upper-col2{
+
+    .invoice-upper-col2 {
         margin-top: 20px;
     }
-    
-    .invoice-upper-col1-row1{
+
+    .invoice-upper-col1-row1 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom:10px;
+        margin-bottom: 10px;
         width: 100%;
     }
-    .balance-div{
+
+    .balance-div {
         display: block;
         width: 100%;
-        
-      
+
+
     }
-    .row1-dropdown-div{
+
+    .row1-dropdown-div {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-    .dropdown-div{
+
+    .dropdown-div {
         width: 100%;
-        margin-top:5px;
+        margin-top: 5px;
     }
-    .row1-dropdown-div p{
+
+    .row1-dropdown-div p {
         font-family: 'Nexa Light';
         color: #fff;
         font-size: 15px;
         margin-bottom: 4px;
     }
-    .input-div{
+
+    .input-div {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top:10px;
+        margin-top: 10px;
         margin-left: 0px;
         width: 100%;
     }
-    .para-div{
+
+    .para-div {
         display: flex;
         justify-content: space-between;
         font-family: 'Nexa Light';
@@ -448,23 +537,27 @@ font-family: 'Nexa Light';
         font-size: 15px;
         margin-bottom: 5px;
     }
-    .input-div input[type="text"]{
+
+    .input-div input[type="text"] {
         padding: 15px;
         margin-left: 0px;
         outline: none;
         font-size: 10px;
-        width:100%;
-       
+        width: 100%;
+
     }
-    .input-div input[type="text"]::placeholder{
+
+    .input-div input[type="text"]::placeholder {
         font-family: "Nexa Light";
         font-size: 12px;
     }
-    .invoice-lower input{
+
+    .invoice-lower input {
         border: 0 !important;
         outline: none;
     }
-    .input-checkbox-div{
+
+    .input-checkbox-div {
         display: flex;
         margin-left: 0px;
         margin-top: 10px;
@@ -473,15 +566,18 @@ font-family: 'Nexa Light';
         align-items: center;
 
     }
-    .input-checkbox-div input[type="checkbox"]{
+
+    .input-checkbox-div input[type="checkbox"] {
         width: 20px;
         height: 16px;
     }
-    .input-checkbox-div p{
+
+    .input-checkbox-div p {
         margin-top: 4px;
         margin-left: 6px;
     }
-    .checkbox-div{
+
+    .checkbox-div {
         display: flex;
         flex-direction: column;
         color: #fff;
@@ -490,29 +586,35 @@ font-family: 'Nexa Light';
         width: 100%;
         margin-top: 15px;
     }
-    .checkbox-div p{
+
+    .checkbox-div p {
         margin-left: 0px;
-       margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-    .checkbox-div .input-checkbox-div{
-        margin-top:-10px;
+
+    .checkbox-div .input-checkbox-div {
+        margin-top: -10px;
     }
-    .input-checkbox-div p{
+
+    .input-checkbox-div p {
         margin-left: 10px;
     }
-    .checkbox-div .input-checkbox-div p{
+
+    .checkbox-div .input-checkbox-div p {
         margin-bottom: 0px;
         margin-right: 5px;
     }
-    .row1-dropdown-div textarea{
+
+    .row1-dropdown-div textarea {
         width: 100%;
         height: 100px;
     }
-    .row2-input{
+
+    .row2-input {
         width: 100% !important;
     }
-    
-    .invoice-upper-col2{
+
+    .invoice-upper-col2 {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -521,197 +623,239 @@ font-family: 'Nexa Light';
         align-items: center;
         justify-content: center;
     }
-    .invoice-upper-col2 .balance-div{
+
+    .invoice-upper-col2 .balance-div {
         display: flex;
         justify-content: space-around;
         width: fit-content;
     }
-    .balance-div p:nth-child(1){
+
+    .balance-div p:nth-child(1) {
         font-size: 15px;
         text-transform: uppercase;
         text-align: left;
     }
-    .balance-div p:nth-child(2){
+
+    .balance-div p:nth-child(2) {
         font-size: 32px;
         text-transform: uppercase;
         margin-top: 0px;
     }
-    .invoice-upper-col2 .input-div{
+
+    .invoice-upper-col2 .input-div {
         margin-top: 0px;
         margin-bottom: 40px;
     }
-    
-    .filter-row{
+
+    .filter-row {
         display: flex;
         width: 100%;
-        justify-content:center;
+        justify-content: center;
         height: 70px;
     }
-    .filter-row .row1-dropdown-div{
+
+    .filter-row .row1-dropdown-div {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-       
+
     }
-    .filter-row .row1-dropdown-div p{
+
+    .filter-row .row1-dropdown-div p {
         color: black;
         font-size: 15px;
     }
-    .table-row{
-        margin-top:30px;
+
+    .table-row {
+        margin-top: 30px;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         overflow-x: scroll;
-       
+
     }
-    table{
+
+    table {
         width: 100%;
     }
-    .table-row thead{
+
+    .table-row thead {
         color: rgb(89, 86, 86);
         font-family: 'Nexa Light';
         font-size: 8px;
         width: 100%;
-       
+
     }
-    thead tr{
-        display: flex;    
+
+    thead tr {
+        display: flex;
         width: 100%;
         margin: 0;
         padding: 0;
         justify-content: space-between;
     }
- 
-    tbody{
+
+    tbody {
         width: 100%;
     }
-    .table-row tbody tr{
+
+    .table-row tbody tr {
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
-    .table-row tbody tr td{
-       font-size: 8px !important;
-    
+
+    .table-row tbody tr td {
+        font-size: 8px !important;
+
     }
-    tbody .table-row-input td:last-child i{
+
+    tbody .table-row-input td:last-child i {
         font-size: 20px;
     }
-    .table-sign{
+
+    .table-sign {
         margin-right: 0px !important;
         opacity: .6;
         font-size: 10px;
     }
-    table,th,td{
-     border-collapse: collapse;
+
+    table,
+    th,
+    td {
+        border-collapse: collapse;
     }
-    .table-row-input{
+
+    .table-row-input {
         display: flex;
         flex-direction: column;
     }
-    tbody tr td{
-       border-bottom: 1px solid rgb(185, 183, 183);
+
+    tbody tr td {
+        border-bottom: 1px solid rgb(185, 183, 183);
     }
-    .table-buttons{
+
+    .table-buttons {
         margin-top: 20px;
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        justify-content: space-between;   
+        justify-content: space-between;
     }
-    .subtotal{
+
+    .subtotal {
         display: flex;
         margin-bottom: 20px;
         justify-content: flex-end;
     }
-    .subtotal p{
+
+    .subtotal p {
         margin-right: 20px;
         font-size: 16px;
         font-family: 'Nexa Light';
     }
-    .subtotal p:nth-child(2){
+
+    .subtotal p:nth-child(2) {
         font-family: 'Nexa Light';
     }
-    .table-buttons button{
+
+    .table-buttons button {
         background: #fff !important;
         padding: 8px;
         height: auto;
         width: 100px;
-       margin-right: 20px;
-       border-radius: 30px;
-       cursor: pointer;
-       transition: .6s ease;
-       font-family: 'Nexa Light';
-       font-size: 10px;
-       margin-top: 10px;
+        margin-right: 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: .6s ease;
+        font-family: 'Nexa Light';
+        font-size: 10px;
+        margin-top: 10px;
     }
-    .table-buttons button:hover{
+
+    .table-buttons button:hover {
         background: #121f55 !important;
         color: #fff;
     }
-    .table-input{
-    border: 0;
-    padding: 10px;
-    text-align: left;
-    outline: none;
-    width: 100%;
-    font-size: 14px;
-    font-family: 'Nexa Light';
+
+    .table-input {
+        border: 0;
+        padding: 10px;
+        text-align: left;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+        font-family: 'Nexa Light';
     }
-    .table-input:focus{
+
+    .table-input:focus {
         border: 1px solid rgb(52, 50, 50);
         background: rgb(223, 222, 222);
         border-radius: 10px;
     }
-    .form-row{
+
+    .form-row {
         display: flex;
         flex-direction: column;
         margin-top: 30px;
     }
-    .form-row-col1{
+
+    .form-row-col1 {
         display: flex;
         flex-direction: column;
         font-family: 'Nexa Light';
     }
-    .form-row-col1 textarea{
+
+    .form-row-col1 textarea {
         height: 80px;
     }
-    .textarea-div1,.textarea-div2{
+
+    .textarea-div1,
+    .textarea-div2 {
         margin-bottom: 10px;
     }
-    .textarea-div1 p,.textarea-div2 p{
+
+    .textarea-div1 p,
+    .textarea-div2 p {
         color: rgb(101, 97, 97);
         margin-bottom: 10px;
     }
-    .textarea-div1 textarea,.textarea-div2 textarea{
+
+    .textarea-div1 textarea,
+    .textarea-div2 textarea {
         outline: none;
-        padding:10px;
+        padding: 10px;
         border-radius: 10px;
     }
-    .textarea-div3{
+
+    .textarea-div3 {
         margin-top: 10px;
     }
-    .para{
+
+    .para {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 13px;
     }
-    .para p:nth-child(1){
+
+    .para p:nth-child(1) {
         display: flex;
         align-items: center;
     }
-    .para p i{
+
+    .para p i {
         margin-right: 10px;
     }
-    .textarea-div3 .para p{
+
+    .textarea-div3 .para p {
         color: rgb(101, 97, 97);
         margin-bottom: 10px;
     }
-    .file-input{
-        width:100%;
+
+    .file-input {
+        width: 100%;
         border: 1px solid rgb(142, 142, 142);
         padding: 15px;
         display: flex;
@@ -723,13 +867,16 @@ font-family: 'Nexa Light';
         margin-top: 10px;
         border-radius: 10px;
     }
-    .file-input label{
+
+    .file-input label {
         cursor: pointer;
     }
+
     .file-input input {
         width: 0;
     }
-    .input-div1{
+
+    .input-div1 {
         margin-top: 30px;
         align-items: center;
         display: flex;
@@ -737,50 +884,68 @@ font-family: 'Nexa Light';
         height: auto;
         flex-wrap: wrap;
     }
-    .input-div1 .dropdown-div{
-flex:.7;
+
+    .input-div1 .dropdown-div {
+        flex: .7;
     }
-    .input-div1 input{
+
+    .input-div1 input {
         width: 100px;
         background: #fff;
         height: 40px;
         border: 0;
         outline: none;
         border-radius: 16px;
-       margin-top: 30px;
+        margin-top: 30px;
         box-shadow: 0px 3px 6px #00000029;
-        padding:8px;
+        padding: 8px;
     }
-    .input-div1 p{
+
+    .input-div1 p {
         font-family: 'Nexa Light';
         font-size: 16px;
         margin-top: 30px;
 
     }
-    .input-div2,.input-div3,.input-div4,.input-div5
-    {
+
+    .balance-div {
+        margin-left: 0;
+    }
+
+    .input-div2,
+    .input-div3,
+    .input-div4,
+    .input-div5 {
         display: flex;
         padding: 20px;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .input-div2 p,.input-div3 p,.input-div4 p,.input-div5 p{
+
+    .input-div2 p,
+    .input-div3 p,
+    .input-div4 p,
+    .input-div5 p {
         font-family: 'Nexa Light';
         font-size: 16px;
     }
-    .input-div4 p:nth-child(2),.input-div5 p:nth-child(2){
+
+    .input-div4 p:nth-child(2),
+    .input-div5 p:nth-child(2) {
         font-family: 'Nexa Light';
     }
-    .input-div2 input,.input-div3 input{
+
+    .input-div2 input,
+    .input-div3 input {
         width: 100px;
         padding: 10px;
         outline: navajowhite;
         border: 0;
-        border:1px solid #c7c7c7 !important;
+        border: 1px solid #c7c7c7 !important;
     }
-    .preview-row{
-        width:100%;
+
+    .preview-row {
+        width: 100%;
         background-color: #000;
         height: 100px;
         margin-top: 40px;
@@ -788,20 +953,13 @@ flex:.7;
         display: flex;
         align-items: center;
     }
-    .buttons1,.buttons2{
+
+    .buttons1,
+    .buttons2 {
         display: flex;
     }
-    .buttons1 button{
-      width: 100px;
-      padding: 10px;
-      margin: 0 10px;
-      background: #ffffff;
-      font-family: 'Nexa Light';
-      border-radius: 16px;
-      cursor: pointer;
-      font-size: 10px;
-    }
-    .buttons2 button{
+
+    .buttons1 button {
         width: 100px;
         padding: 10px;
         margin: 0 10px;
@@ -811,7 +969,19 @@ flex:.7;
         cursor: pointer;
         font-size: 10px;
     }
-    .buttons2 button:nth-child(2){
+
+    .buttons2 button {
+        width: 100px;
+        padding: 10px;
+        margin: 0 10px;
+        background: #ffffff;
+        font-family: 'Nexa Light';
+        border-radius: 16px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .buttons2 button:nth-child(2) {
         width: 100px;
         padding: 0px;
         margin: 0 10px;
@@ -821,13 +991,23 @@ flex:.7;
         cursor: pointer;
         font-size: 10px;
     }
-    .invoice-upper input,textarea{
+
+    .invoice-upper input,
+    textarea {
         border-radius: 2px;
     }
-    .invoice-lower input,textarea{
+
+    .invoice-lower input,
+    textarea {
         border-radius: 2px !important;
     }
-    .row1-dropdown-div,.dropdown-div,.table-buttons button,.buttons1 button,.buttons2 button,.buttons2 button:nth-child(2){
+
+    .row1-dropdown-div,
+    .dropdown-div,
+    .table-buttons button,
+    .buttons1 button,
+    .buttons2 button,
+    .buttons2 button:nth-child(2) {
         border-radius: 2px;
     }
 }

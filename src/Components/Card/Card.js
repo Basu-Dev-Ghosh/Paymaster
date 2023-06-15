@@ -52,7 +52,7 @@ const Card = ({ company }) => {
             <p>On time payement</p>
             <div className="ratings">
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 90 }}
                 value={Math.floor(company.OTP)}
                 readOnly={true}
                 itemStyles={customStyles}
@@ -66,7 +66,7 @@ const Card = ({ company }) => {
             <p>Negotiation</p>
             <div className="ratings">
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 90 }}
                 value={Math.floor(company?.Negotiation) || 0}
                 readOnly={true}
                 itemStyles={customStyles}
@@ -80,7 +80,7 @@ const Card = ({ company }) => {
             <p>Responsive</p>
             <div className="ratings">
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 90 }}
                 value={Math.floor(company?.Responsive) || 0}
                 readOnly={true}
                 itemStyles={customStyles}
@@ -94,7 +94,7 @@ const Card = ({ company }) => {
             <p>Ethical</p>
             <div className="ratings">
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 90 }}
                 value={Math.floor(company?.Ethical) || 0}
                 readOnly={true}
                 itemStyles={customStyles}

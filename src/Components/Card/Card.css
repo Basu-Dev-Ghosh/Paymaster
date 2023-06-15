@@ -1,8 +1,8 @@
 .card {
-  width: 350px;
-  height: 400px;
+  max-width: 300px;
+  min-height: 350px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.08) 0px 48px 20px 0px;
   overflow-x: hidden;
   margin-left: 17px;
@@ -10,123 +10,143 @@
   cursor: pointer;
   padding: 20px;
 }
+
 .row1 {
   display: flex;
   align-items: center;
-  padding: 0px 0px;
 }
+
 .row1 .logo img {
-  width: 60px;
-  height: 50px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
 }
-.row1 .title {
-  margin-left: 3px;
-}
+
+
 .row1 .title h1 {
   font-family: "Nexa Bold";
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 6px;
   margin-bottom: 6px;
   text-transform: lowercase;
   color: #272b65;
 }
+
 .row1 .title p {
   font-family: "Nexa Light";
-  font-size: 15px;
+  font-size: 10px;
   opacity: 0.4;
+  margin-left: 6px;
 }
 
 .row3 {
-  padding: 0px 0px;
+  margin-top: 10px;
 }
+
 .row3-row1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 12px 0;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
+
 .row3-row1 p {
-  font-size: 15px;
+  font-size: 10px;
   font-family: "Nexa Light";
+  flex: 1;
 }
+
 .row4 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 17px;
+  font-size: 14px;
+  padding-top: 10px;
 }
+
 .row4 p {
-  font-size: 18px;
+  font-size: 8px;
   font-family: "Nexa Light";
-  margin-top: 40px;
+  margin-top: 12px;
 }
 
 .ratings {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding-bottom: 0px;
 }
+
 @media only screen and (max-width: 600px) {
   .card {
-    width: 85%;
-    height: 220px;
+    max-width: 85%;
+    min-height: 200px;
     background-color: #fff;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     overflow-x: hidden;
     padding: 8px;
     position: relative;
-    margin-top: 10px;
+    margin-left: 0 5px;
   }
+
   .row1 {
     display: flex;
     align-items: center;
-    padding: 2px 1px;
+    padding: 0px 1px;
   }
+
   .row1 .logo img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
+
   .row1 .title h1 {
     font-family: "MyriadPro-Regular";
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 0;
-    margin-left: 5px;
+    margin-left: 4px;
     color: #272b65;
     text-transform: lowercase;
   }
+
   .row1 .title p {
-    font-size: 8px;
+    font-size: 6px;
   }
+
   .row3 {
     width: 100%;
-    padding: 0px 10px;
+    padding: 10px 5px;
   }
+
   .row3-row1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin: 5px 0;
-    width: 90%;
+    margin: 4px 0;
+    width: 100%;
   }
+
   .row3-row1 p {
-    font-size: 10px;
+    font-size: 8px;
     font-family: "Causten-Regular";
-    margin: 1px 0;
+    margin: 2px 0;
   }
+
   .row4 {
     margin-top: 0px;
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
   }
+
   .ratings {
     padding-bottom: 0px;
+
   }
+
   .row4 p {
     display: none;
   }

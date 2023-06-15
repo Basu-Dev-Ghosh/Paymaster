@@ -24,7 +24,7 @@ const Invoice = () => {
   const [companyLogo, setCompanyLogo] = useState("");
   const [clients, setClients] = useState([]);
   const [addClientMode, setAddClientMode] = useState(false);
-  const firstInputRef=useRef(null)
+  const firstInputRef = useRef(null)
   const [pdfData, setPdfData] = useState({
     send: false,
   });
@@ -40,7 +40,7 @@ const Invoice = () => {
         setPdfData({ ...pdfData, companyName: res.data.user.CompanyName });
         setClients(res.data.clients);
       }
-    } catch (err) {}
+    } catch (err) { }
   };
   useEffect(() => {
     isAuth();
@@ -135,14 +135,14 @@ const Invoice = () => {
         theme: "light",
       });
     } else {
-      let dis=invoiceData.amount
-      if(invoiceData.tax){
-         dis = (parseInt(invoiceData.amount) + (parseInt(invoiceData.amount) * parseInt(invoiceData.tax)) / 100)
+      let dis = invoiceData.amount
+      if (invoiceData.tax) {
+        dis = (parseInt(invoiceData.amount) + (parseInt(invoiceData.amount) * parseInt(invoiceData.tax)) / 100)
       }
       setInvoiceList((oldData) => {
-        return [...oldData, {...invoiceData,amount:dis}];
+        return [...oldData, { ...invoiceData, amount: dis }];
       });
-     
+
       setInvoiceData({
         product: "",
         description: "",
@@ -162,7 +162,7 @@ const Invoice = () => {
       let amount = parseInt(invoiceData.qty * invoiceData.rate);
       setInvoiceData({ ...invoiceData, amount });
     }
-    
+
   }, [invoiceData.qty, invoiceData.rate]);
 
 
@@ -516,7 +516,7 @@ const Invoice = () => {
             </table>
             <div className="table-buttons">
               <div className="buttons">
-                <button onClick={() => setAddLineMode(!addLineMode)}>
+                <button onClick={() => { setAddLineMode(!addLineMode); addList() }}>
                   Add line
                 </button>
                 <button onClick={(e) => setInvoiceList([])}>
@@ -600,7 +600,7 @@ const Invoice = () => {
             </div>
           </div>
           <ToastContainer />
-        </div>
+        </div >
       )}
     </>
   );

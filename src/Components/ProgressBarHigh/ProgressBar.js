@@ -15,8 +15,6 @@ const ProgressBar = ({ value }) => {
         ringFgColour="#C63B79"
         ringIntermediateColour="#59648D"
         ringThickness={0.4}
-        segmented
-        showIntermediateProgress
         startStep={0}
         step={value / 10}
         steps={10}

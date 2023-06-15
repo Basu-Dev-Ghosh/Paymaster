@@ -193,21 +193,21 @@ const Company = () => {
             <div className="company-score">
               <div className="company-score-row1">
                 <ProgressBar value={value} />
-                <p>Overall score</p>
+                <div className="company-score-row2">
+                  <p>Overall score</p>
+                  {
+                    userRated ? <button style={{ backgroundColor: "green", color: "#fff" }}>Rated</button> : <button onClick={rate}>Rate</button>
+                  }
+                </div>
               </div>
-              <div className="company-score-row2">
-                {
-                  userRated ? <button style={{ backgroundColor: "green", color: "#fff" }}>Rated</button> : <button onClick={rate}>Rate</button>
-                }
 
-              </div>
             </div>
           </div>
           <div className="top-companies top-ratings">
             <div className="rating-box">
               <p>On time payment</p>
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 80 }}
                 value={Math.floor(company?.OTP)}
                 readOnly
                 itemStyles={customStyles}
@@ -219,7 +219,7 @@ const Company = () => {
             <div className="rating-box">
               <p>Negotiation</p>
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 80 }}
                 value={Math.floor(company?.Negotiation)}
                 readOnly
                 itemStyles={customStyles}
@@ -231,7 +231,7 @@ const Company = () => {
             <div className="rating-box">
               <p>Responsive</p>
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 80 }}
                 value={Math.floor(company?.Responsive)}
                 readOnly
                 itemStyles={customStyles}
@@ -243,7 +243,7 @@ const Company = () => {
             <div className="rating-box">
               <p>Ethical</p>
               <Rating
-                style={{ maxWidth: 100 }}
+                style={{ maxWidth: 80 }}
                 value={Math.floor(company?.Ethical)}
                 readOnly
                 itemStyles={customStyles}

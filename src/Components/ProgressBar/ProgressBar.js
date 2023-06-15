@@ -8,15 +8,12 @@ const ProgressBar = ({ value }) => {
       <RadialProgress
         backgroundColour="#dff0d8"
         backgroundTransparent
-        duration={3000}
         fontRatio={4}
         height="100%"
         ringBgColour="#E3E3E3"
         ringFgColour="#C63B79"
         ringIntermediateColour="#E75459"
         ringThickness={0.4}
-        segmented
-        showIntermediateProgress
         startStep={0}
         step={value / 10}
         steps={10}

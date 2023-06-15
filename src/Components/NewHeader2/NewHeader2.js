@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const NewHeader2 = ({ setShowLoader, setIsLoggedin, setUser }) => {
     const [token, setToken] = useState(false);
-    const [user2,setUser2]=useState(null)
+    const [user2, setUser2] = useState(null)
     const navigate = useNavigate();
     const [searchinput, setSearchinput] = useState("");
 
@@ -104,11 +104,11 @@ const NewHeader2 = ({ setShowLoader, setIsLoggedin, setUser }) => {
                 {token ? (
                     <>
                         <div className="user-icon">
-                        {
-              user2.CompanyLogo?
-              <img className="companyLogo" src={user2.CompanyLogo} alt="Logo"  />
-              :<i class="fa-solid fa-user-tie"></i>
-            }
+                            {
+                                user2?.CompanyLogo ?
+                                    <img className="companyLogo" src={user2?.CompanyLogo} alt="Logo" />
+                                    : <i class="fa-solid fa-user-tie"></i>
+                            }
                         </div>
                         <a onClick={logout}>
                             <i class="fa-solid fa-right-from-bracket"></i> Sign out
