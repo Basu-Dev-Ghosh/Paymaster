@@ -13,8 +13,8 @@
 }
 
 .login-box {
-  width: 85%;
-  height: 85%;
+  width: 90%;
+  height: 95%;
   display: flex;
   background-color: #fff;
 }
@@ -30,9 +30,13 @@
   font-size: 20px;
   color: #4e4e4e;
   font-family: "Nexa Light";
-  margin-top: 30px;
+  margin-top: 10px;
+  overflow: hidden;
 }
+
 .login-box-form-logo {
+  margin-top: 2rem;
+ overflow: hidden;
   cursor: pointer;
 }
 
@@ -83,7 +87,7 @@
   height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .login-form .email-input,
 .login-form .password-input {

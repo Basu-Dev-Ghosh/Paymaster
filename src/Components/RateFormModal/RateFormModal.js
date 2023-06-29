@@ -161,7 +161,7 @@ const RateFormModal = ({
             <div className="rate-form-input-text">
               <textarea
                 placeholder="Write your review..."
-                rows="4"
+                rows="6"
                 onChange={(e) => setReview(e.target.value)}
                 value={review}
                 required

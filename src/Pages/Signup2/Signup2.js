@@ -16,7 +16,7 @@ const Signup2 = () => {
     Name: "",
     DOB: "",
     CompanyName: "",
-    CompanyLogo:"",
+    CompanyLogo: "",
     Position: "",
     Location: "",
     Email: "",
@@ -115,7 +115,7 @@ const Signup2 = () => {
     }
   };
 
-  const handleSignupLogo=async(e)=>{
+  const handleSignupLogo = async (e) => {
     const data = new FormData();
     data.append("file", e.target.files[0]);
     data.append("upload_preset", "paymaster");
@@ -141,8 +141,7 @@ const Signup2 = () => {
         theme: "light",
       });
     }
-  }
-
+  };
 
   return (
     <>
@@ -152,11 +151,7 @@ const Signup2 = () => {
         <div className="login-container">
           <div className="login-box">
             <div className="login-box-color">
-              <img
-                src={groupimage}
-                style={{ width: "700px" }}
-                alt="Group image"
-              />
+              <img src={groupimage} alt="Group image" />
             </div>
             <div className="login-box-form">
               <div className="login-box-form-logo">
@@ -208,13 +203,17 @@ const Signup2 = () => {
                   />
                 </div>
                 <div className="email-input logo-input">
-                 <label htmlFor="companyLogo"><p>Company Logo</p>
-                 {
-                  userData.CompanyLogo? <i class="fa-solid fa-check" style={{color:"green"}}></i>: <i class="fa-solid fa-upload"></i>
-                 }
-              
-                 
-                 </label>
+                  <label htmlFor="companyLogo">
+                    <p>Company Logo</p>
+                    {userData.CompanyLogo ? (
+                      <i
+                        class="fa-solid fa-check"
+                        style={{ color: "green" }}
+                      ></i>
+                    ) : (
+                      <i class="fa-solid fa-upload"></i>
+                    )}
+                  </label>
                   <input
                     type="file"
                     required

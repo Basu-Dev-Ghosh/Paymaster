@@ -57,10 +57,13 @@
 .rate-form-input-text textarea {
   border: 0;
   width: 100%;
-  height: 60%;
+  height: 96%;
   background: transparent;
   font-family: "Nexa Light";
   font-size: 18px;
+  resize: none;
+  outline: none;
+  padding: 2rem;
 }
 .rate-form-input-image {
   width: 218px;
